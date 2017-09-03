@@ -1,0 +1,247 @@
+{% load i18n %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 	<link rel="shortcut icon" type="image/x-icon" href="{% static 'yourwords/icons/favicon.ico' %}">
+
+ 	<title>{% trans 'Twoje Słówka Online' %} | {% trans 'Podręczna baza słówek języka obcego dla każdego' %} {% if title %}| {{ title }} {% endif %}</title>
+ 	<meta name="description" content="{% trans 'Aplikacja do nauki słówek języka obcego online. Angielski, niemiecki, hiszpański czy rosyjski zawsze pod ręką. Całkowicie za darmo. Bez reklam.' %}">
+
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+ 	<link rel="stylesheet" href="{% static 'yourwords/css/w3.css' %}">
+ 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+ 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Palanquin+Dark">
+ 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Palanquin">
+ 	<link rel="stylesheet" href="{% static 'yourwords/css/styles.css' %}">
+
+ 	<script src="{% static 'yourwords/js/jquery-3.0.0.min.js' %}"></script>
+ 	<script src="{% static 'yourwords/js/jquery-cookie.js' %}"></script>
+ 	<script src="{% static 'yourwords/js/definitions.js' %}"></script>
+ 	{% include 'yourwords/js/scripts.html' %}
+ 	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-88504315-1', 'auto');
+    ga('send', 'pageview');
+	</script>
+</head>
+<body class="w3-light-grey"><div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.9&appId=837729266384283";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+	{% if messages %}
+			{% for message in messages %}
+				<div class="w3-row message_frame">
+					<div class="w3-col s12 w3-card-2 {{ message.tags }}">
+						<div class="message w3-left">
+							{% if 'safe' in message.tags %}
+								{{ message|safe }}
+							{% else %}
+								{{ message }}
+							{% endif %}
+						</div>
+						<div class="w3-display-topright message-close">
+							<i class="material-icons">close</i>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		{% endif %}
+
+	<div class="w3-row message_frame_js">
+		<div class="w3-col s12 w3-card-2 info">
+			<div class="message w3-left">
+
+			</div>
+		</div>
+	</div>
+
+	<div class="w3-modal modal-base">
+		<div class="w3-modal-content w3-card-2">
+			<header class="w3-container w3-padding modal-header"><div class="w3-right"><i class="material-icons modal-close">close</i></div></header>
+			<div class="w3-container w3-padding w3-light-grey modal-content"></div>
+		</div>
+	</div>
+
+	<div class="w3-modal modal-confirm">
+		<div class="w3-modal-content w3-card-2">
+			<header class="w3-container w3-padding modal-header">
+			</header>
+			<div class="w3-container w3-padding w3-light-grey modal-content">
+			</div>
+			<footer class="w3-container w3-padding w3-light-grey modal-content">
+				<button class="w3-btn w3-hover-white yes">{% trans 'TAK' %}</button>
+				<button class="w3-btn w3-light-grey w3-hover-white no">{% trans 'Anuluj' %}</button>
+			</footer>
+		</div>
+	</div>
+
+	<div class="w3-modal modal-fancybox">
+		<div class="w3-modal-content w3-card-2">
+			<header class="w3-container w3-padding w3-teal modal-header"><h5><div id="modal-fancybox-text"></span></div></h5><div class="w3-display-topright"><i class="material-icons modal-close">close</i></div></header>
+			<div class="w3-container w3-padding w3-light-grey modal-content"></div>
+		</div>
+	</div>
+
+	<div class="w3-container frame">
+
+	{% block content %}
+	{% endblock content %}
+
+
+
+	</div>
+	
+	<div class="w3-row">
+		<div class="w3-rest">
+			<footer class="base">
+			{% if user.is_authenticated %}
+				<button class="w3-btn w3-blue w3-card-2 w3-hover-white rating" title="{% trans 'Oceń trudność' %}"><i class="material-icons">star_rate</i></button>
+			{% endif %}
+				<div class="w3-container menu-container" style="right:210px;z-index:5">
+						<ul class="w3-container w3-card-2 w3-teal menu-list menusearch">
+							<li>
+								<form method="POST" action="{% url 'yourwords:search' %}" id="search">
+									<input class="w3-input w3-card-2 w3-light-grey" type="text" name="searched_text" id="searched_text" placeholder="{% trans 'szukaj' %}">
+									<button class="w3-btn w3-card-2 w3-light-grey w3-hover-teal search-btn" type="submit"><i class="material-icons">done</i></span></button>
+								</form>
+							</li>
+						</ul>
+						<ul>
+							<li>
+								<button class="w3-btn w3-card-2 w3-teal w3-hover-white menusearch-btn" title="{% trans 'Wyszukaj słówko' %}"><i class="material-icons">search</i></button>
+							</li>
+						</ul>
+				</div>
+				<div class="w3-container menu-container" style="right:140px;z-index:4">
+						<ul class="w3-navbar w3-card-2 w3-orange menu-list menu2">
+							<li><a href="{% url 'yourwords:wordlist' kind='random' %}">{% trans 'LOSOWO' %}</a></li>
+							<li><a href="{% url 'yourwords:wordlist' kind='descending' %}">{% trans 'DATA WPROWADZENIA MALEJĄCO' %}</a></li>
+							{% if user.is_authenticated %}
+								<li><a id="listing_choice" href="{% url 'yourwords:listings' %}">{% trans 'TWOJE WŁASNE LISTY' %}</a></li>
+							{% endif %}
+						</ul>
+						<ul>
+							<li>
+								<button class="w3-btn w3-card-2 w3-orange w3-hover-white menu2-btn" title="{% trans 'Widoki list' %}"><i class="material-icons">list</i></button>
+							</li>
+						</ul>
+				</div>
+			
+			
+				<div class="w3-container menu-container" style="right:70px;z-index:3">
+						<ul class="w3-navbar w3-card-2 w3-green menu-list menu3">
+							<li><a href="{% url 'yourwords:add' %}">{% trans 'DODAJ NOWE SŁÓWKO' %} <i class="material-icons">add</i></a></li>
+							<li><a href="{% url 'yourwords:set_repeat' %}">{% trans 'POWTÓRZ SŁÓWKA' %} <i class="material-icons">school</i></a></li>
+						</ul>
+						<ul>
+							<li>
+								<button class="w3-btn w3-card-2 w3-green w3-hover-white menu3-btn" title="{% trans 'Działania' %}"><i class="material-icons">trending_up</i></button>
+							</li>
+						</ul>
+				</div>
+
+				<div class="w3-container menu-container" style="right:0px;z-index:2">
+						<ul class="w3-navbar w3-card-2 w3-white menu-list menu1">
+						      {% if not user.is_authenticated %}
+						      	<li><a class="w3-bar-item w3-button" href="{% url 'authentication:signin' %}">{% trans 'ZALOGUJ SIĘ' %} <i class="material-icons">account_box</i></a></li>
+						      {% endif %}
+						      	{% if user.is_authenticated %}
+						      		<li class="admin_menu_section_item"><a class="w3-bar-item w3-button" href="{% url 'authentication:logout_page' %}">{% trans 'WYLOGUJ SIĘ' %} <i class="material-icons">redo</i></a></li>
+						      		{% if not user.profile.is_socialuser %}
+						      			<li class="admin_menu_section_item"><a class="w3-bar-item w3-button" href="{% url 'authentication:password_change' %}">{% trans 'UTWÓRZ NOWE HASŁO' %} <i class="material-icons">refresh</i></a></li>
+						      		{% endif %}
+						      	{% endif %}
+						      	{% if user.is_authenticated %}
+						      		<li><a href="#" class="w3-bar-item w3-button admin_menu_section_button">{% trans 'TWOJE KONTO' %} <i class="material-icons">expand_more</i></a></li>
+						      	{% endif %}
+						      	<li class="app_settings_menu_section_item"><a id="change_language" href="{% url 'accounts:language' %}">{% trans 'ZMIEŃ JĘZYK' %} <i class="material-icons">language</i></a></li>
+						      	{% if user.is_superuser %}
+						      		<li class="app_settings_menu_section_item"><a href="{% url 'rosetta-home' %}" target="_blank">{% trans 'TŁUMACZENIA' %} <i class="material-icons">language</i></a></li>
+						      	{% endif %}
+						      	{% if user.is_authenticated and not user.profile.is_socialuser %}
+						      		<li class="app_settings_menu_section_item"><a id="option_settings" href="{% url 'accounts:option_settings' %}">{% trans 'OPCJE APLIKACJI' %} <i class="material-icons">settings</i></a></li>
+						      	{% endif %}
+						      	<li><a href="#" class="w3-bar-item w3-button app_settings_menu_section_button">{% trans 'USTAWIENIA APLIKACJI' %} <i class="material-icons">expand_more</i></a></li>
+							        <li><a class="w3-bar-item w3-button" href="{% url 'yourwords:contact' %}">{% trans 'WYŚLIJ WIADOMOŚĆ' %} <i class="material-icons">email</i></a></li>
+							        <li><a href="{% url 'yourwords:about' %}">{% trans 'O APLIKACJI' %} <i class="material-icons">info</i></a></li>
+							        <li><a href="{% url 'yourwords:index' %}">{% trans 'WRÓĆ DO STRONY GŁÓWNEJ' %} <i class="material-icons">home</i></a></li>
+							        <div class="w3-right">
+							      	{% if user.is_authenticated and not user.profile.is_socialuser %}
+							      		{% if user.is_superuser %}
+							      			<div class="w3-opacity w3-small w3-right">
+							      				<a class="w3-bar-item w3-button" href="{% url 'admin:index' %}" target="_blank">{{ user.username }}</a>
+							      			</div>
+							      		{% else %}
+							      			<div class="w3-padding w3-opacity w3-small w3-right">{{ user.username }}</div>
+							      		{% endif %}
+							      	{% elif user.is_authenticated and user.profile.is_socialuser %}
+							      		<div class="w3-padding w3-opacity w3-small w3-right">{{ user.first_name }} {{ user.last_name }}</div>
+							      	{% endif %}
+							      	</div>
+						</ul>
+						<ul>
+							<li>
+								<button class="w3-btn w3-card-2 w3-red w3-hover-white menu1-btn" title="{% trans 'Menu główne' %}"><i class="material-icons">menu</i></button>
+							</li>
+						</ul>
+				</div>
+			</footer>
+		</div>
+	</div>
+
+
+
+
+
+
+
+	<div class="w3-row">
+		<div class='w3-rest'>
+			<div class="end-gap">
+			</div>
+		</div>
+	</div>
+	
+	<div class="w3-row">
+		<div class='w3-rest'>
+			<div class="end-gap">
+			</div>
+		</div>
+	</div>
+
+	<section class="w3-container w3-center">
+		<div class="fb-like" data-href="https://twojeslowka.online/" data-layout="box_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+	</section>
+	<section class="w3-container w3-padding w3-center w3-small w3-opacity copyright">
+		<p>{% trans 'Aplikacja do nauki słówek języka obcego online. Angielski, niemiecki, hiszpański czy rosyjski zawsze pod ręką. Całkowicie za darmo. Bez reklam.' %}</p>
+		<p>Copyright by Adam Guła - {% trans 'Twoje Słówka Online' %} {% now 'Y' %}</p>
+	</section>
+
+	<div class="w3-row">
+		<div class='w3-rest'>
+			<div class="end-gap">
+			</div>
+		</div>
+	</div>
+
+	<section class="w3-container w3-center w3-medium w3-blue cookies_information">
+		<p>{% trans 'Serwis wykorzystuje cookies. Korzystając ze strony, wyrażasz zgodę na ich wykorzystywanie' %}. <a href="{% url 'yourwords:cookies' %}" target="_blank">{% trans 'Dowiedz się więcej' %}</a>. <div class="w3-display-topright"><i class="w3-right material-icons">close</i></div></p>
+	</section>
+
+</body>
+</html> 

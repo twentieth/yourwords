@@ -1,0 +1,12 @@
+{% load i18n %}
+{% autoescape off %}
+{% trans 'Otrzymujesz tę wiadomość, gdyż zarejestrowałeś się na stronie' %} {{ domain }}.
+
+{% trans 'Aby aktywować swoje konto, przejdź na stronę, której adres widnieje poniżej' %}:
+
+{{ protocol }}://{{ domain }}{% url 'authentication:signup_confirm' uidb64=uid token=token %}
+
+{% trans 'Dziękujemy za skorzystanie z naszej strony.' %}
+{% trans 'Zespół' %} {{ domain }}
+
+{% endautoescape %} 

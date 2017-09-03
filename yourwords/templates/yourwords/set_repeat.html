@@ -1,0 +1,113 @@
+
+{% extends 'yourwords/base.html' %}
+{% load i18n %}
+
+{% block content %}
+
+<div class="w3-row">
+  <div class="w3-rest">
+    <h2>{% trans 'Ustaw zakres powtórki słówek' %}</h2>
+  </div>
+</div>
+
+<section id="set_repeat_forms">
+<div class="w3-row">
+  <div class="w3-rest">
+    <form action="{% url 'yourwords:index' %}" method="POST" id="main_repeat_form">
+    {% csrf_token %}
+      <label for="set_main_repeat" class="w3-label w3-text-blue w3-medium">{% trans 'Wybierz słówka wprowadzone' %}:</label>
+      <br>
+
+      <input type="radio" name="main_repeat" class="w3-radio" value="1" id="1" checked>
+      <label for="1" class="w3-validate w3-text-black">{% trans 'dziś oraz wczoraj' %}</label>
+      <br>
+
+      <input type="radio" name="main_repeat" class="w3-radio" value="7" id="7">
+      <label for="7" class="w3-validate w3-text-black">1 {% trans 'tydzień temu' %}</label>
+      <br>
+      
+      <input type="radio" name="main_repeat" class="w3-radio" value="30" id="30">
+      <label for="30" class="w3-validate w3-text-black">1 {% trans 'miesiąc temu' %}</label>
+      <br>
+
+      <input type="radio" name="main_repeat" class="w3-radio" value="90" id="90">
+      <label for="90" class="w3-validate w3-text-black">3 {% trans 'miesiące temu' %}</label>
+      <br>
+
+      <input type="radio" name="main_repeat" class="w3-radio" value="180" id="180">
+      <label for="180" class="w3-validate w3-text-black">6 {% trans 'miesięcy temu' %}</label>
+      <br>
+
+      <input type="radio" name="main_repeat" class="w3-radio" value="365" id="365">
+      <label for="365" class="w3-validate w3-text-black">1 {% trans 'rok temu' %}</label>
+      <br>
+      
+      <input type="radio" name="main_repeat" class="w3-radio" value="manually" id="manually">
+      <label for="manually" class="w3-validate w3-text-black">{% trans 'Zaznacz, aby wprowadzić liczbę dni ręcznie' %}</label>
+      <br>
+
+      <input type="number" class="w3-input" name="main_repeat_manually" min="1" max="99999" disabled>
+
+      <button type="submit" class="w3-btn w3-medium w3-blue w3-hover-white" id="submit-btn-settings-days">{% trans 'Pokaż' %}</button>
+      <button type="reset" class="w3-btn w3-medium w3-light-grey w3-hover-white" id="reset-btn">{% trans 'Wyczyść' %}</button>
+    </form>
+  </div>
+</div>
+
+<br>
+
+<div class="w3-row">
+  <div class="w3-rest">
+	<form action="{% url 'yourwords:index' %}" method="POST" id="settings_form">
+  {% csrf_token %}
+			<label for="set_day_before" class="w3-label w3-text-blue">{% trans 'Zaznacz okres, z którego chcesz wyświetlić słówka.' %}</label>
+			<select class="w3-select" id="set_day_before" name="days_before">
+				<option value="-1">{% trans 'Wszystkie słówka' %}</option>
+        <option value="1">1 {% trans 'dzień' %}</option>
+        <option value="2">2 {% trans 'dni' %}</option>
+        <option value="3">3 {% trans 'dni' %}</option>
+        <option value="7">7 {% trans 'dni' %}</option>
+        <option value="14">14 {% trans 'dni' %}</option>
+        <option value="30">30 {% trans 'dni' %}</option>
+      </select>  
+      <button type="submit" class="w3-btn w3-medium w3-blue w3-hover-white" id="submit-btn-settings-days">{% trans 'Pokaż' %}</button>
+      <button type="reset" class="w3-btn w3-medium w3-light-grey w3-hover-white" id="reset-btn">{% trans 'Wyczyść' %}</button>
+</form>
+</div>
+</div>
+
+<br>
+
+<div class="w3-row">
+  <div class="w3-rest">
+<form action="{% url 'yourwords:index' %}" method="POST" id="settings_form">
+{% csrf_token %}
+    <label for="set_number_words" class="w3-label w3-text-blue">{% trans 'Zaznacz liczbę słówek, które chcesz powtórzyć, uwzględniając poziom trudności.' %}</label>
+      <select class="w3-select" id="set_number_words" name="number_words">
+	      <option value="-1">{% trans 'Wszystkie słówka' %}</option>
+        <option value="5">5</option>
+        <option value="10">10</option>
+        <option value="15">15</option>
+        <option value="20">20</option>
+      </select>
+
+      <label class="w3-validate w3-text-black" for="_0">{% trans 'Wszystkie' %}</label>
+      <input type="radio" name="rating" value="0" class="w3-radio" id="_0" checked>
+
+      <label class="w3-validate w3-text-black" for="_1">{% trans 'Łatwy' %}</label>
+      <input type="radio" name="rating" value="1" class="w3-radio" id="_1">
+
+      <label class="w3-validate w3-text-black" for="_2">{% trans 'Średni' %}</label>
+      <input type="radio" name="rating" value="2" class="w3-radio" id="_2"> 
+
+      <label class="w3-validate w3-text-black" for="_3">{% trans 'Trudny' %}</label>
+      <input type="radio" name="rating" value="3" class="w3-radio" id="_3">
+      <br>
+      <button type="submit" class="w3-btn w3-medium w3-blue w3-hover-white" id="submit-btn-settings-words">{% trans 'Pokaż' %}</button>
+      <button type="reset" class="w3-btn w3-medium w3-light-grey w3-hover-white" id="reset-btn">{% trans 'Wyczyść' %}</button>
+</form>
+
+</div>
+</div>
+</section>
+{% endblock content %}

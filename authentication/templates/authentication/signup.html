@@ -1,0 +1,38 @@
+
+{% extends 'yourwords/base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="w3-row">
+	<div class="w3-rest">
+		<h2 class="form_header">{% trans 'Utwórz darmowe konto' %}</h2>
+	</div>
+</div>
+
+<div class="w3-row">
+	<div class="w3-rest">
+	
+	<form method="POST" action="{% url 'authentication:signup' %}" class="authentication_form">
+	{% csrf_token %}
+		{% for field in form %}
+				<label class="w3-label w3-text-blue">{{ field.label }}</label>
+				{% for error in field.errors %}
+					<span class="w3-small w3-text-red error">{{ error }}</span>
+				{% endfor %}
+				{{ field }}
+		{% endfor %}
+
+		<button type="submit" class="w3-btn w3-medium w3-blue w3-hover-white">{% trans 'Zarejestruj się' %}</button>
+		<button type="reset" class="w3-btn w3-medium w3-light-grey w3-hover-white reset_button">{% trans 'Wyczyść' %}</button>
+	</form>
+
+
+
+
+</div>
+</div>
+
+
+{% endblock content %}

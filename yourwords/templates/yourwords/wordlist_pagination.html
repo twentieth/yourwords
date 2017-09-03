@@ -1,0 +1,26 @@
+ <div class="w3-row">
+ 	<div class="w3-col" style="width:40px;height:1px;visibility:hidden;">
+ 		<div></div>
+ 	</div>
+ 	{% if record_list.paginator.num_pages > 1 %}
+ 	<div class="w3-rest">
+ 	<ul class="pagination">
+ 	 {% if record_list.has_previous %}
+ 			<li><a href="?page={{ 1 }}"><i class="fa fa-angle-double-left"></i></a></li>
+ 			<li><a href="?page={{ record_list.previous_page_number }}"><i class="fa fa-angle-left"></i></a></li>
+ 	 {% else %}
+ 			<li><a href="#" class="disabled"><i class="fa fa-angle-double-left"></i></a></li>
+ 			<li><a href="#" class="disabled"><i class="fa fa-angle-left"></i></a></li>
+ 	 {% endif %}
+ 		<li class="pagination_numbers"><a href="?page={{ record_list.number }}">{{ record_list.number }}/{{ record_list.paginator.num_pages }}</a></li>
+ 		{% if record_list.has_next %}
+ 		   <li><a href="?page={{ record_list.next_page_number }}"><i class="fa fa-angle-right"></i></a></li>
+ 		   <li><a href="?page={{ record_list.paginator.num_pages }}"><i class="fa fa-angle-double-right"></i></a></li>
+ 	 {% else %}
+ 			<li><a href="#" class="disabled"><i class="fa fa-angle-right"></i></a></li>
+ 		   <li><a href="#" class="disabled"><i class="fa fa-angle-double-right"></i></a></li>
+ 	  {% endif %}
+ 	</ul>
+ 	</div>
+ 	{% endif %}
+ </div> 

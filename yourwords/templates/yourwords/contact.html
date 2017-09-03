@@ -1,0 +1,62 @@
+{% extends 'yourwords/base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="w3-row">
+	<div class="w3-rest">
+		<h2>{% trans 'Wyślij wiadomość' %}</h2>
+	</div>
+</div>
+
+<div class="w3-row">
+	<div class="w3-rest">
+	<form name="contact" method="POST" action="" id="contact">
+	{% csrf_token %}
+
+		<label for="id_your_name" class="w3-label w3-text-blue">{% trans 'Twoje imię' %}</label>
+		{% if form.your_name.errors %}
+    		{% for error in form.your_name.errors %}
+        		<span class="w3-small w3-text-red errors">{{ error|escape }} </span>
+    		{% endfor %}
+		{% endif %}
+		{{ form.your_name }}
+		<label for="id_your_email" class="w3-label w3-text-blue">{% trans 'Twój e-mail' %}</label>
+		{% if form.your_email.errors %}
+    		{% for error in form.your_email.errors %}
+        		<span class="w3-small w3-text-red errors">{{ error|escape }} </span>
+    		{% endfor %}
+		{% endif %}
+		{{ form.your_email }}
+		<label for="id_your_message" class="w3-label w3-text-blue">{% trans 'Twoja wiadomość' %}</label>
+		{% if form.your_message.errors %}
+    		{% for error in form.your_message.errors %}
+        		<span class="w3-small w3-text-red errors" style="">{{ error|escape }} </span>
+    		{% endfor %}
+		{% endif %}
+		{{ form.your_message }}
+		<label for="id_cc_myself" class="w3-label w3-text-blue">{% trans 'Czy wysłać kopię wiadomości do Ciebie?' %}</label>
+		<input type="checkbox" name="cc_myself" id="id_cc_myself" class="w3-check" checked>
+		<br>
+
+		<button type="submit" class="w3-btn w3-medium w3-blue w3-hover-white" id="contact-btn">{% trans 'Wyślij wiadomość' %}</button>
+		<button type="reset" class="w3-btn w3-medium w3-light-grey w3-hover-white" id="reset-btn">{% trans 'Wyczyść' %}</button>
+	</form>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

@@ -1,0 +1,24 @@
+
+{% extends 'accounts/base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block content %}
+
+  <div class="w3-row message_frame">
+	<div class="w3-rest w3-card-2 info">
+		<div class="message w3-left">
+			{% trans 'Gratulujemy! Twoje konto zostało utworzone. Na podany przez Ciebie adres e-mail został wysłany link aktywacyjny. Jeśli wiadomość do Ciebie nie dotarła, sprawdź również folder spam.' %}'
+		</div>
+		<div class="w3-right message-close">
+		<i class="material-icons">close</i>
+		</div>
+	</div>
+</div>
+
+
+<div class="w3-container">
+
+</div>
+{% endblock %} 
+ 

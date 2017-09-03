@@ -1,0 +1,37 @@
+{% extends 'yourwords/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<section class="w3-container w3-padding w3-medium about">
+<h3>Po co...</h3>
+
+<p>Chciałbyś uczyć się słówek skutecznie? Dzięki tej poręcznej aplikacji do nauki słówek języka obcego (angielskiego, niemieckiego, hiszpańskiego, rosyjskiego i innych) będzie to możliwe. Pamiętaj, że podstawą nauki słówek języka obcego jest powtarzanie. Z pewnością używałeś fiszek. Ile razy jednak o nich zapominałeś? Nie trzeba więc przypominać o wygodzie rozwiązania, jakim jest podręczna aplikacja Twoje Słówka Online, o której z pewnością nie zapomnisz, wychodząc rano do szkoły czy pracy. Bo jak często zapominasz o swoim smartfonie z dostępem do Internetu? ;) Tak, wystarczy tylko smartfon i połączenie z Internetem. I oczywiście Twoje chęci! :)</p>
+
+<h3>Jak to działa?</h3>
+
+<p>Aplikacja jest dla Ciebie interaktywną pomocą w nauce słówek języka obcego, którego się uczysz. Poprzez stronę możesz dodawać swoje słówka i powtarzać je zgodnie z ustawieniami, które wprowadzisz. Wszystko to w dogodnej dla Ciebie porze i miejscu - pociągu, autobusie, tramwaju, spacerze, gdziekolwiek masz ochotę na naukę. Co więcej, możesz posiadać więcej niż jedno darmowe konto w serwisie, dzięki czemu nie musisz poprzestawać na tylko jednym języku obcym!</p>
+<p>Będąc niezalogowanym użytkownikiem masz dostęp do poglądowej bazy słówek utworzonej i wykorzystywanej przez autora aplikacji.</p>
+
+<h3>Ile kosztuje?</h3>
+<p>NIC :) Tak, tak - korzystanie z pełni funkcjonalności aplikacji Twoje Słówka Online jest bezpłatne. Wystarczy <a href="{% url 'authentication:signup' %}" class="w3-large">założyć darmowe konto</a>, by zacząć nową przygodę efektywnej nauki słówek języka obcego. Możesz też po prostu <a href="{% url 'authentication:signin' %}" class="w3-large">zalogować się, używając swojego konta na Facebooku</a>. Angielski, niemiecki czy rosyjski nię będzie już dla Ciebie problemem!</p>
+
+<h3>A to wszystko bez reklam!</h3>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}

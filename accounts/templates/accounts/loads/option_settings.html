@@ -1,0 +1,51 @@
+{% load i18n %}
+<script>
+
+$(function() {
+	$('#option_settings_form input[type=checkbox]').addClass('w3-check')
+
+  	$('#option_settings_form').submit(function(event) {
+  		event.preventDefault()
+  		var data = {}
+  		$('#option_settings_form input[type=checkbox]').each(function() {
+  			data[this.name] = this.checked
+  		})
+  		$.ajax({
+  			url: '{% url "accounts:option_settings" %}',
+  			type: 'POST',
+  			dataType: 'json',
+  			data: data
+  		}).done(function(data) {
+  			hideModalFancybox()
+  			showAndHideModal('info', '{% trans "Ustawienia zostały zapisane." %}')
+  		}).fail(function() {
+  			hideModalFancybox()
+  			showAndHideModal('error', '{% trans "Wystąpił błąd. Ustawienia nie zostały zapisane." %}')
+  		});
+  	});
+	
+});
+</script>
+
+{% if user.is_authenticated and not user.profile.is_socialuser %}
+
+	<form action="{% url 'accounts:option_settings' %}" method="POST" id="option_settings_form">
+	{% csrf_token %}
+	<table class="w3-table w3-bordered w3-text-teal">
+		{% for field in form %}
+		<tr>
+		<td>
+			<label for="{{ field.id_for_label }}">{{ field.label }}</label>
+		</td>
+		<td>
+			{{ field }}
+		</td>
+		</tr>
+		{% endfor %}
+	</table>
+	<br>
+		<input type="submit" value="{% trans 'Zapisz' %}" class="w3-btn w3-teal">
+	</form>
+
+
+{% endif %}

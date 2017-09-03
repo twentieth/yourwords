@@ -1,0 +1,3 @@
+{% load i18n %}{% autoescape off %}
+{% blocktrans %}Rejestracja nowego użytkownika na {{ site_name }}{% endblocktrans %}
+{% endautoescape %}

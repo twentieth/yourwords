@@ -1,0 +1,866 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-06-04 10:17+0200\n"
+"PO-Revision-Date: 2017-06-04 08:19+0000\n"
+"Last-Translator: b'  <twentiethsite@linux.pl>'\n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.1\n"
+"X-Translated-Using: django-rosetta 0.7.13\n"
+
+#: accounts/forms.py:8
+msgid "Wyszukuj słówka, używając rozszerzonego algorytmu wyszukiwania"
+msgstr "Search for words using the extended search algorithm"
+
+#: accounts/templates/accounts/loads/option_settings.html:20
+#: accounts/views.py:37
+msgid "Ustawienia zostały zapisane."
+msgstr "Settings have been saved."
+
+#: accounts/templates/accounts/loads/option_settings.html:22
+msgid "Wystąpił błąd. Ustawienia nie zostały zapisane."
+msgstr "An error occured. Settings have not been saved."
+
+#: accounts/templates/accounts/loads/option_settings.html:46
+msgid "Zapisz"
+msgstr "Save"
+
+#: accounts/views.py:17
+msgid "Ustawienia użytkownika"
+msgstr "User settings"
+
+#: accounts/views.py:39
+msgid "Przepraszamy, wystąpił błąd. Ustawienia nie zostały zapisane."
+msgstr "Sorry, the error occured. Settings have not been saved."
+
+#: accounts/views.py:49
+msgid "Zmień język"
+msgstr "Change the language"
+
+#: authentication/forms.py:16 authentication/forms.py:28
+#: authentication/forms.py:32 authentication/forms.py:65
+#: authentication/forms.py:83
+#: authentication/templates/authentication/password_change.html:24
+#: authentication/templates/authentication/password_change.html:32
+#: authentication/templates/authentication/password_change.html:40
+#: authentication/templates/authentication/password_reset_confirm.html:27
+#: authentication/templates/authentication/password_reset_confirm.html:35
+#: authentication/templates/authentication/password_reset_form.html:27
+#: yourwords/forms.py:8 yourwords/forms.py:9 yourwords/forms.py:23
+#: yourwords/forms.py:24 yourwords/forms.py:25
+msgid "pole wymagane"
+msgstr "required field"
+
+#: authentication/forms.py:18 authentication/forms.py:90
+msgid "Nazwa użytkownika"
+msgstr "Username"
+
+#: authentication/forms.py:19 authentication/forms.py:92
+msgid "Hasło"
+msgstr "Password"
+
+#: authentication/forms.py:24 authentication/forms.py:87
+msgid "Hasła nie są takie same."
+msgstr "Passwords are not the same."
+
+#: authentication/forms.py:27
+#: authentication/templates/authentication/password_change.html:26
+#: authentication/templates/authentication/password_reset_confirm.html:21
+msgid "Nowe hasło"
+msgstr "New password"
+
+#: authentication/forms.py:31
+#: authentication/templates/authentication/password_change.html:34
+#: authentication/templates/authentication/password_reset_confirm.html:29
+msgid "Nowe hasło - potwierdź"
+msgstr "New password - confirm"
+
+#: authentication/forms.py:61
+msgid "Niepoprawne stare hasło."
+msgstr "Incorrect the old password."
+
+#: authentication/forms.py:64
+msgid "stare hasło"
+msgstr "Old password"
+
+#: authentication/forms.py:86
+msgid "Użytkownik z takim adresem e-mail już istnieje."
+msgstr "A user with this email address already exists."
+
+#: authentication/forms.py:91
+#: authentication/templates/authentication/password_reset_form.html:21
+msgid "Adres e-mail"
+msgstr "Email adress"
+
+#: authentication/forms.py:93
+msgid "Hasło - potwierdź"
+msgstr "Password - confirm"
+
+#: authentication/forms.py:179
+msgid "Email"
+msgstr "Email"
+
+#: authentication/templates/authentication/password_change.html:11
+#: authentication/templates/authentication/password_reset_confirm.html:14
+msgid "Zmień hasło"
+msgstr "Change password"
+
+#: authentication/templates/authentication/password_change.html:18
+msgid "Stare hasło"
+msgstr "Old password"
+
+#: authentication/templates/authentication/password_change.html:42
+#: authentication/templates/authentication/password_reset_confirm.html:37
+msgid "Zmień"
+msgstr "Change"
+
+#: authentication/templates/authentication/password_change.html:43
+#: authentication/templates/authentication/password_reset_confirm.html:38
+#: authentication/templates/authentication/password_reset_form.html:30
+#: authentication/templates/authentication/signin.html:28
+#: authentication/templates/authentication/signup.html:28
+#: yourwords/templates/yourwords/add.html:128
+#: yourwords/templates/yourwords/contact.html:44
+#: yourwords/templates/yourwords/set_repeat.html:52
+#: yourwords/templates/yourwords/set_repeat.html:74
+#: yourwords/templates/yourwords/set_repeat.html:107
+msgid "Wyczyść"
+msgstr "Clean"
+
+#: authentication/templates/authentication/password_change_done.html:11
+msgid ""
+"Twoje hasło zostało zmienione. Przejdź dalej, korzystając z przycisków "
+"nawigacji."
+msgstr ""
+"Your password has been changed. Continue using the navigation buttons."
+
+#: authentication/templates/authentication/password_reset_confirm.html:44
+msgid ""
+"Link resetowania hasła jest nieprawidłowy, prawdopodobnie dlatego, że został"
+" już wcześniej użyty. Proszę wypełnij formularz resetowania hasła jeszcze "
+"raz."
+msgstr ""
+"The password reset link was invalid, possibly because it has already been "
+"used. Please request a new password reset."
+
+#: authentication/templates/authentication/password_reset_confirm.html:50
+msgid ""
+"Podany link był nieprawidłowy. Wypełnij formularz resetowania hasła jeszcze "
+"raz."
+msgstr ""
+"The link provided was invalid. Fill out the password reset form again."
+
+#: authentication/templates/authentication/password_reset_email.html:3
+msgid ""
+"Otrzymujesz tę wiadomość, gdyż skorzystano z opcji resetu hasła dla Twojego "
+"konta na stronie"
+msgstr ""
+"You are receiving this message because you have used the password reset "
+"option for your account on"
+
+#: authentication/templates/authentication/password_reset_email.html:5
+msgid ""
+"Aby wprowadzić nowe hasło, przejdź na stronę, której adres widnieje poniżej"
+msgstr "To enter a new password, go to the address shown below"
+
+#: authentication/templates/authentication/password_reset_email.html:9
+msgid "Twoja nazwa użytkownika"
+msgstr "Your username"
+
+#: authentication/templates/authentication/password_reset_email.html:11
+msgid "Dziękujemy za skorzystanie z naszej strony"
+msgstr "Thank you for using our site"
+
+#: authentication/templates/authentication/password_reset_email.html:12
+#: authentication/templates/authentication/signup_email.html:10
+msgid "Zespół"
+msgstr "Team"
+
+#: authentication/templates/authentication/password_reset_form.html:12
+msgid "Zresetuj hasło"
+msgstr "Reset the password"
+
+#: authentication/templates/authentication/password_reset_form.html:29
+msgid "Wyślij"
+msgstr "Send"
+
+#: authentication/templates/authentication/password_reset_subject.txt:3
+#, python-format
+msgid "Reset hasła na %(site_name)s"
+msgstr "Password reset at %(site_name)s"
+
+#: authentication/templates/authentication/registration_complete.html:11
+msgid ""
+"Gratulujemy! Twoje konto zostało utworzone. Na podany przez Ciebie adres "
+"e-mail został wysłany link aktywacyjny. Jeśli wiadomość do Ciebie nie "
+"dotarła, sprawdź również folder spam."
+msgstr ""
+"Congratulations! Your account has been created. An activation link has been "
+"sent to the e-mail address you provided. If the message did not arrive, "
+"check also the spam folder."
+
+#: authentication/templates/authentication/signin.html:10
+#: authentication/templates/authentication/signin.html:27
+msgid "Zaloguj się"
+msgstr "Sign in"
+
+#: authentication/templates/authentication/signin.html:39
+msgid "Nie masz konta i chcesz w pełni korzystać z aplikacji?"
+msgstr ""
+"Do not have an account and would like to make full use of the application?"
+
+#: authentication/templates/authentication/signin.html:39
+msgid "Zarejestruj się!"
+msgstr "Sign up!"
+
+#: authentication/templates/authentication/signin.html:45
+msgid "Nie pamiętasz hasła?"
+msgstr "Do not you remember the password?"
+
+#: authentication/templates/authentication/signin.html:45
+msgid "Utwórz nowe"
+msgstr "Create a new one"
+
+#: authentication/templates/authentication/signin.html:50
+msgid "Zaloguj się za pomocą konta"
+msgstr "Sign in with your account"
+
+#: authentication/templates/authentication/signup.html:10
+msgid "Utwórz darmowe konto"
+msgstr "Create a free account"
+
+#: authentication/templates/authentication/signup.html:27
+msgid "Zarejestruj się"
+msgstr "Sign up"
+
+#: authentication/templates/authentication/signup_email.html:3
+msgid "Otrzymujesz tę wiadomość, gdyż zarejestrowałeś się na stronie"
+msgstr "You receive this message because you registered on"
+
+#: authentication/templates/authentication/signup_email.html:5
+msgid ""
+"Aby aktywować swoje konto, przejdź na stronę, której adres widnieje poniżej"
+msgstr "To activate your account, go to the address shown below"
+
+#: authentication/templates/authentication/signup_email.html:9
+msgid "Dziękujemy za skorzystanie z naszej strony."
+msgstr "Thank you for using our site."
+
+#: authentication/templates/authentication/signup_subject.txt:2
+#, python-format
+msgid "Rejestracja nowego użytkownika na %(site_name)s"
+msgstr "New user registration at %(site_name)s"
+
+#: authentication/views.py:29
+msgid "Nastąpiło poprawne zalogowanie użytkownika"
+msgstr "The user has logged on successfully"
+
+#: authentication/views.py:37
+msgid ""
+"Twoje konto użytkownika nie jest aktywne. Skontaktuj się z administratorem "
+"strony."
+msgstr ""
+"Your user account is not active. Please contact the site administrator."
+
+#: authentication/views.py:39
+msgid "Wpisane dane są niepoprawne. Spróbuj jeszcze raz."
+msgstr "The data entered is incorrect. Please try again."
+
+#: authentication/views.py:43
+msgid "Logowanie"
+msgstr "Sign in"
+
+#: authentication/views.py:64
+msgid ""
+"Na podany adres e-mail wysłaliśmy link aktywacyjny do Twojego konta. Jeśli "
+"nie otrzymasz wiadomości, sprawdź folder spam w swojej skrzynce."
+msgstr ""
+"We have sent an activation link to your account at the email address you "
+"provided. If you do not receive a message, check the spam folder in your "
+"inbox."
+
+#: authentication/views.py:70
+msgid "Rejestracja"
+msgstr "Sign up"
+
+#: authentication/views.py:79
+msgid "Nastąpiło poprawne wylogowanie użytkownika."
+msgstr "The user has logged out properly."
+
+#: authentication/views.py:91
+msgid "Twoje hasło zostało zmienione"
+msgstr "Your password has been changed."
+
+#: authentication/views.py:96
+msgid "Nowe hasło do konta"
+msgstr "Set a new password"
+
+#: authentication/views.py:118
+msgid ""
+"Na podany adres e-mail wysłaliśmy instrukcję zresetowania Twojego hasła. "
+"Jeśli podany adres istnieje w naszej bazie danych, wiadomość powinna dotrzeć"
+" lada moment. Jeśli jej nie otrzymasz, sprawdź folder spam w swojej "
+"skrzynce."
+msgstr ""
+"We have sent a reset password to your e-mail address. If the given address "
+"exists in our database, the message should arrive at any moment. If you do "
+"not receive it, please check the spam folder in your inbox."
+
+#: authentication/views.py:124
+msgid "Reset hasła do konta"
+msgstr "Password reset"
+
+#: authentication/views.py:131
+msgid "Hasło zostało wysłane"
+msgstr "The password has been sent"
+
+#: authentication/views.py:155
+msgid "Wpisz nowe hasło"
+msgstr "Enter a new password"
+
+#: authentication/views.py:160
+msgid "Twoje hasło zostało zmienione."
+msgstr "Your password has been changed."
+
+#: authentication/views.py:167
+msgid "Resetowanie hasła nieudane"
+msgstr "Reset password failed"
+
+#: authentication/views.py:178
+msgid "Verification e-mail sent"
+msgstr "Verification e-mail sent"
+
+#: authentication/views.py:200
+msgid "Twoje konto zostało aktywowane."
+msgstr "Your account has been activated."
+
+#: authentication/views.py:208
+msgid "Aktywacja nowego konta nieudana"
+msgstr "Activation of new account failed"
+
+#: authentication/views.py:209
+msgid ""
+"Przepraszamy, aktywacja Twojego konta nie przebiegła pomyślnie. Spróbuj "
+"później."
+msgstr ""
+"Sorry, activation of your account was not successful. Please try later."
+
+#: mysite/settings.py:156
+msgid "polski"
+msgstr "Polish"
+
+#: mysite/settings.py:157
+msgid "angielski"
+msgstr "English"
+
+#: yourwords/forms.py:8 yourwords/forms.py:9
+msgid "Pole może zawierać maksymalnie 100 znaków."
+msgstr "The field can contain up to 100 characters."
+
+#: yourwords/forms.py:10
+msgid "Pole może zawierać maksymalnie 500 znaków."
+msgstr "The field can contain a maximum of 500 characters."
+
+#: yourwords/forms.py:26 yourwords/templates/yourwords/contact.html:39
+msgid "Czy wysłać kopię wiadomości do Ciebie?"
+msgstr "Do you send a copy of the message to you?"
+
+#: yourwords/templates/yourwords/add.html:36
+msgid "Rekord został dodany. Rekordów w bazie"
+msgstr "Record has been added. Records in the database"
+
+#: yourwords/templates/yourwords/add.html:59
+msgid "Przepraszamy, wystąpił błąd. Problem z odebraniem danych z serwera."
+msgstr "Sorry, an error occurred. Problem getting server data."
+
+#: yourwords/templates/yourwords/add.html:71
+msgid "Edytuj wybrany rekord"
+msgstr "Edit the selected record"
+
+#: yourwords/templates/yourwords/add.html:73
+msgid "Dodaj nowy rekord"
+msgstr "Add a new record"
+
+#: yourwords/templates/yourwords/add.html:89
+msgid "Słówko polskie"
+msgstr "Polish word"
+
+#: yourwords/templates/yourwords/add.html:97
+msgid "Słówko języka obcego"
+msgstr "Foreign language word"
+
+#: yourwords/templates/yourwords/add.html:105
+msgid "Zdanie"
+msgstr "Sentence"
+
+#: yourwords/templates/yourwords/add.html:113
+#: yourwords/templates/yourwords/index.html:52
+#: yourwords/templates/yourwords/set_repeat.html:97 yourwords/views.py:78
+msgid "Łatwy"
+msgstr "Easy"
+
+#: yourwords/templates/yourwords/add.html:115
+#: yourwords/templates/yourwords/index.html:54
+#: yourwords/templates/yourwords/set_repeat.html:100 yourwords/views.py:80
+msgid "Średni"
+msgstr "Medium"
+
+#: yourwords/templates/yourwords/add.html:117
+#: yourwords/templates/yourwords/index.html:56
+#: yourwords/templates/yourwords/set_repeat.html:103 yourwords/views.py:82
+msgid "Trudny"
+msgstr "Difficult"
+
+#: yourwords/templates/yourwords/add.html:123
+msgid "Dodaj"
+msgstr "Add"
+
+#: yourwords/templates/yourwords/add.html:126
+msgid "Edytuj"
+msgstr "Edit"
+
+#: yourwords/templates/yourwords/add.html:141
+msgid "Usuń"
+msgstr "Delete"
+
+#: yourwords/templates/yourwords/base.html:12
+#: yourwords/templates/yourwords/base.html:233
+msgid "Twoje Słówka Online"
+msgstr "Your Words Online"
+
+#: yourwords/templates/yourwords/base.html:12
+msgid "Podręczna baza słówek języka obcego dla każdego"
+msgstr "Handy vocabulary basics of a foreign language for everyone"
+
+#: yourwords/templates/yourwords/base.html:13
+#: yourwords/templates/yourwords/base.html:232
+msgid ""
+"Aplikacja do nauki słówek języka obcego online. Angielski, niemiecki, "
+"hiszpański czy rosyjski zawsze pod ręką. Całkowicie za darmo. Bez reklam."
+msgstr ""
+"Application for learning foreign words online. English, German, Spanish or "
+"Russian always on hand. Completely free. Without ads."
+
+#: yourwords/templates/yourwords/base.html:88
+msgid "TAK"
+msgstr "YES"
+
+#: yourwords/templates/yourwords/base.html:89
+msgid "Anuluj"
+msgstr "Cancel"
+
+#: yourwords/templates/yourwords/base.html:114
+msgid "Oceń trudność"
+msgstr "Rate difficulty"
+
+#: yourwords/templates/yourwords/base.html:120
+msgid "szukaj"
+msgstr "search"
+
+#: yourwords/templates/yourwords/base.html:127
+msgid "Wyszukaj słówko"
+msgstr "Search for words"
+
+#: yourwords/templates/yourwords/base.html:133
+msgid "LOSOWO"
+msgstr "RANDOMLY"
+
+#: yourwords/templates/yourwords/base.html:134
+msgid "DATA WPROWADZENIA MALEJĄCO"
+msgstr "BY DATE DESCENDING"
+
+#: yourwords/templates/yourwords/base.html:136
+msgid "TWOJE WŁASNE LISTY"
+msgstr "YOUR OWN LISTS"
+
+#: yourwords/templates/yourwords/base.html:141
+msgid "Widoki list"
+msgstr "Lists views"
+
+#: yourwords/templates/yourwords/base.html:149
+msgid "DODAJ NOWE SŁÓWKO"
+msgstr "ADD A NEW WORD"
+
+#: yourwords/templates/yourwords/base.html:150
+msgid "POWTÓRZ SŁÓWKA"
+msgstr "REPEAT WORDS"
+
+#: yourwords/templates/yourwords/base.html:154
+msgid "Działania"
+msgstr "Actions"
+
+#: yourwords/templates/yourwords/base.html:162
+msgid "ZALOGUJ SIĘ"
+msgstr "SIGN IN"
+
+#: yourwords/templates/yourwords/base.html:165
+msgid "WYLOGUJ SIĘ"
+msgstr "LOGOUT"
+
+#: yourwords/templates/yourwords/base.html:167
+msgid "UTWÓRZ NOWE HASŁO"
+msgstr "CREATE A NEW PASSWORD"
+
+#: yourwords/templates/yourwords/base.html:171
+msgid "TWOJE KONTO"
+msgstr "YOUR ACCOUNT"
+
+#: yourwords/templates/yourwords/base.html:173
+msgid "ZMIEŃ JĘZYK"
+msgstr "CHANGE LANGUAGE"
+
+#: yourwords/templates/yourwords/base.html:175
+msgid "TŁUMACZENIA"
+msgstr "TRANSLATIONS"
+
+#: yourwords/templates/yourwords/base.html:178
+msgid "OPCJE APLIKACJI"
+msgstr "APPLICATION OPTIONS"
+
+#: yourwords/templates/yourwords/base.html:180
+msgid "USTAWIENIA APLIKACJI"
+msgstr "APPLICATION SETTINGS"
+
+#: yourwords/templates/yourwords/base.html:181
+msgid "WYŚLIJ WIADOMOŚĆ"
+msgstr "SEND A MESSAGE"
+
+#: yourwords/templates/yourwords/base.html:182
+msgid "O APLIKACJI"
+msgstr "ABOUT AN APPLICATION"
+
+#: yourwords/templates/yourwords/base.html:183
+msgid "WRÓĆ DO STRONY GŁÓWNEJ"
+msgstr "BACK TO HOME"
+
+#: yourwords/templates/yourwords/base.html:200
+msgid "Menu główne"
+msgstr "Main menu"
+
+#: yourwords/templates/yourwords/base.html:244
+msgid ""
+"Serwis wykorzystuje cookies. Korzystając ze strony, wyrażasz zgodę na ich "
+"wykorzystywanie"
+msgstr "The service uses cookies. By using the site, you consent to their use"
+
+#: yourwords/templates/yourwords/base.html:244
+msgid "Dowiedz się więcej"
+msgstr "Learn more"
+
+#: yourwords/templates/yourwords/contact.html:9
+#: yourwords/templates/yourwords/contact.html:43
+msgid "Wyślij wiadomość"
+msgstr "Send a message"
+
+#: yourwords/templates/yourwords/contact.html:18
+msgid "Twoje imię"
+msgstr "Your name"
+
+#: yourwords/templates/yourwords/contact.html:25
+msgid "Twój e-mail"
+msgstr "Your email"
+
+#: yourwords/templates/yourwords/contact.html:32
+msgid "Twoja wiadomość"
+msgstr "Your message"
+
+#: yourwords/templates/yourwords/index.html:48
+msgid "Oznacz poziom trudności słówka"
+msgstr "Mark word's difficulty level"
+
+#: yourwords/templates/yourwords/index.html:70
+msgid "Losuj słówko polskie"
+msgstr "Draw a Polish word"
+
+#: yourwords/templates/yourwords/index.html:75
+msgid "Losuj słówko języka obcego"
+msgstr "Draw a foreign language word"
+
+#: yourwords/templates/yourwords/js/scripts.html:121 yourwords/views.py:179
+msgid "Nie podano frazy wyszukiwania."
+msgstr "No search terms entered."
+
+#: yourwords/templates/yourwords/js/scripts.html:132
+msgid "Czy na pewno chcesz usunąć wybrany rekord?"
+msgstr "Are you sure you want to delete the selected record?"
+
+#: yourwords/templates/yourwords/js/scripts.html:137
+msgid "Powtórz słówka z wybranej listy"
+msgstr "Repeat words from your own list."
+
+#: yourwords/templates/yourwords/js/scripts.html:165
+msgid "Wprowadzona wartość musi być liczbą w zakresie"
+msgstr "The value entered must be a number in the range"
+
+#: yourwords/templates/yourwords/js/scripts.html:190
+msgid "Wprowadź ustawienia użytkownika"
+msgstr "Enter user settings"
+
+#: yourwords/templates/yourwords/js/scripts.html:195
+msgid "Wybierz język interfejsu"
+msgstr "Select interface language"
+
+#: yourwords/templates/yourwords/set_repeat.html:9
+msgid "Ustaw zakres powtórki słówek"
+msgstr "Set the range of word repeat"
+
+#: yourwords/templates/yourwords/set_repeat.html:18
+msgid "Wybierz słówka wprowadzone"
+msgstr "Choose words entered"
+
+#: yourwords/templates/yourwords/set_repeat.html:22
+msgid "dziś oraz wczoraj"
+msgstr "today and yesterday"
+
+#: yourwords/templates/yourwords/set_repeat.html:26 yourwords/views.py:51
+msgid "tydzień temu"
+msgstr "week ago"
+
+#: yourwords/templates/yourwords/set_repeat.html:30 yourwords/views.py:53
+msgid "miesiąc temu"
+msgstr "month ago"
+
+#: yourwords/templates/yourwords/set_repeat.html:34 yourwords/views.py:55
+msgid "miesiące temu"
+msgstr "months ago"
+
+#: yourwords/templates/yourwords/set_repeat.html:38 yourwords/views.py:57
+msgid "miesięcy temu"
+msgstr "months ago"
+
+#: yourwords/templates/yourwords/set_repeat.html:42 yourwords/views.py:59
+msgid "rok temu"
+msgstr "year ago"
+
+#: yourwords/templates/yourwords/set_repeat.html:46
+msgid "Zaznacz, aby wprowadzić liczbę dni ręcznie"
+msgstr "Tick to enter the number of days manually"
+
+#: yourwords/templates/yourwords/set_repeat.html:51
+#: yourwords/templates/yourwords/set_repeat.html:73
+#: yourwords/templates/yourwords/set_repeat.html:106
+msgid "Pokaż"
+msgstr "Display"
+
+#: yourwords/templates/yourwords/set_repeat.html:63
+msgid "Zaznacz okres, z którego chcesz wyświetlić słówka."
+msgstr "Select the period from which you want to display the word."
+
+#: yourwords/templates/yourwords/set_repeat.html:65
+#: yourwords/templates/yourwords/set_repeat.html:87
+msgid "Wszystkie słówka"
+msgstr "All words"
+
+#: yourwords/templates/yourwords/set_repeat.html:66
+msgid "dzień"
+msgstr "day"
+
+#: yourwords/templates/yourwords/set_repeat.html:67
+#: yourwords/templates/yourwords/set_repeat.html:68
+#: yourwords/templates/yourwords/set_repeat.html:69
+#: yourwords/templates/yourwords/set_repeat.html:70
+#: yourwords/templates/yourwords/set_repeat.html:71 yourwords/views.py:70
+msgid "dni"
+msgstr "days"
+
+#: yourwords/templates/yourwords/set_repeat.html:85
+msgid ""
+"Zaznacz liczbę słówek, które chcesz powtórzyć, uwzględniając poziom "
+"trudności."
+msgstr ""
+"Mark the number of words you want to repeat, taking into account the "
+"difficulty level."
+
+#: yourwords/templates/yourwords/set_repeat.html:94
+msgid "Wszystkie"
+msgstr "All"
+
+#: yourwords/templates/yourwords/wordlist.html:24
+#: yourwords/templates/yourwords/wordlist.html:74
+msgid "Powtórz zaznaczone słówka"
+msgstr "Repeat the marked words"
+
+#: yourwords/templates/yourwords/wordlist.html:34 yourwords/views.py:250
+msgid "Edytuj słówko"
+msgstr "Edit the word"
+
+#: yourwords/views.py:41
+msgid "Losowanie spośród wszystkich słówek o poziomie trudności"
+msgstr "Draw of all vocabulary words of difficulty"
+
+#: yourwords/views.py:49
+msgid "Losowanie spośród słówek wprowadzonych w ciągu ostatniego dnia"
+msgstr "Draw from words introduced in the last day"
+
+#: yourwords/views.py:51 yourwords/views.py:53 yourwords/views.py:55
+#: yourwords/views.py:57 yourwords/views.py:59 yourwords/views.py:62
+msgid "Losowanie spośród słówek wprowadzonych"
+msgstr "Draw from words introduced"
+
+#: yourwords/views.py:62
+msgid "dni temu"
+msgstr "days ago"
+
+#: yourwords/views.py:67
+msgid " Słówek"
+msgstr "Words"
+
+#: yourwords/views.py:70
+msgid "Losowanie spośród słówek wprowadzonych w okresie ostatnich"
+msgstr "Draw from words introduced in the last"
+
+#: yourwords/views.py:73 yourwords/views.py:93 yourwords/views.py:102
+#: yourwords/views.py:122
+msgid "Słówek"
+msgstr "Words"
+
+#: yourwords/views.py:89 yourwords/views.py:98
+msgid "Losowanie spośród słówek w liczbie"
+msgstr "Draw from number words"
+
+#: yourwords/views.py:93 yourwords/views.py:102
+msgid "Losowanie spośród słówek o poziomie trudności"
+msgstr "Draw from words on the difficulty level"
+
+#: yourwords/views.py:108
+msgid "Losowanie sposród zaznaczonych słówek w liczbie"
+msgstr "Draw of selected words in the number"
+
+#: yourwords/views.py:122
+msgid "Losowanie spośród słówek własnej listy."
+msgstr "Draw from the words of your own list."
+
+#: yourwords/views.py:131
+msgid ""
+"Brak słówek spełniających wybrane kryteria. Spróbuj jeszcze raz. A może "
+"jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!"
+msgstr ""
+"No words match the selected criteria. Try again. Or are you a new user? "
+"Complete your own vocabulary base!"
+
+#: yourwords/views.py:144
+#| msgid "kolejność wg daty malejąco"
+msgid "Lista słówek w kolejności wg daty wprowadzenia malejąco."
+msgstr "Words list in order by date descending."
+
+#: yourwords/views.py:147
+msgid "Lista słówek w kolejności losowej."
+msgstr "Words list in random order."
+
+#: yourwords/views.py:151
+msgid "Brak słówek w bazie danych."
+msgstr "No words in the database."
+
+#: yourwords/views.py:158
+msgid "Lista słówek"
+msgstr "Wordlist"
+
+#: yourwords/views.py:194
+msgid "Nie znaleziono rekordów dla frazy"
+msgstr "No records were found for the phrase"
+
+#: yourwords/views.py:197
+msgid "Wyniki wyszukiwania dla frazy"
+msgstr "Search results for phrase"
+
+#: yourwords/views.py:197
+msgid "Liczba znalezionych rekordów"
+msgstr "Number of records found"
+
+#: yourwords/views.py:200
+msgid "Wyniki wyszukiwania"
+msgstr "Searching results"
+
+#: yourwords/views.py:225
+msgid "Dodaj słówko"
+msgstr "Add a new word"
+
+#: yourwords/views.py:236 yourwords/views.py:266
+msgid "Nie masz uprawnień do żądanej strony."
+msgstr "You do not have permission to the requested page."
+
+#: yourwords/views.py:245
+msgid "Wybrany rekord został zedytowany."
+msgstr "The selected record has been edited."
+
+#: yourwords/views.py:270
+msgid "Wybrany rekord został usunięty."
+msgstr "The selected record has been deleted."
+
+#: yourwords/views.py:273
+msgid ""
+"Przepraszamy, wystąpił błąd. Wybrany rekord nie został usunięty. Spróbuj "
+"później."
+msgstr ""
+"Sorry, an error occurred. The selected record has not been deleted. Please "
+"try later."
+
+#: yourwords/views.py:293
+msgid "Ustaw zakres powtórki"
+msgstr "Set repeat range"
+
+#: yourwords/views.py:309
+msgid "[[yourwords]] Wiadomość od użytkownika "
+msgstr "[[yourwords]] Message from the user"
+
+#: yourwords/views.py:328
+msgid "Dziękuję, wiadomość została wysłana."
+msgstr "Thank you, the message has been sent."
+
+#: yourwords/views.py:331
+msgid "Wystąpił błąd - wiadomość w tej chwili nie może zostać wysłana."
+msgstr "Error occurred - message can not be sent at this time."
+
+#: yourwords/views.py:337
+msgid "Napisz do nas"
+msgstr "Write us"
+
+#: yourwords/views.py:352
+msgid "O aplikacji"
+msgstr "About an application"
+
+#: yourwords/views.py:358
+msgid "Polityka cookies"
+msgstr "Cookies policy"
+
+#~ msgid "wszystkie rekordy"
+#~ msgstr "all records"
+
+#~ msgid "kolejność losowa"
+#~ msgstr "Random order"
+
+#~ msgid ""
+#~ "Losowanie spośród wszystkich słówek o poziomie trudności <span "
+#~ "class=\"w3-tag w3-black w3-border w3-border-light-grey w3-round\">"
+#~ msgstr ""
+#~ "Draw of all vocabulary words of difficulty <span class=\"w3-tag w3-black "
+#~ "w3-border w3-border-light-grey w3-round\">"
+
+#~ msgid "Nowe hasło (powtórz)"
+#~ msgstr "New password - confirm"
+
+#~ msgid "nowe hasło"
+#~ msgstr "New password"
+
+#~ msgid "nowe hasło (powtórz)"
+#~ msgstr "New password - confirm"
+
+#~ msgid ""
+#~ "\n"
+#~ "<p>Chciałbyś uczyć się słówek skutecznie? Dzięki tej poręcznej aplikacji do nauki słówek języka obcego (angielskiego, niemieckiego, hiszpańskiego, rosyjskiego i innych) będzie to możliwe. Pamiętaj, że podstawą nauki słówek języka obcego jest powtarzanie. Z pewnością używałeś fiszek. Ile razy jednak o nich zapominałeś? Nie trzeba więc przypominać o wygodzie rozwiązania, jakim jest podręczna aplikacja Twoje Słówka Online, o której z pewnością nie zapomnisz, wychodząc rano do szkoły czy pracy. Bo jak często zapominasz o swoim smartfonie z dostępem do Internetu? ;) Tak, wystarczy tylko smartfon i połączenie z Internetem. I oczywiście Twoje chęci! :)</p>\n"
+#~ msgstr ""
+#~ "\n"
+#~ "<p>Do you want to learn words efficiently? Dzięki tej poręcznej aplikacji do nauki słówek języka obcego (angielskiego, niemieckiego, hiszpańskiego, rosyjskiego i innych) będzie to możliwe. Pamiętaj, że podstawą nauki słówek języka obcego jest powtarzanie. Z pewnością używałeś fiszek. Ile razy jednak o nich zapominałeś? Nie trzeba więc przypominać o wygodzie rozwiązania, jakim jest podręczna aplikacja Twoje Słówka Online, o której z pewnością nie zapomnisz, wychodząc rano do szkoły czy pracy. Bo jak często zapominasz o swoim smartfonie z dostępem do Internetu? ;) Tak, wystarczy tylko smartfon i połączenie z Internetem. I oczywiście Twoje chęci! :)</p>\n"
+
+#~ msgid "Język"
+#~ msgstr "Language"

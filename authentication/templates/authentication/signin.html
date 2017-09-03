@@ -1,0 +1,57 @@
+
+{% extends 'yourwords/base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="w3-row">
+	<div class="w3-rest">
+		<h2 class="form_header">{% trans 'Zaloguj się' %}</h2>
+	</div>
+</div>
+
+<div class="w3-row">
+	<div class="w3-rest">
+	
+	<form method="POST" action="{% url 'authentication:signin' %}" class="authentication_form">
+	{% csrf_token %}
+		{% for field in form %}
+				<label class="w3-label w3-text-blue">{{ field.label }}</label>
+				{% for error in field.errors %}
+					<span class="w3-small w3-text-red error">{{ error }}</span>
+				{% endfor %}
+				{{ field }}
+		{% endfor %}
+
+		<button type="submit" class="w3-btn w3-medium w3-blue w3-hover-white">{% trans 'Zaloguj się' %}</button>
+		<button type="reset" class="w3-btn w3-medium w3-light-grey w3-hover-white reset_button">{% trans 'Wyczyść' %}</button>
+	</form>
+
+
+
+
+</div>
+</div>
+
+<div class="w3-row">
+	<div class="w3-rest">
+		<p class="w3-small">{% trans 'Nie masz konta i chcesz w pełni korzystać z aplikacji?' %} <span class="w3-text-blue w3-medium"><a href="{% url 'authentication:signup' %}">{% trans 'Zarejestruj się!' %}</a></span></p>
+	</div>
+</div>
+
+<div class="w3-row">
+	<div class="w3-rest">
+		<p class="w3-small">{% trans 'Nie pamiętasz hasła?' %} <span class="w3-text-blue w3-medium"><a href="{% url 'authentication:password_reset' %}">{% trans 'Utwórz nowe' %}</a>.</span></p>
+	</div>
+</div>
+
+<div class="w3-row">
+		<a class="fb_link" href="{% url 'social:begin' 'facebook' %}"><div class="w3-indigo w3-center w3-padding-large w3-btn w3-block w3-hover-white w3-margin-top">{% trans 'Zaloguj się za pomocą konta' %} Facebook</div></a>
+</div>
+
+
+
+
+
+{% endblock content %}

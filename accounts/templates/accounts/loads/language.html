@@ -1,0 +1,18 @@
+{% load i18n %}
+{% get_current_language as LANGUAGE_CODE %}
+{% get_available_languages as LANGUAGES %}
+{% get_language_info_list for LANGUAGES as languages %}
+<section id="language">
+<table class="w3-table w3-bordered w3-text-teal">
+	<tr>
+	{% for language in languages %}
+		<td>
+			{# {% if language.code != LANGUAGE_CODE %}<i class="material-icons">done</i>{% endif %} #}
+			<a href="/{{ language.code }}/">{{ language.name_local|upper }}</a>
+		</td>
+	{% endfor %}
+	</tr>
+</table>
+
+
+</section>

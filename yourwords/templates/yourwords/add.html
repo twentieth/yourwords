@@ -1,0 +1,182 @@
+{% extends 'yourwords/base.html' %}
+{% load i18n %}
+{% load staticfiles %}
+
+{% block content %}
+{% if user.is_authenticated %}
+
+<script>
+	$(function() {
+		//dodanie nowego rekordu do bazy ze słówkami
+		$("#add_record").on('submit', function(e) { 
+			e.preventDefault()
+			$('.errors').hide()
+
+			var polish = $('#input_polish').val().toUpperCase()
+			var english = $('#input_english').val().toLowerCase()
+			var sentence = $('#input_sentence').val()
+
+			$.ajax({
+				type: "POST",
+				url: "{% url 'yourwords:add' %}",
+				dataType: "json",
+				data: {
+					polish: polish,
+					english: english,
+					sentence: sentence
+				}
+				}).done(function(data)
+				{
+					if(data.clean_form == 1)
+					{
+						$('#input_polish').val('');
+						$('#input_english').val('');
+						$('#input_sentence').val('');
+						$('.message_frame').hide();
+						showAndHideModal('info', '{% trans "Rekord został dodany. Rekordów w bazie" %}: <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + data.records_count + '</span>')
+					}
+					if (data.clean_form == 0) {
+						var errors = JSON.parse(data.errors)
+						$.each(errors, function(k, v) {
+							if (k == 'polish') {
+								for (i = 0; i < v.length; i++) {
+									$('label[for="input_polish"]').after(' <span class="w3-medium w3-text-red errors">' + v[i].message + '</span>')
+								}
+							}
+							if (k == 'english') {
+								for (i = 0; i < v.length; i++) {
+									$('label[for="input_english"]').after(' <span class="w3-medium w3-text-red errors">' + v[i].message + '</span>')
+								}
+							}
+							if (k == 'sentence') {
+								for (i = 0; i < v.length; i++) {
+									$('label[for="input_sentence"]').after(' <span class="w3-medium w3-text-red errors">' + v[i].message + '</span>')
+								}
+							}
+						})
+					}
+				}).fail(function() {
+					 showAndHideModal('error', '{% trans "Przepraszamy, wystąpił błąd. Problem z odebraniem danych z serwera." %}');
+				});
+				$('button[type="reset"]').on('click', function(){
+					$('.message_frame').fadeOut(200)
+				})
+		});
+	})
+</script>
+
+<div class="w3-row">
+	<div class="w3-rest">
+		{% if edit %}
+			<h2>{% trans 'Edytuj wybrany rekord' %}</h2>
+		{% else %}
+			<h2>{% trans 'Dodaj nowy rekord' %}</h2>
+		{% endif %}
+	</div>
+</div>
+
+<div class="w3-row">
+	<div class="w3-rest">
+	
+		{% if not edit %}
+			<form action="{% url 'yourwords:add' %}" method="POST" id="add_record">
+		{% endif %}
+		{% if edit %}
+			<form action="{% url 'yourwords:edit' record_id=id %}" method="POST" id="edit_record">
+		{% endif %}
+			{% csrf_token %}
+				
+				<label for="input_polish" class="w3-label w3-text-blue">{% trans 'Słówko polskie' %}</label>
+				{% if form.polish.errors %}
+    				{% for error in form.polish.errors %}
+        				<span class="w3-small w3-text-red errors" style="">{{ error|escape }} </span>
+    				{% endfor %}
+				{% endif %}
+				{{ form.polish }}
+
+				<label for="input_english" class="w3-label w3-text-blue">{% trans 'Słówko języka obcego' %}</label>
+				{% if form.english.errors %}
+    				{% for error in form.english.errors %}
+        				<span class="w3-small w3-text-red errors" style="">{{ error|escape }} </span>
+    				{% endfor %}
+				{% endif %}
+				{{ form.english }}
+
+				<label for="input_sentence" class="w3-label w3-text-blue">{% trans 'Zdanie' %}</label>
+				{% if form.sentence.errors %}
+    				{% for error in form.sentence.errors %}
+        				<span class="w3-small w3-text-red errors" style="">{{ error|escape }} </span>
+    				{% endfor %}
+				{% endif %}
+				{{ form.sentence }}
+				{% if edit %}
+					<label class="w3-validate w3-text-blue" for="__1">{% trans 'Łatwy' %}</label>
+					<input type="radio" name="rating" id="__1" value="1" class="w3-radio" {% if rating == '1' %}checked{% endif %}>
+					<label class="w3-validate w3-text-blue" for="__2">{% trans 'Średni' %}</label>
+					<input type="radio" name="rating" id="__2" value="2" class="w3-radio" {% if rating == '2' %}checked{% endif %}>
+					<label class="w3-validate w3-text-blue" for="__3">{% trans 'Trudny' %}</label>
+					<input type="radio" name="rating" id="__3" value="3" class="w3-radio" {% if rating == '3' %}checked{% endif %}>
+ 					<br>
+ 					<br>
+				{% endif %}
+				{% if not edit %}
+					<button type="submit" class="w3-btn w3-medium w3-blue w3-hover-white submit-btn-ang">{% trans 'Dodaj' %}</button>
+				{% endif %}
+				{% if edit %}
+					<button type="submit" class="w3-btn w3-medium w3-blue w3-hover-white submit-btn-ang">{% trans 'Edytuj' %}</button>
+				{% endif %}
+				<button type="reset" class="w3-btn w3-medium w3-light-grey w3-hover-white" id="reset-btn">{% trans 'Wyczyść' %}</button>
+			</form>
+		{% if edit %}
+		
+			{% for x in '123' %}
+				<div class="w3-row gap">
+					<div class="w3-rest"></div>
+				</div>
+			{% endfor %}
+
+			<form action="{% url 'yourwords:delete' %}" method="POST" id="delete_record">
+				{% csrf_token %}
+				<input type="text" name="delete_record" value="{{ id }}" class="w3-input w3-border" style="display:none;">
+				<button type="submit" class="w3-btn w3-red w3-hover-white" id="submit-btn-delete">{% trans 'Usuń' %}</button>
+			</form>
+		{% endif %}
+		
+	
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% else %}
+	<div class="w3-row">
+		<div class="w3-rest">
+		<h2 class="w3-container w3-center">Niestety nie posiadasz uprawnień do tej strony.</h2>
+		</div>
+	</div>
+	<div class="w3-row">
+		<div class="w3-rest">
+			<ul class="w3-center w3-ul">
+				<li><a href="{% url 'yourwords:login' %}">Zaloguj się jako administrator</a>, by  móc ją oglądać.</li>
+				<li>Lub <a href="{% url 'yourwords:index' %}">przejdź do strony głównej</a>.</li>
+			</ul>
+		</div>
+	</div>
+
+{% endif %}
+
+
+{% endblock content %}

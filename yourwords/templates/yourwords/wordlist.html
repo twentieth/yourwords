@@ -1,0 +1,85 @@
+{% extends 'yourwords/base.html' %}
+{% load i18n %}
+{% block content %}
+
+<div class="wordlist_frame">
+
+{% if record_list %}
+	{% include 'yourwords/wordlist_pagination.html' %}
+{% endif %}
+
+<div class="w3-row gap">
+	<div class="w3-rest"></div>
+</div>
+
+
+{% if record_list %}
+	<form method="POST" action="{% url 'yourwords:index' %}" id="repeat-checked">
+	{% csrf_token %}
+	<div class="w3-row">
+			<div class="w3-col" style="width:40px;height:1px;visibility:hidden;">
+			<div></div>
+		</div>
+			<div class="w3-rest">
+				<input type="submit" class="w3-red w3-text-light-grey w3-card-2 repeat-check-btn" value="{% trans 'Powtórz zaznaczone słówka' %}">
+			</div>
+		</div>
+	{% for raw in record_list %}
+
+	<div class="w3-row">
+		<div class="w3-col" style="width:40px;">
+			<input class="w3-check repeat-check" type="checkbox" name="repeat-checked" value="{{ raw.id }}">
+			{% if user.is_authenticated %}
+				<div class="w3-center w3-light-grey w3-text-grey edit">
+					<a href="{% url 'yourwords:edit' record_id=raw.id %}" title="{% trans 'Edytuj słówko' %}"><i class="material-icons">edit</i></a>
+				</div>
+			{% endif %}
+
+		</div>
+	<div class="w3-rest">
+
+
+	<div class="w3-row">
+		<div class="w3-half">
+				<div class="w3-card-2 w3-green w3-text-light-grey w3-center read_polish">
+					{{ raw.polish }}
+				</div>
+		</div>
+		<div class="w3-half">
+				<div class="w3-card-2 w3-orange w3-text-light-grey w3-center read_english">
+					{{ raw.english }}
+				</div>
+		</div>
+	</div>
+	<div class="w3-row">
+		{% if raw.sentence != '' %}
+				<div class="w3-card-2 w3-teal w3-text-light-grey w3-center read_sentence">
+					{{ raw.sentence }}
+				</div>
+			
+		{% endif %}
+		
+
+	</div>
+
+	</div>
+	</div>
+
+		{% endfor %}
+		<div class="w3-row">
+			<div class="w3-col" style="width:40px;height:1px;visibility:hidden;">
+			<div></div>
+		</div>
+			<div class="w3-rest">
+				<input type="submit" class="w3-red w3-card-2 w3-center repeat-check-btn" value="{% trans 'Powtórz zaznaczone słówka' %}">
+			</div>
+		</div>
+	</form>
+{% endif %}
+
+{% if record_list %}
+	{% include 'yourwords/wordlist_pagination.html' %}
+{% endif %}
+
+</div>
+{% endblock content %}

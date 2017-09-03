@@ -1,0 +1,34 @@
+
+{% if user.is_authenticated %}
+
+<div class="w3-row">
+  <div class="w3-rest">
+
+{% if listings %}
+	<form action="{% url 'yourwords:index' %}" method="POST" id="listings">
+	{% csrf_token %}
+	<table class="w3-table w3-bordered w3-text-teal">
+	{% for listing in listings %}
+		<tr>
+		<td>
+		<input type="radio" name="listing" id="listing_{{ listing.id }}" value="{{ listing.id }}" class="w3-radio" {% if forloop.first %}checked{% endif %}>
+		</td>
+		<td>
+		<label for="listing_{{ listing.id }}">{{ listing.created_at }}</label>
+		</td>
+		</tr>
+	{% endfor %}
+	</table>
+	<br>
+	<button type="submit" class="w3-btn w3-teal">Pokaż</button>
+	</form>
+{% else %}
+		<div class="w3-row">
+			Brak utworzonych list.
+		</div>
+{% endif %}
+</div>
+</div>
+
+
+{% endif %}
