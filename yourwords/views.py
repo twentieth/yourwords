@@ -6,7 +6,8 @@ from .models import English
 from .models import Listing
 from .services import user_has_option, set_pagination, queryset_to_json_like
 from .forms import AddRecordForm, ContactForm, SearchForm
-import datetime, json
+import datetime
+import json
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
@@ -15,119 +16,29 @@ from django.core.mail import send_mail
 from django.utils.translation import ugettext as _
 from django.db.models import Q
 from django.core.cache import cache
+from.code.draw_factory import DrawFactory
 
 
 @csrf_exempt
 def index(request):
-    if not request.method == 'POST' or request.POST.get('days_before') == '-1' or request.POST.get('number_words') == '-1' or 'repeat-checked' not in request.POST or 'main_repeat' not in request.POST:
-        if 'rating' in request.POST and request.POST.get('rating') != '0':
-            rating = request.POST.get('rating')
-            if rating == '1':
-                rating_word = 'Łatwy'
-            elif rating == '2':
-                rating_word = 'Średni'
-            elif rating == '3':
-                rating_word = 'Trudny'
-            record_ids = English.users.where_user(request.user).filter(rating=rating).values_list('id', flat=True)
-            record_count = len(record_ids)
-            message_text = _('Losowanie spośród wszystkich słówek o poziomie trudności') + ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + rating_word + '</span> Słówek: <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + str(record_count) + '</span>'
-        else:
-            record_ids = English.users.where_user(request.user).values_list('id', flat=True)
-            record_count = len(record_ids)
-            message_text = None
-    if request.method == 'POST' and ('main_repeat' in request.POST or 'main_repeat_manually' in request.POST):
-        main_repeat = request.POST.get('main_repeat')
-        if main_repeat == '1':
-            message_text = _('Losowanie spośród słówek wprowadzonych w ciągu ostatniego dnia')
-        elif main_repeat == '7':
-            message_text = _('Losowanie spośród słówek wprowadzonych') + ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">1 ' + ' ' + _('tydzień temu') + '</span>'
-        elif main_repeat == '30':
-            message_text = _('Losowanie spośród słówek wprowadzonych') + ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">1 ' + ' ' + _('miesiąc temu') + '</span>'
-        elif main_repeat == '90':
-            message_text = _('Losowanie spośród słówek wprowadzonych') + ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">3 ' + ' ' + _('miesiące temu') + '</span>'
-        elif main_repeat == '180':
-            message_text = _('Losowanie spośród słówek wprowadzonych') + ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">6 ' + ' ' + _('miesięcy temu') + '</span>'
-        elif main_repeat == '365':
-            message_text = _('Losowanie spośród słówek wprowadzonych') + ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round"> ' + _('rok temu') + '</span>'
-        else:
-            main_repeat = request.POST.get('main_repeat_manually')
-            message_text = _('Losowanie spośród słówek wprowadzonych') + '<span class="w3-tag w3-black w3-border w3-border-light-grey w3-round"> ' + main_repeat + ' ' + _('dni temu') + '</span>'
-        i = int(main_repeat) - 1
-        i_plus = int(main_repeat) + 1
-        record_ids = English.users.where_user(request.user).filter(created_at__gte=timezone.now()-datetime.timedelta(days=i_plus), created_at__lte=timezone.now()-datetime.timedelta(days=i)).values_list('id', flat=True)
-        record_count = len(record_ids)
-        message_text += _(' Słówek') + ': <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + str(record_count) + '</span>'
-    if request.method == 'POST' and request.POST.get('days_before') != '-1' and 'days_before' in request.POST:
-        days_before = int(request.POST.get('days_before'))
-        message_text = _('Losowanie spośród słówek wprowadzonych w okresie ostatnich') + '<span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + str(days_before) + '</span> ' + _('dni') + '.'
-        record_ids = English.users.where_user(request.user).filter(created_at__gte=timezone.now()-datetime.timedelta(days=days_before)).values_list('id', flat=True)
-        record_count = len(record_ids)
-        message_text += ' ' + _('Słówek') + ': <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + str(record_count) + '</span>'
-    if request.method == 'POST' and request.POST.get('number_words') != '-1' and 'number_words' in request.POST:
-        number_words = int(request.POST.get('number_words'))
-        rating = request.POST.get('rating')
-        if rating == '0' or rating =='1':
-            rating_word = _('Łatwy')
-        if rating == '2':
-            rating_word = _('Średni')
-        if rating == '3':
-            rating_word = _('Trudny')
-        record_ids = English.users.where_user(request.user).values_list('id', flat=True)
-        record_count = len(record_ids)
-        if number_words >= record_count:
-            if rating == '0':
-                record_ids = English.users.where_user(request.user).values_list('id', flat=True)
-                record_count = len(record_ids)
-                message_text = _('Losowanie spośród słówek w liczbie') + ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + str(number_words) + '</span>'
-            else:
-                record_ids = English.users.where_user(request.user).filter(rating=rating).values_list('id', flat=True)
-                record_count = len(record_ids)
-                message_text = _('Losowanie spośród słówek o poziomie trudności') + '<span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + rating_word + '</span> ' + _('Słówek') + ': <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + str(len(record_ids)) + '</span>'
-        else:
-            if rating == '0':
-                record_ids = English.users.where_user(request.user).values_list('id', flat=True).order_by('?')[:number_words]
-                record_count = len(record_ids)
-                message_text = _('Losowanie spośród słówek w liczbie') + ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + str(number_words) + '</span>'
-            else:
-                record_ids = English.users.where_user(request.user).values_list('id', flat=True).filter(rating=rating).order_by('?')[:number_words]
-                record_count = len(record_ids)
-                message_text = _('Losowanie spośród słówek o poziomie trudności') + ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + rating_word + '</span> ' + _('Słówek') + ': <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + str(len(record_ids)) + '</span>'
+    collection_manager = DrawFactory.get_collection_manager(request)
+    record_list = collection_manager.get_collection()
+    record_count = len(record_list)
+    message_text = collection_manager.get_message()
 
-    if request.method == 'POST' and 'repeat-checked' in request.POST:
-        if len(request.POST.getlist('repeat-checked')) > 0:
-            record_ids = request.POST.getlist('repeat-checked')
-            record_count = len(record_ids)
-            message_text = _('Losowanie sposród zaznaczonych słówek w liczbie') + ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + str(record_count) + '</span>'
-            if request.user.is_authenticated():
-                listing = Listing()
-                listing.user = request.user
-                listing.listing = json.dumps(record_ids)
-                listing.save()
-                howMany = Listing.users.where_user(request.user).count()
-                if howMany > 10:
-                    Listing.users.where_user(request.user).order_by('-created_at').last().delete()
-
-    if request.method == 'POST' and 'listing' in request.POST:
-        listing = Listing.users.where_user(request.user).get(id=int(request.POST.get('listing')))
-        record_ids = json.loads(listing.listing)
-        record_count = len(record_ids)
-        message_text = _('Losowanie spośród słówek własnej listy.') + ' ' + _('Słówek') + ': <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + str(record_count) + '</span>'
-
-    if record_count > 0:
-        record_list = English.users.where_user(request.user).filter(id__in=list(record_ids))
-        records_to_json = {
-            'record_count': record_count,
-            'record_list': queryset_to_json_like(record_list)
-        }
-
-        context = {
-            'records_data': records_to_json
-        }
-        if message_text:
-            messages.info(request, message_text, extra_tags='safe')
-    else:
-        messages.info(request, _('Brak słówek spełniających wybrane kryteria. Spróbuj jeszcze raz. A może jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!'))
+    if not record_count:
+        message_text = _('Brak słówek spełniających wybrane kryteria. Spróbuj jeszcze raz. A może jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!')
+        messages.info(request, message_text)
         return redirect('yourwords:set_repeat')
+
+    messages.info(request, message_text, extra_tags = 'safe')
+    records_to_json = {
+        'record_count': record_count,
+        'record_list': record_list
+    }
+    context = {
+        'records_data': records_to_json
+    }
 
     return render(request, 'yourwords/index.html', context)
 
@@ -137,6 +48,9 @@ def wordlist(request, kind = ''):
         ordering = '-created_at'
         message_text = _('Lista słówek w kolejności wg daty wprowadzenia malejąco.')
     elif kind == 'random':
+        ordering = '?'
+        message_text = _('Lista słówek w kolejności losowej.')
+    else:
         ordering = '?'
         message_text = _('Lista słówek w kolejności losowej.')
     record_list = English.users.where_user(request.user).order_by(ordering)

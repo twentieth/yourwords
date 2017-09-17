@@ -5,7 +5,7 @@ from django.utils import timezone
 class UserManager(models.Manager):
     def where_user(self, user):
         if user.is_authenticated():
-            user_id = user
+            user_id = user.id
         else:
             user_id = 1
         return super(UserManager, self).get_queryset().filter(user_id=user_id)
