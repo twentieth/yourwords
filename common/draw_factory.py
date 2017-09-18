@@ -157,9 +157,9 @@ class NumberWordsManager(CollectionManager):
 class RepeatCheckedManager(CollectionManager):
     def __init__(self, request):
         CollectionManager.__init__(self, request)
-        self.repeat_checked = self._request.POST.get('repeat-checked')
-        if len(self.repeat_checked) > 0:
-            self._records_ids = shuffle(self._request.POST.getlist('repeat-checked'))
+        self.__repeat_checked = self._request.POST.getlist('repeat-checked')
+        if len(self.__repeat_checked) > 0:
+            self._records_ids = self.__repeat_checked
             self._count = len(self._records_ids)
             self._message = _('Losowanie sposród zaznaczonych słówek w liczbie') + ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + str(self._count) + '</span>'
             if self._request.user.is_authenticated():
