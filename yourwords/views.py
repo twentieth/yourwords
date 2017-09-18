@@ -82,10 +82,10 @@ def search(request):
                 return render(request, 'yourwords/wordlist.html', {})
         searched_text = form.cleaned_data['searched_text']
         request.session['searched_text'] = searched_text
+        if 'searched_text' not in request.session:
+            messages.warning(request, _('Nie podano frazy wyszukiwania.'))
+            return render(request, 'yourwords/wordlist.html', {})
         if user_has_option(request.user, 'extended_searching'):
-            if 'searched_text' not in request.session:
-                messages.warning(request, _('Nie podano frazy wyszukiwania.'))
-                return render(request, 'yourwords/wordlist.html', {})
             searched_text = request.session.get('searched_text')
             where_clause = '(polish LIKE "%%' + searched_text.replace(' ', '%%" OR polish LIKE "%%') + '%%"'
             where_clause += ' OR english LIKE "%%' + searched_text.replace(' ', '%%" OR english LIKE "%%') + '%%"'
@@ -95,9 +95,12 @@ def search(request):
             query = 'SELECT id, polish, english, sentence from yourwords_english WHERE ' + where_clause
             record_list = list(English.objects.raw(query))
             record_count = len(record_list)
+        elif user_has_option(request.user, 'only_full_words_searching'):
+            record_list = English.users.where_user(request.user).filter(Q(polish__iregex = r"\b{}\b".format(searched_text)) | Q(english__iregex = r"\b{}\b".format(searched_text)) | Q(sentence__iregex = r"\b{}\b".format(searched_text)))
+            record_count = record_list.count()
         else:
             record_list = English.users.where_user(request.user).filter(Q(polish__icontains=searched_text) | Q(english__icontains=searched_text) | Q(sentence__icontains=searched_text))
-            record_count = len(record_list)
+            record_count = record_list.count()
         if record_count == 0:
             messages.info(request, _('Nie znaleziono rekordów dla frazy') + ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + searched_text + '</span>', extra_tags='safe')
             return render(request, 'yourwords/wordlist.html', {})

@@ -57,8 +57,8 @@ def queryset_to_json_like(queryset):
     for record in queryset:
         for key, value in record.items():
             if isinstance(value, datetime.datetime):
-                record[key] = str(value)
-            if value is None:
-                record[key] = 0
+                record[key] = value.strftime("%Y-%m-%d %H:%M:%S")
+            elif value is None:
+                record[key] = "0000-00-00 00:00:00"
         array.append(record)
     return array

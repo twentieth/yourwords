@@ -22,6 +22,8 @@ def option_settings(request):
             if form.is_valid():
                 instance = form.save(commit=False)
                 instance.user = request.user
+                if instance.only_full_words_searching:
+                    instance.extended_searching = False
                 instance.save()
                 response_data['success'] = 1
             else:
@@ -32,6 +34,8 @@ def option_settings(request):
             if form.is_valid():
                 instance = form.save(commit=False)
                 instance.user = request.user
+                if instance.only_full_words_searching:
+                    instance.extended_searching = False
                 instance.save()
                 messages.info(request, _('Ustawienia zostały zapisane.'))
             else:

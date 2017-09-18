@@ -30,6 +30,7 @@ class Profile(models.Model):
 class Option(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, primary_key=True)
     extended_searching = models.BooleanField(default=False)
+    only_full_words_searching = models.BooleanField(default=False)
 
     @receiver(post_save, sender=User)
     def create_user_option(sender, instance, created, **kwargs):

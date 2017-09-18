@@ -2,6 +2,10 @@
 <script>
 
 $(function() {
+    $('form').click(function(e) {
+        e.stopPropagation();
+    });
+
 	$('#option_settings_form input[type=checkbox]').addClass('w3-check')
 
   	$('#option_settings_form').submit(function(event) {
@@ -9,7 +13,7 @@ $(function() {
   		var data = {}
   		$('#option_settings_form input[type=checkbox]').each(function() {
   			data[this.name] = this.checked
-  		})
+  		});
   		$.ajax({
   			url: '{% url "accounts:option_settings" %}',
   			type: 'POST',
@@ -23,7 +27,15 @@ $(function() {
   			showAndHideModal('error', '{% trans "Wystąpił błąd. Ustawienia nie zostały zapisane." %}')
   		});
   	});
-	
+
+	excludeOption('id_only_full_words_searching', 'id_extended_searching');
+    
+    var labelOnlyFullWordsSearching = $('[for=id_only_full_words_searching]');
+    var labelExtendedSearching = $('[for=id_extended_searching]');
+    labelOnlyFullWordsSearching.append('<span class="i">{% trans "Aktywacja tej opcji wyłącza jednocześnie opcję wyszukiwania poprzez rozszerzony algorytm wyszukiwania." %}</span>');
+    labelExtendedSearching.append('<span class="i">{% trans "Aktywacja tej opcji wyłącza jednocześnie opcję wyszukiwania tylko całych słówek." %}</span>');
+    labelOnlyFullWordsSearching.attr('title', '{% trans "Wyszukuj tylko całe słówka." %}');
+    labelExtendedSearching.attr('title', '{% trans "Wyszukuj wystąpienia wszystkich fraz wprowadzonych w pole wyszukiwania." %}');
 });
 </script>
 
