@@ -65,13 +65,6 @@ input[type='text'], input[type='password'], textarea
 {
 	cursor: pointer;
 }
-img
-{
-	position: relative;
-	bottom: 3px;
-	opacity: 0.4;
-	box-shadow: 3px 3px 6px black;
-}
 .message, .message_js
 {
 	width: 90%;
@@ -393,4 +386,7 @@ a {
     margin: 0;
     font-size: 12px;
     color: grey;
+}
+.h {
+	display: none;
 }

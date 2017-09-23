@@ -1,0 +1,1628 @@
+[ pid=24973, time=2017-05-04 04:51:42,710 ]: Not Found: /favicon.ico
+[ pid=8811, time=2017-05-04 05:15:00,133 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: burden | OBCI¡¯ENIE, BRZEMIÊ>]>
+  UnorderedObjectListWarning
+
+[ pid=8811, time=2017-05-04 05:18:25,678 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: capability | ZDOLNO¦Æ, MO¯LIWO¦Æ>]>
+  UnorderedObjectListWarning
+
+[ pid=8811, time=2017-05-04 05:18:38,355 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: aim at, aim for | D¡¯YÆ DO CZEGO¦>, <English: reliability | PEWNO¦Æ, NIEZAWODNO¦Æ>, <English: ability | ZDOLNO¦Æ, UMIEJÊTNO¦Æ>, <English: capability | ZDOLNO¦Æ, MO¯LIWO¦Æ>]>
+  UnorderedObjectListWarning
+
+[ pid=8811, time=2017-05-04 05:24:06,704 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: be under way | W TOKU>]>
+  UnorderedObjectListWarning
+
+[ pid=8811, time=2017-05-04 05:37:31,592 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: sue | POZWAÆ KOGO¦ W S¡DZIE, Z£O¯YÆ PRZECIWKO KOMU¦ POZEW W S¡DZIE>, <English: damages | ODSZKODOWANIE>, <English: substantial | SPORY, ZNACZ¡CY>, <English: damage | USZKODZIÆ; ¬LE WP£YWAÆ NA>, <English: severely | POWA¯NIE, CIÊ¯KO>, <English: permanent | TRWA£Y>]>
+  UnorderedObjectListWarning
+
+[ pid=8811, time=2017-05-04 15:54:39,510 ]: Not Found: /robots.txt
+[ pid=8811, time=2017-05-04 15:54:39,967 ]: Not Found: /.well-known/assetlinks.json
+[ pid=8811, time=2017-05-04 16:48:03,125 ]: Not Found: /robots.txt
+[ pid=8811, time=2017-05-04 16:48:03,746 ]: Not Found: /static/yourwords/css/social-likes_flat.css
+[ pid=8811, time=2017-05-04 19:50:05,556 ]: Not Found: /robots.txt
+[ pid=80841, time=2017-05-05 00:08:14,562 ]: Not Found: /robots.txt
+[ pid=80841, time=2017-05-05 05:45:47,293 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: shy | NIE¦MIA£Y>, <English: arrange | ORGANIZOWAÆ>, <English: duty | OBOWI¡ZEK>, <English: price list | CENNIK>, <English: principal | PRZE£O¯ONY>, <English: gape | GAPIÆ SIÊ>, <English: open | SZCZERY>, <English: speech | PRZEMÓWIENIE>, <English: open up | OTWIERAÆ SIÊ>, <English: remind | PRZYPOMNIEÆ>, <English: briefcase | TECZKA>, <English: rewrite | PRZEPISAÆ>, <English: form | TWORZYÆ, UTWORZYÆ>, <English: recognisable | ROZPOZNAWALNY>, <English: work on | PRACOWAÆ NAD>, <English: unique | WYJ¡TKOWY>, <English: praise | POCHWALIÆ>, <English: walk to | PODEJ¦Æ DO>, <English: carry | NIE¦Æ>, <English: far away | DALEKO>, '...(remaining elements truncated)...']>
+  UnorderedObjectListWarning
+
+[ pid=80841, time=2017-05-05 05:47:04,051 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: cope with | RADZIÆ SOBIE Z>, <English: deal with | RADZIÆ SOBIE Z>, <English: handle | PORADZIÆ SOBIE Z CZYM¦>]>
+  UnorderedObjectListWarning
+
+[ pid=80841, time=2017-05-05 05:48:28,283 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: cope with something | RADZIÆ SOBIE Z CZYM¦>, <English: deal with something | RADZIÆ SOBIE Z CZYM¦>, <English: handle something | PORADZIÆ SOBIE Z CZYM¦>]>
+  UnorderedObjectListWarning
+
+[ pid=80841, time=2017-05-05 06:36:41,436 ]: Not Found: /robots.txt
+[ pid=80841, time=2017-05-05 17:10:48,608 ]: Not Found: /apple-app-site-association
+[ pid=80841, time=2017-05-05 17:10:53,135 ]: Not Found: /.well-known/apple-app-site-association
+[ pid=98132, time=2017-05-05 20:29:24,896 ]: Not Found: /static/yourwords/js/definitions.js
+[ pid=98132, time=2017-05-05 20:29:24,899 ]: Not Found: /static/yourwords/css/w3.css
+[ pid=98132, time=2017-05-05 20:29:25,099 ]: Not Found: /static/yourwords/css/styles.css
+[ pid=98132, time=2017-05-05 20:29:25,286 ]: Not Found: /static/yourwords/js/jquery-3.0.0.min.js
+[ pid=98132, time=2017-05-05 20:29:25,440 ]: Not Found: /static/yourwords/js/definitions.js
+[ pid=98132, time=2017-05-05 20:29:25,840 ]: Not Found: /static/yourwords/icons/favicon.ico
+[ pid=23308, time=2017-05-05 20:37:16,396 ]: Not Found: /static/yourwords/css/w3.css
+[ pid=23308, time=2017-05-05 20:37:16,398 ]: Not Found: /static/yourwords/css/styles.css
+[ pid=23308, time=2017-05-05 20:37:16,518 ]: Not Found: /static/yourwords/js/jquery-3.0.0.min.js
+[ pid=23308, time=2017-05-05 20:37:16,520 ]: Not Found: /static/yourwords/js/definitions.js
+[ pid=23308, time=2017-05-05 20:37:16,853 ]: Not Found: /static/yourwords/icons/favicon.ico
+[ pid=25234, time=2017-05-05 20:38:11,341 ]: Not Found: /static/yourwords/css/w3.css
+[ pid=25234, time=2017-05-05 20:38:11,344 ]: Not Found: /static/yourwords/css/styles.css
+[ pid=25234, time=2017-05-05 20:38:11,512 ]: Not Found: /static/yourwords/js/jquery-3.0.0.min.js
+[ pid=25234, time=2017-05-05 20:38:11,514 ]: Not Found: /static/yourwords/js/definitions.js
+[ pid=25234, time=2017-05-05 20:38:11,768 ]: Not Found: /static/yourwords/icons/favicon.ico
+[ pid=50542, time=2017-05-05 21:06:55,150 ]: Not Found: /robots.txt
+[ pid=50542, time=2017-05-06 01:47:26,226 ]: Not Found: /static/yourwords/icons/favicon-32x32.png
+[ pid=50542, time=2017-05-06 15:50:41,505 ]: Not Found: /robots.txt
+[ pid=50542, time=2017-05-07 07:53:48,244 ]: Not Found: /robots.txt
+[ pid=50542, time=2017-05-07 07:53:48,439 ]: Not Found: /apple-app-site-association
+[ pid=50542, time=2017-05-07 07:54:01,275 ]: Not Found: /.well-known/apple-app-site-association
+[ pid=50542, time=2017-05-07 09:14:46,587 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: reffering to | W ODNIESIENIU DO>, <English: alusive | NIEUCHWYTNY>, <English: informed | UZASADNIONY>, <English: soar | ROSN¡Æ, ZWY¯KOWAÆ>, <English: wilful | ¦WIADOMIE, ROZMY¦LNIE>]>
+  UnorderedObjectListWarning
+
+[ pid=50542, time=2017-05-07 09:57:09,821 ]: Not Found: /.well-known/assetlinks.json
+[ pid=24998, time=2017-05-07 17:02:28,883 ]: Not Found: /favicon.ico
+[ pid=24998, time=2017-05-07 19:11:45,393 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-08 07:24:10,861 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-08 15:57:32,168 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-08 15:57:34,128 ]: Not Found: /static/yourwords/bootstrap/css/bootstrap.min.css
+[ pid=24998, time=2017-05-08 15:57:34,667 ]: Not Found: /static/yourwords/css/social-likes_flat.css
+[ pid=24998, time=2017-05-08 15:57:34,738 ]: Not Found: /static/yourwords/js/social-likes.min.js
+[ pid=24998, time=2017-05-09 00:37:50,177 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-09 05:22:39,411 ]: Not Found: /static/yourwords/css/social-likes_flat.css
+[ pid=24998, time=2017-05-09 05:22:39,569 ]: Not Found: /static/yourwords/js/social-likes.min.js
+[ pid=24998, time=2017-05-09 05:30:06,957 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: shooting star | SPADAJ¡CA GWIAZDA>, <English: in the meantime | TYMCZASEM>, <English: scare | PRZESTRASZYÆ>, <English: mean | MIEÆ ZAMIAR, ZAMIERZAÆ>, <English: mean | Z£O¦LIWY>, <English: extinction | ZAG£ADA, UNICESTWIENIE; ZANIK>, <English: vanish | ZNIKN¡Æ>, <English: in the meantime | TYMCZASEM>, <English: upset | ZMARTWIÆ, ZASMUCIÆ>, <English: means | ¦RODKI>, <English: agree on | UZGODNIÆ>, <English: contain | POWSTRZYMAÆ>, <English: by no means | W ¯ADEN SPOSÓB>, <English: kick-off to something | ROZPOCZÊCIE CZEGO¦>, <English: be meant for somebody | BYÆ PRZEZNACZONYM DLA KOGO¦>, <English: prior | WCZE¦NIEJSZY>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-09 15:07:37,295 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-09 15:50:43,959 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-10 08:51:27,161 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-10 17:19:19,211 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: flame | P£OMIEÑ>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-10 20:59:25,224 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-11 10:45:43,711 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-11 14:32:48,667 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-11 16:06:03,020 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-11 16:06:04,073 ]: Not Found: /static/yourwords/bootstrap/css/bootstrap.min.css
+[ pid=24998, time=2017-05-11 16:06:04,347 ]: Not Found: /static/yourwords/css/social-likes_flat.css
+[ pid=24998, time=2017-05-11 16:06:04,543 ]: Not Found: /static/yourwords/js/social-likes.min.js
+[ pid=24998, time=2017-05-11 18:11:52,087 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: redundant | ZBÊDNY, NIEPOTRZEBNY, ZBYTECZNY>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-11 18:41:41,607 ]: Not Found: /favicon.ico
+[ pid=24998, time=2017-05-12 06:14:22,303 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-12 15:50:46,421 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-12 15:52:53,981 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-12 22:11:00,612 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-13 00:53:16,099 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-13 07:07:42,422 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: shy | NIE¦MIA£Y>, <English: arrange | ORGANIZOWAÆ>, <English: duty | OBOWI¡ZEK>, <English: price list | CENNIK>, <English: principal | PRZE£O¯ONY>, <English: gape | GAPIÆ SIÊ>, <English: open | SZCZERY>, <English: speech | PRZEMÓWIENIE>, <English: open up | OTWIERAÆ SIÊ>, <English: remind | PRZYPOMNIEÆ>, <English: briefcase | TECZKA>, <English: rewrite | PRZEPISAÆ>, <English: form | TWORZYÆ, UTWORZYÆ>, <English: recognisable | ROZPOZNAWALNY>, <English: work on | PRACOWAÆ NAD>, <English: unique | WYJ¡TKOWY>, <English: praise | POCHWALIÆ>, <English: walk to | PODEJ¦Æ DO>, <English: carry | NIE¦Æ>, <English: far away | DALEKO>, '...(remaining elements truncated)...']>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-13 07:08:29,511 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: spend | WYDAÆ PIENI¡DZE>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-13 07:54:47,422 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: z³o¶liwe oprogramowanie s³u¿±ce do wy³udzenia pieniêdzy | RANSOMWARE>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-13 12:39:54,040 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-13 17:14:14,614 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: ransom | OKUP>, <English: z³o¶liwe oprogramowanie s³u¿±ce do wy³udzenia pieniêdzy | RANSOMWARE>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-13 17:20:50,243 ]: Not Found: /favicon.ico
+[ pid=24998, time=2017-05-13 19:44:44,498 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: beaver | BÓBR>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-13 20:18:27,435 ]: Not Found: /.well-known/assetlinks.json
+[ pid=24998, time=2017-05-14 03:37:28,994 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-14 07:55:19,323 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: be done by | BYÆ WYKONYWANYM PRZEZ>, <English: spec | SPECYFIKACJA>, <English: ransomware | Z£O¦LIWE OPROGRAMOWANIE S£U¯¡CE DO WY£UDZENIA PIENIÊDZY>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-14 15:40:04,109 ]: Not Found: /.well-known/apple-app-site-association
+[ pid=24998, time=2017-05-14 15:40:04,722 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-14 15:40:07,189 ]: Not Found: /apple-app-site-association
+[ pid=24998, time=2017-05-14 17:31:38,215 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-15 01:38:40,540 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-15 01:38:41,966 ]: Not Found: /static/yourwords/css/social-likes_flat.css
+[ pid=24998, time=2017-05-15 01:38:42,146 ]: Not Found: /static/yourwords/js/social-likes.min.js
+[ pid=24998, time=2017-05-15 01:38:42,394 ]: Not Found: /static/yourwords/bootstrap/css/bootstrap.min.css
+[ pid=24998, time=2017-05-15 04:20:20,414 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-15 04:21:26,665 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-15 13:07:15,355 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-15 17:03:22,260 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-15 20:04:18,356 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: the first time | PIERWSZY RAZ>, <English: although, even though | CHOCIA¯>, <English: figure out | ZROZUMIEÆ CO¦, ROZWI¡ZAÆ JAKI¦ PROBLEM>, <English: shoot | STRZELIÆ; ZASTRZELIÆ>, <English: though | CHOCIA¯>, <English: make someone angry | Z£O¦CIÆ KOGO¦>, <English: declare a state of emergency | WPROWADZIÆ STAN WYJ¡TKOWY>, <English: conscience | SUMIENIE>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-16 00:42:50,315 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-16 06:07:37,295 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-16 07:15:32,545 ]: Not Found: /apple-app-site-association
+[ pid=24998, time=2017-05-16 07:15:35,934 ]: Not Found: /.well-known/apple-app-site-association
+[ pid=24998, time=2017-05-16 08:33:40,285 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: thus | TYM SAMYM, W TEN SPOSÓB>, <English: expense | WYDATEK>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-16 08:50:18,958 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: look forward to something | CZEKAÆ NA CO¦ Z NIECIERPLIWO¦CI¡>, <English: look forward to something | NIE MÓC SIÊ DOCZEKAÆ CZEGO¦>, <English: forward | NAPRZÓD, DO PRZODU>, <English: take a step | ZROBIÆ KROK>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-16 10:49:48,452 ]: Not Found: /.well-known/assetlinks.json
+[ pid=24998, time=2017-05-16 13:23:40,193 ]: Not Found: /favicon.ico
+[ pid=24998, time=2017-05-16 15:32:38,510 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-16 17:19:03,274 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: peer through | ZAGL¡DAÆ DO>, <English: peer | OSOBA RÓWNORZÊDNA Z KIM¦, RÓWIE¦NIK (NP. W TYM SAMYM WIEKU, O TAKICH SAMYCH UMIEJÊTNO¦CIACH, O TAKIM>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-16 17:27:44,785 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: be entitled to | BYÆ UPOWA¯NIONYM DO>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-16 19:00:07,413 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-17 02:30:43,045 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-17 05:53:49,663 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-17 07:16:44,986 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-17 10:28:32,828 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-17 15:03:53,267 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-17 16:49:16,131 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-17 18:47:06,126 ]: Not Found: /static/yourwords/css/social-likes_flat.css
+[ pid=24998, time=2017-05-17 18:47:06,918 ]: Not Found: /static/yourwords/js/social-likes.min.js
+[ pid=24998, time=2017-05-17 19:18:25,263 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-17 19:24:09,857 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-18 00:35:14,052 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-18 05:12:40,096 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: disappointing | ROZCZAROWUJ¡CY>, <English: disappointed by | ROZCZAROWANY>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-18 05:21:13,113 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: ripe | DOJRZA£Y>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-18 05:21:21,830 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: rape | GWA£T; ZGWA£CIÆ>, <English: rape | GWA£T, ZGWA£CIÆ>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-18 05:38:25,040 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: welcomed by | PRZYJÊTY PRZEZ>]>
+  UnorderedObjectListWarning
+
+[ pid=24998, time=2017-05-18 05:49:03,743 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-18 05:49:05,761 ]: Not Found: /static/yourwords/bootstrap/css/bootstrap.min.css
+[ pid=24998, time=2017-05-18 05:49:06,249 ]: Not Found: /static/yourwords/css/social-likes_flat.css
+[ pid=24998, time=2017-05-18 05:49:06,407 ]: Not Found: /static/yourwords/js/social-likes.min.js
+[ pid=24998, time=2017-05-18 06:19:58,724 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-18 08:17:33,275 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-18 11:11:16,292 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-18 13:47:21,749 ]: Not Found: /robots.txt
+[ pid=24998, time=2017-05-18 18:11:58,959 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-18 21:47:45,262 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-18 21:49:05,225 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-19 03:37:32,472 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-19 09:56:25,477 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-19 16:36:29,441 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-19 16:57:36,312 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-19 17:05:37,177 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: fatality | OFIARA ¦MIERTELNA>]>
+  UnorderedObjectListWarning
+
+[ pid=24225, time=2017-05-19 17:24:53,835 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: hull | KAD£UB>, <English: toll | OP£ATA>, <English: estimate | SZACOWAÆ, OKRE¦LAÆ CO¦ W PRZYBLI¯ENIU>, <English: grant | PRZYZNAÆ, UDZIELIÆ>, <English: stemming | POWSTRZYMANIE>, <English: stem | ZATAMOWAÆ>, <English: rebuke | REPRYMENDA, UPOMNIENIE>, <English: thrive | DOBRZE SIÊ ROZWIJAÆ (O DZIECKU)>, <English: prompt something | POWODOWAÆ CO¦, DOPROWADZAÆ DO CZEGO¦>, <English: backlash | OSTRY SPRZECIW, GWA£TOWNA REAKCJA>]>
+  UnorderedObjectListWarning
+
+[ pid=24225, time=2017-05-19 18:50:53,898 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: drop | KROPLA>, <English: contract | KURCZYÆ SIÊ>, <English: drop | UPU¦CIÆ>]>
+  UnorderedObjectListWarning
+
+[ pid=24225, time=2017-05-20 05:19:58,804 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-20 07:27:34,169 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: art | UMIEJÊTNO¦Æ, ZDOLNO¦Æ>, <English: take out | WYJ¡Æ, WYCI¡GN¡Æ>, <English: get a grasp of something | ZROZUMIEÆ PODSTAWY CZEGO¦, ZA£APAÆ CO¦>, <English: devote | PO¦WIÊCAÆ (NP. CZAS NA ZROBIENIE CZEGO¦)>, <English: standoff over something | IMPAS W SPRAWIE CZEGO¦>]>
+  UnorderedObjectListWarning
+
+[ pid=24225, time=2017-05-20 09:58:18,951 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-20 10:17:38,143 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-20 11:07:25,103 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-20 11:38:48,933 ]: Not Found: /static/yourwords/bootstrap/css/bootstrap.min.css
+[ pid=24225, time=2017-05-20 11:38:49,177 ]: Not Found: /static/yourwords/js/social-likes.min.js
+[ pid=24225, time=2017-05-20 11:38:49,606 ]: Not Found: /static/yourwords/css/social-likes_flat.css
+[ pid=24225, time=2017-05-20 13:04:24,180 ]: Not Found: /amp/pl/
+[ pid=24225, time=2017-05-20 13:04:24,963 ]: Not Found: /favicon.ico
+[ pid=24225, time=2017-05-20 13:04:37,547 ]: Not Found: /amp
+[ pid=24225, time=2017-05-20 13:58:14,285 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-20 15:49:58,398 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-20 15:50:06,274 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-20 18:24:56,034 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-20 23:20:44,037 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-21 01:31:07,047 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-21 09:41:32,244 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-21 12:22:48,717 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-21 15:06:13,296 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-21 18:19:53,920 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: linger | UTRZYMYWAÆ SIÊ (NP. O ZAPACHU, SMAKU)>, <English: it's up to you | TO ZALE¯Y OD CIEBIE>, <English: pitifully | ¯A£O¦NIE>, <English: commission | ZLECIÆ>, <English: harassment | NÊKANIE, DOKUCZANIE>]>
+  UnorderedObjectListWarning
+
+[ pid=24225, time=2017-05-21 18:22:36,834 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: essential | NIEZBÊDNY, PODSTAWOWY>]>
+  UnorderedObjectListWarning
+
+[ pid=24225, time=2017-05-21 18:25:02,282 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: remote | DALEKI, ODLEG£Y>]>
+  UnorderedObjectListWarning
+
+[ pid=24225, time=2017-05-21 19:07:33,693 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-21 19:34:19,981 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: apparently | NAJWYRA¬NIEJ, NAJWIDOCZNIEJ>]>
+  UnorderedObjectListWarning
+
+[ pid=24225, time=2017-05-21 19:38:18,382 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: surely | NA PEWNO>, <English: occur | WYDARZYÆ SIÊ, WYST¡PIÆ>, <English: barely | LEDWIE CO, DOPIERO CO; LEDWIE, LEDWO>, <English: merely | ZALEDWIE, TYLKO, JEDYNIE>, <English: severely | POWA¯NIE, CIÊ¯KO>, <English: purely | TYLKO, JEDYNIE, WY£¡CZNIE>]>
+  UnorderedObjectListWarning
+
+[ pid=24225, time=2017-05-21 23:38:44,747 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-22 00:32:49,226 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-22 04:25:18,591 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-22 04:26:52,600 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-22 08:32:00,327 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-22 12:38:40,124 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-22 13:06:52,779 ]: Not Found: /robots.txt
+[ pid=24225, time=2017-05-22 16:56:28,159 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-22 18:32:43,304 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: detailed | SZCZEGÓ£OWY>, <English: tail | OGON>, <English: boost | WZMAGAÆ, ZWIÊKSZAÆ>, <English: detail | WYSZCZEGÓLNIÆ; SZCZEGÓ£, DETAL>, <English: hammer something out | WYPRACOWAÆ CO¦>, <English: further | DALSZY, KOLEJNY; DALEJ>, <English: retail | SPRZEDA¯ DETALICZNA>, <English: and the like | I TYM PODOBNE>, <English: in detail | SZCZEGÓ£OWO>, <English: devoid of something | POZBAWIONY CZEGO¦>, <English: wag | MERDAÆ>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-22 18:54:27,915 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: indicate | WSKAZYWAÆ>, <English: grid | SIATKA, SIEÆ>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-22 18:57:03,322 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: encourage | NAMAWIAÆ>, <English: unconscious | NIE¦WIADOMY; NIEZAMIERZONY>, <English: encourage | ZACHÊCAÆ>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-22 20:21:49,433 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-22 21:47:16,407 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-23 01:13:42,897 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-23 02:30:54,499 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-23 05:11:39,664 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: scratch | ZADRAPANIE; DRAPAÆ SIÊ, ZADRAPAÆ SIÊ>, <English: merely | ZALEDWIE, TYLKO, JEDYNIE>, <English: from scratch | OD POCZ¡TKU, OD ZERA>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-23 05:20:36,749 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: be inclined to | BYÆ SK£ONNYM>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-23 06:33:43,930 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-23 09:28:53,998 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-23 10:58:16,763 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-23 14:53:36,754 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-23 19:07:56,335 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: take out the rubbish | OPRÓ¯NIÆ KOSZ NA ¦MIECI>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-23 19:16:19,049 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: upsetting | DENERWUJ¡CY>, <English: upset | ZMARTWIÆ, ZASMUCIÆ>, <English: be upset about | BYÆ NIEZADOWOLONYM Z>, <English: turn back | ZAWRÓCIÆ>, <English: muse | DUMAÆ, ROZMY¦LAÆ>, <English: upsetting | WSTRZ¡SAJ¡CY>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-23 19:24:11,899 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-23 19:28:18,694 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-23 21:23:41,146 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-23 23:41:51,240 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-23 23:51:43,747 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-24 06:49:44,977 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-24 10:13:32,714 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-24 11:58:54,180 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-24 14:03:10,329 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-24 14:54:28,986 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-24 16:09:10,101 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-24 18:26:53,000 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-24 18:59:18,472 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: push | PCHAÆ>, <English: pull | CI¡GN¡Æ>, <English: pull | CI¡GN¡Æ>, <English: pull in | WJECHAÆ GDZIE¦ I SIÊ ZATRZYMAÆ>, <English: pull away | RUSZYÆ Z MIEJSCA>, <English: final approach | PODEJ¦CIE DO L¡DOWANIA>, <English: repeatedly | WIELOKROTNIE>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-24 19:13:51,568 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: pledge | DEKLAROWAÆ, ZOBOWI¡ZYWAÆ SIÊ>, <English: pledge | ZOBOWI¡ZAÆ SIÊ>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-24 20:25:31,092 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-24 21:28:50,214 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-25 00:04:04,419 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-25 01:52:34,273 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-25 06:01:10,908 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-25 11:03:32,809 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-25 12:18:25,419 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-25 15:37:49,702 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-25 20:09:20,144 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-26 00:05:12,123 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-26 00:18:58,912 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-26 03:59:26,817 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-26 05:00:44,609 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: dismiss | ZWOLNIÆ KOGO¦ Z PRACY>, <English: dismiss, reject | ODRZUCIÆ>, <English: call | WEZWANIE DO ZROBIENIA CZEGO¦>, <English: compensation | REKOMPENSATA>, <English: segment | ODCINEK>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-26 05:02:03,791 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: regardless of | BEZ WZGLÊDU NA>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-26 05:11:20,526 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: initially | POCZ¡TKOWO>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-26 05:11:31,011 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: stained glass | WITRA¯>, <English: nothing to write home about | NIC SPECJALNEGO>, <English: give up | PODDAÆ SIÊ>, <English: more environmentally friendly | BARDZIEJ PRZYJAZNY DLA ¦RODOWISKA>, <English: transcend | PRZEKRACZAÆ, PRZE¦CIGAÆ>, <English: transcend | PRZEKRACZAÆ, PRZE¦CIGAÆ>, <English: resort | KURORT>, <English: designed | PRZEZNACZONY>, <English: rugged | POSTRZÊPIONY>, <English: nomadic tribe | PLEMIÊ KOCZOWNICZE>, <English: actually | TAK NAPRAWDÊ, FAKTYCZNIE>, <English: originally | POCZ¡TKOWO>, <English: performed by | WYKONYWANY PRZEZ>, <English: date | OSOBA, Z KTÓR¡ JEST SIÊ UMÓWIONYM NA RANDKÊ>, <English: unconditionally | BEZWARUNKOWO>, <English: scramble | SZYFROWAÆ, KODOWAÆ; WALCZYÆ O BYT; WSPINAÆ SIÊ, GRAMOLIÆ SIÊ>, <English: get up | WSTAÆ Z £Ó¯KA>, <English: industrially | PRZEMYS£OWO>, <English: pressing | PILNY, NAGL¡CY, NIE CIERPI¡CY ZW£OKI>, <English: reveal | UJAWNIÆ, WYJAWIÆ>, '...(remaining elements truncated)...']>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-26 15:12:48,144 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-26 16:02:53,092 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-26 20:58:05,899 ]: Not Found: /favicon.ico
+[ pid=87006, time=2017-05-26 22:42:32,742 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-27 03:30:18,724 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-27 04:08:22,895 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-27 12:57:24,934 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-27 15:08:47,329 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-27 18:22:42,206 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-27 19:03:33,201 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-27 19:43:02,786 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-27 19:43:03,143 ]: Not Found: /sitemap.xml
+[ pid=87006, time=2017-05-27 23:30:01,023 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-28 01:36:24,861 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-28 01:36:54,871 ]: Not Found: /static/yourwords/js/social-likes.min.js
+[ pid=87006, time=2017-05-28 01:37:00,012 ]: Not Found: /static/yourwords/css/social-likes_flat.css
+[ pid=87006, time=2017-05-28 03:31:42,270 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-28 07:46:14,284 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: at a time | PO KOLEI>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-28 08:16:35,504 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: ditch | RÓW>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-28 12:06:02,644 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-28 15:13:18,862 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-28 17:24:34,482 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: knock | PUKAÆ>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-28 19:22:37,778 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-28 23:38:45,599 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-29 01:28:22,222 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-29 03:52:20,036 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-29 05:34:03,288 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: fugitive | UCIEKINIER, ZBIEG>, <English: be in the run | BYÆ ¦CIGANYM>]>
+  UnorderedObjectListWarning
+
+[ pid=87006, time=2017-05-29 06:43:17,616 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-29 07:55:32,653 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-29 12:44:58,304 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-29 14:59:56,893 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-29 16:48:18,988 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-29 20:11:47,528 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-29 22:02:48,308 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-30 02:48:10,566 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-30 09:24:11,568 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-30 09:41:41,509 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-30 13:18:31,040 ]: Not Found: /robots.txt
+[ pid=87006, time=2017-05-30 17:56:22,842 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: mindful | ¦WIADOMY>]>
+  UnorderedObjectListWarning
+
+[ pid=78709, time=2017-05-31 01:20:12,843 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-05-31 03:08:19,489 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-05-31 03:42:55,850 ]: Not Found: /favicon.ico
+[ pid=78709, time=2017-05-31 03:42:56,340 ]: Not Found: /apple-touch-icon.png
+[ pid=78709, time=2017-05-31 03:42:56,843 ]: Not Found: /apple-touch-icon-precomposed.png
+[ pid=78709, time=2017-05-31 05:55:02,990 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-05-31 10:01:06,138 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-05-31 14:06:12,191 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-05-31 16:34:00,326 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-05-31 17:43:23,641 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-05-31 21:33:02,201 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-06-01 09:42:32,966 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-06-01 23:21:31,961 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-06-02 01:55:05,039 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-06-02 04:01:34,748 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-06-02 12:30:04,166 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-06-02 16:29:49,677 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: pull out | OPU¦CIÆ>]>
+  UnorderedObjectListWarning
+
+[ pid=78709, time=2017-06-02 17:42:40,121 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-06-02 20:50:25,628 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-06-03 00:39:29,546 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-06-03 08:22:08,686 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-06-03 13:19:53,980 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-06-03 16:22:09,068 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-06-03 17:43:39,918 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: valid | WA¯NY (AKTUALNY)>, <English: severe | POWA¯NY, CIÊ¯KI>, <English: wary | ROZWA¯NY>]>
+  UnorderedObjectListWarning
+
+[ pid=78709, time=2017-06-04 01:43:38,414 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-06-04 05:23:37,642 ]: Not Found: /robots.txt
+[ pid=78709, time=2017-06-04 05:51:07,920 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: deliberately | UMY¦LNIE, CELOWO>]>
+  UnorderedObjectListWarning
+
+[ pid=78709, time=2017-06-04 07:41:49,801 ]: Not Found: /robots.txt
+[ pid=37515, time=2017-06-04 08:28:57,229 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-04 08:29:00,671 ]: Not Found: /en/wordlist/order/desc/
+[ pid=37515, time=2017-06-04 08:29:04,183 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-04 08:39:14,769 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-04 11:01:05,553 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/backends/mysql/base.py:101: Warning: (1364, "Field 'email_message_create_listing' doesn't have a default value")
+  return self.cursor.execute(query, args)
+
+[ pid=37515, time=2017-06-04 11:04:42,830 ]: Internal Server Error: /pl/social-auth/complete/facebook/
+Traceback (most recent call last):
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_django/views.py", line 28, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/base.py", line 39, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/utils.py", line 253, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/facebook.py", line 92, in auth_complete
+    state = self.validate_state()
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/oauth.py", line 89, in validate_state
+    raise AuthStateMissing(self, 'state')
+social_core.exceptions.AuthStateMissing: Session value state missing.
+[ pid=37515, time=2017-06-04 11:04:43,039 ]: Not Found: /favicon.ico
+[ pid=37515, time=2017-06-04 13:54:30,640 ]: Not Found: /robots.txt
+[ pid=37515, time=2017-06-04 13:54:35,522 ]: Not Found: /pl/wordlist/take/5/
+[ pid=37515, time=2017-06-04 14:16:12,909 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-04 15:48:15,564 ]: Not Found: /robots.txt
+[ pid=37515, time=2017-06-04 15:48:19,482 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-04 15:48:23,413 ]: Not Found: /en/wordlist/take/100/
+[ pid=37515, time=2017-06-04 15:48:27,292 ]: Not Found: /en/wordlist/take/100/
+[ pid=37515, time=2017-06-04 15:48:31,153 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-04 15:48:34,961 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-04 15:48:38,755 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-04 15:48:42,485 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-04 15:48:46,171 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-04 17:40:36,731 ]: Not Found: /pl/wordlist/
+[ pid=37515, time=2017-06-04 18:51:36,731 ]: Not Found: /pl/wordlist/
+[ pid=37515, time=2017-06-04 19:43:16,421 ]: Not Found: /robots.txt
+[ pid=37515, time=2017-06-04 19:43:42,378 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-04 19:43:42,644 ]: Not Found: /pl/wordlist/take/5/
+[ pid=37515, time=2017-06-04 21:08:05,935 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-04 21:11:46,975 ]: Not Found: /robots.txt
+[ pid=37515, time=2017-06-04 21:11:50,801 ]: Not Found: /en/wordlist/order/desc/
+[ pid=37515, time=2017-06-04 21:12:25,786 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-04 21:24:15,678 ]: Not Found: /en/wordlist/order/desc/
+[ pid=37515, time=2017-06-04 21:53:08,834 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-04 22:23:21,430 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-04 23:23:33,661 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-04 23:54:03,430 ]: Not Found: /en/wordlist/take/100/
+[ pid=37515, time=2017-06-05 00:34:24,007 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-05 01:18:55,572 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-05 01:35:34,902 ]: Not Found: /robots.txt
+[ pid=37515, time=2017-06-05 01:35:38,648 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-05 03:25:03,266 ]: Not Found: /en/wordlist/order/desc/
+[ pid=37515, time=2017-06-05 03:52:19,817 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-05 03:53:48,954 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-05 04:17:54,837 ]: Not Found: /robots.txt
+[ pid=37515, time=2017-06-05 04:18:17,972 ]: Not Found: /pl/wordlist/take/20/
+[ pid=37515, time=2017-06-05 04:22:50,650 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-05 04:43:32,111 ]: Not Found: /pl/wordlist/take/20/
+[ pid=37515, time=2017-06-05 05:16:35,991 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: be in the habit of | MIEÆ ZWYCZAJ ROBIENIA CZEGO¦>]>
+  UnorderedObjectListWarning
+
+[ pid=37515, time=2017-06-05 05:36:27,844 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-05 05:53:37,575 ]: Not Found: /robots.txt
+[ pid=37515, time=2017-06-05 05:53:41,683 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-05 05:56:04,650 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-05 05:56:08,566 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-05 05:56:12,413 ]: Not Found: /en/wordlist/order/desc/
+[ pid=37515, time=2017-06-05 06:53:17,719 ]: Not Found: /en/wordlist/take/100/
+[ pid=37515, time=2017-06-05 07:23:57,631 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-05 07:24:41,267 ]: Not Found: /en/wordlist/take/100/
+[ pid=37515, time=2017-06-05 08:27:52,202 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-05 08:38:32,375 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-05 10:26:57,063 ]: Not Found: /robots.txt
+[ pid=37515, time=2017-06-05 10:27:01,092 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-05 10:28:25,816 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-05 10:50:13,955 ]: Not Found: /robots.txt
+[ pid=37515, time=2017-06-05 10:56:23,232 ]: Not Found: /en/wordlist/order/desc/
+[ pid=37515, time=2017-06-05 11:27:29,945 ]: Not Found: /en/wordlist/take/100/
+[ pid=37515, time=2017-06-05 11:56:03,225 ]: Not Found: /robots.txt
+[ pid=37515, time=2017-06-05 11:56:07,303 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-05 11:57:43,647 ]: Not Found: /en/wordlist/take/5/
+[ pid=37515, time=2017-06-05 12:38:18,306 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-05 13:52:33,350 ]: Not Found: /en/wordlist/take/20/
+[ pid=37515, time=2017-06-05 14:14:23,511 ]: Not Found: /pl/wordlist/order/desc/
+[ pid=37515, time=2017-06-05 14:19:59,868 ]: Not Found: /robots.txt
+[ pid=37515, time=2017-06-05 14:43:33,254 ]: Not Found: /pl/wordlist/order/desc/
+[ pid=37515, time=2017-06-05 15:03:55,370 ]: Not Found: /pl/wordlist/take/20/
+[ pid=37515, time=2017-06-05 18:03:11,771 ]: Not Found: /robots.txt
+[ pid=31934, time=2017-06-05 23:44:51,988 ]: Not Found: /robots.txt
+[ pid=31934, time=2017-06-05 23:47:18,616 ]: Not Found: /en/wordlist/order/desc/
+[ pid=31934, time=2017-06-06 00:16:31,576 ]: Not Found: /pl/wordlist/take/5/
+[ pid=31934, time=2017-06-06 03:38:45,028 ]: Not Found: /robots.txt
+[ pid=31934, time=2017-06-06 03:38:49,005 ]: Not Found: /en/wordlist/take/5/
+[ pid=31934, time=2017-06-06 03:52:53,506 ]: Not Found: /en/wordlist/take/20/
+[ pid=31934, time=2017-06-06 03:54:18,623 ]: Not Found: /en/wordlist/take/5/
+[ pid=31934, time=2017-06-06 03:54:22,566 ]: Not Found: /en/wordlist/order/desc/
+[ pid=31934, time=2017-06-06 03:54:26,365 ]: Not Found: /en/wordlist/take/5/
+[ pid=31934, time=2017-06-06 07:16:36,033 ]: Not Found: /en/wordlist/take/5/
+[ pid=31934, time=2017-06-06 07:22:18,529 ]: Not Found: /robots.txt
+[ pid=31934, time=2017-06-06 09:20:40,868 ]: Not Found: /pl/wordlist/take/5/
+[ pid=31934, time=2017-06-06 11:20:11,325 ]: Not Found: /en/wordlist/order/desc/
+[ pid=31934, time=2017-06-06 14:04:35,638 ]: Not Found: /robots.txt
+[ pid=31934, time=2017-06-06 16:21:35,042 ]: Not Found: /robots.txt
+[ pid=31934, time=2017-06-06 16:21:38,990 ]: Not Found: /en/wordlist/order/desc/
+[ pid=77320, time=2017-06-06 23:39:46,801 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-07 12:32:03,559 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-07 19:07:43,223 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-07 19:07:47,218 ]: Not Found: /en/wordlist/take/20/
+[ pid=77320, time=2017-06-08 02:35:32,271 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-08 08:25:49,050 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-08 08:25:53,018 ]: Not Found: /en/wordlist/order/desc/
+[ pid=77320, time=2017-06-08 10:00:32,873 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-08 11:42:38,710 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-08 14:18:40,631 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-08 16:38:20,989 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-08 18:02:25,641 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-08 22:51:15,881 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-08 23:25:23,751 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-09 11:59:26,957 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-09 14:31:15,147 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-09 14:31:16,156 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-09 14:31:27,013 ]: Not Found: /robots.txt
+[ pid=77320, time=2017-06-09 20:02:49,421 ]: Not Found: /robots.txt
+[ pid=96136, time=2017-06-09 21:28:19,984 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: get a habit | NABRAÆ NAWYKU, PRZYZWYCZAJENIA>, <English: get rid of | POZBYÆ SIÊ CZEGO¦>]>
+  UnorderedObjectListWarning
+
+[ pid=96136, time=2017-06-09 23:43:55,601 ]: Not Found: /robots.txt
+[ pid=96136, time=2017-06-10 00:07:09,664 ]: Not Found: /robots.txt
+[ pid=96136, time=2017-06-10 01:35:25,406 ]: Not Found: /en/wordlist/take/100/
+[ pid=96136, time=2017-06-10 02:11:34,008 ]: Not Found: /en/wordlist/take/5/
+[ pid=96136, time=2017-06-10 08:47:50,032 ]: Not Found: /robots.txt
+[ pid=96136, time=2017-06-10 08:47:53,925 ]: Not Found: /en/wordlist/order/desc/
+[ pid=96136, time=2017-06-10 09:42:56,626 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: claw | PAZUR, SZPON>, <English: sharp | OSTRY>, <English: strike | ZAATAKOWAÆ, UDERZYÆ>, <English: by struck by | BYÆ PORA¯ONYM PRZEZ>]>
+  UnorderedObjectListWarning
+
+[ pid=96136, time=2017-06-10 10:52:27,118 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: break up with | ZERWAÆ Z>]>
+  UnorderedObjectListWarning
+
+[ pid=96136, time=2017-06-10 10:54:42,259 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: raid something | PRZEPROWADZIÆ OB£AWÊ NA>]>
+  UnorderedObjectListWarning
+
+[ pid=96136, time=2017-06-10 10:56:42,056 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: keep an eye on | RZUCIÆ OKIEM NA>]>
+  UnorderedObjectListWarning
+
+[ pid=96136, time=2017-06-10 12:39:09,689 ]: Not Found: /robots.txt
+[ pid=96136, time=2017-06-10 14:20:12,081 ]: Not Found: /robots.txt
+[ pid=96136, time=2017-06-10 14:20:16,114 ]: Not Found: /en/wordlist/take/100/
+[ pid=82865, time=2017-06-11 00:39:46,683 ]: Not Found: /robots.txt
+[ pid=82865, time=2017-06-11 04:50:50,140 ]: Not Found: /robots.txt
+[ pid=82865, time=2017-06-11 04:53:12,105 ]: Not Found: /en/wordlist/order/desc/
+[ pid=82865, time=2017-06-11 05:22:45,879 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-11 05:31:11,490 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-11 07:25:00,466 ]: Not Found: /en/wordlist/order/desc/
+[ pid=82865, time=2017-06-11 07:53:58,003 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-11 08:57:34,427 ]: Not Found: /robots.txt
+[ pid=82865, time=2017-06-11 08:57:38,365 ]: Not Found: /en/wordlist/order/desc/
+[ pid=82865, time=2017-06-11 09:07:15,473 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-11 11:01:16,689 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-11 11:01:20,473 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-11 11:19:32,435 ]: Not Found: /en/wordlist/take/20/
+[ pid=82865, time=2017-06-11 11:19:35,721 ]: Not Found: /en/wordlist/take/20/
+[ pid=82865, time=2017-06-11 11:28:15,586 ]: Not Found: /en/wordlist/order/desc/
+[ pid=82865, time=2017-06-11 12:05:17,954 ]: Not Found: /en/wordlist/order/desc/
+[ pid=82865, time=2017-06-11 13:05:08,885 ]: Not Found: /robots.txt
+[ pid=82865, time=2017-06-11 13:05:12,717 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-11 13:32:37,435 ]: Not Found: /en/wordlist/order/desc/
+[ pid=82865, time=2017-06-11 13:40:09,594 ]: Not Found: /en/wordlist/take/20/
+[ pid=82865, time=2017-06-11 14:01:47,721 ]: Not Found: /en/wordlist/order/desc/
+[ pid=82865, time=2017-06-11 14:03:25,715 ]: Not Found: /en/wordlist/take/20/
+[ pid=82865, time=2017-06-11 14:04:42,951 ]: Not Found: /en/wordlist/order/desc/
+[ pid=82865, time=2017-06-11 15:08:32,272 ]: Not Found: /robots.txt
+[ pid=82865, time=2017-06-11 18:30:49,254 ]: Not Found: /favicon.ico
+[ pid=82865, time=2017-06-11 18:31:10,092 ]: Not Found: /static/admin/js/change_form.js
+[ pid=82865, time=2017-06-11 18:31:10,187 ]: Not Found: /static/admin/js/prepopulate_init.js
+[ pid=82865, time=2017-06-11 18:31:10,523 ]: Not Found: /static/admin/js/change_form.js
+[ pid=82865, time=2017-06-11 18:31:10,665 ]: Not Found: /static/admin/js/prepopulate_init.js
+[ pid=82865, time=2017-06-11 18:38:19,736 ]: Not Found: /static/admin/js/change_form.js
+[ pid=41676, time=2017-06-11 18:38:19,958 ]: Not Found: /static/admin/js/prepopulate_init.js
+[ pid=82865, time=2017-06-11 19:56:31,618 ]: Not Found: /robots.txt
+[ pid=82865, time=2017-06-11 19:56:35,406 ]: Not Found: /en/wordlist/order/desc/
+[ pid=82865, time=2017-06-11 20:00:47,922 ]: Not Found: /en/wordlist/order/desc/
+[ pid=82865, time=2017-06-11 20:40:52,884 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: perish | UMIERAÆ, GIN¡Æ>]>
+  UnorderedObjectListWarning
+
+[ pid=82865, time=2017-06-12 04:20:32,709 ]: Not Found: /robots.txt
+[ pid=82865, time=2017-06-12 13:51:21,311 ]: Not Found: /robots.txt
+[ pid=82865, time=2017-06-12 13:51:25,051 ]: Not Found: /en/wordlist/order/desc/
+[ pid=82865, time=2017-06-12 14:00:00,903 ]: Not Found: /en/wordlist/order/desc/
+[ pid=82865, time=2017-06-12 14:45:45,983 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 14:45:46,109 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 14:45:46,240 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 14:45:46,365 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 14:45:46,985 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 14:45:47,108 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 14:45:47,233 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 14:45:47,358 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 14:45:47,485 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 14:45:47,617 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:05:46,798 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:05:46,926 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:05:47,053 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:05:47,184 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:05:47,802 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:05:47,927 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:05:48,053 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:05:48,181 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:05:48,305 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:05:48,432 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:58:59,152 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:58:59,370 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:58:59,583 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:58:59,796 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:59:00,667 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:59:00,911 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:59:01,190 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:59:01,418 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:59:01,665 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 16:59:01,894 ]: Not Found: /en/wordlist/take/5/
+[ pid=82865, time=2017-06-12 19:19:40,512 ]: Not Found: /favicon.ico
+[ pid=82865, time=2017-06-12 19:20:15,723 ]: Not Found: /static/admin/js/change_form.js
+[ pid=82865, time=2017-06-12 19:20:15,817 ]: Not Found: /static/admin/js/prepopulate_init.js
+[ pid=82865, time=2017-06-12 19:20:16,159 ]: Not Found: /static/admin/js/change_form.js
+[ pid=82865, time=2017-06-12 19:20:16,302 ]: Not Found: /static/admin/js/prepopulate_init.js
+[ pid=93967, time=2017-06-12 20:06:30,849 ]: Not Found: /robots.txt
+[ pid=93967, time=2017-06-12 22:23:09,213 ]: Not Found: /robots.txt
+[ pid=93967, time=2017-06-13 08:13:08,534 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-13 14:04:16,623 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-13 14:04:17,020 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-13 15:02:49,014 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-13 15:56:51,864 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-13 16:55:41,595 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-13 18:55:03,138 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-13 18:55:07,045 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-13 19:52:57,791 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-13 20:55:52,722 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-13 21:48:56,565 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-13 22:01:37,087 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-13 22:53:08,622 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-13 22:53:12,555 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 00:04:43,821 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 00:54:18,629 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 01:58:25,442 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 02:59:58,255 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-14 03:00:02,182 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 05:04:53,773 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 05:36:35,343 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-14 05:41:18,645 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-14 06:01:59,807 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 08:04:29,868 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-14 08:04:33,555 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 08:54:33,885 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 10:58:57,511 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 12:07:56,846 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-14 12:08:00,825 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 13:01:52,758 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 14:48:53,748 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-14 14:49:45,899 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-14 14:50:30,482 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-14 14:51:11,037 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-14 14:51:40,744 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 14:58:02,706 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 15:02:52,804 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-14 15:03:16,828 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-14 15:03:33,632 ]: Not Found: /en/wordlist/take/100/
+[ pid=84109, time=2017-06-14 15:03:48,583 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 16:54:46,754 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-14 16:54:50,704 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 16:54:54,664 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-14 16:54:58,529 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-14 18:57:18,637 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-14 19:05:38,400 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-14 19:05:41,921 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 19:53:10,959 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-14 19:59:44,755 ]: Not Found: /en/wordlist/take/100/
+[ pid=84109, time=2017-06-14 20:01:57,216 ]: Not Found: /en/wordlist/take/100/
+[ pid=84109, time=2017-06-14 20:02:05,781 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-14 20:02:23,142 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 20:58:27,940 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-14 20:58:31,914 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-14 21:05:16,055 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 21:59:07,220 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 21:59:11,110 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-14 23:52:02,433 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-14 23:52:06,199 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-15 00:28:42,005 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-15 04:48:59,815 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-15 04:49:03,775 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-15 04:49:07,793 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-15 05:42:43,436 ]: Not Found: /en/wordlist/take/100/
+[ pid=84109, time=2017-06-15 05:47:24,528 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-15 05:52:54,283 ]: Not Found: /en/wordlist/take/100/
+[ pid=84109, time=2017-06-15 12:03:22,815 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-15 12:03:26,871 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-15 14:14:01,036 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-15 14:21:38,773 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-15 15:56:06,942 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-15 17:07:34,392 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-15 18:00:55,700 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-15 22:47:54,257 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-15 23:00:24,533 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-15 23:05:54,752 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-15 23:13:29,111 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-15 23:13:33,625 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-15 23:13:43,177 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-15 23:38:12,683 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-16 00:26:39,189 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 01:00:05,302 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-16 01:00:09,053 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-16 01:00:14,283 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-16 01:26:50,920 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-16 01:36:24,239 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 01:56:12,380 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-16 04:48:06,003 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-16 05:52:20,501 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-16 06:01:11,811 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-16 06:01:31,955 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-16 06:01:51,683 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 06:02:05,693 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 06:56:27,217 ]: Not Found: /en/wordlist/take/100/
+[ pid=84109, time=2017-06-16 08:07:42,085 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 08:07:45,786 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-16 08:07:49,332 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 08:07:52,671 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-16 08:18:41,975 ]: Not Found: /en/wordlist/order/desc/
+[ pid=84109, time=2017-06-16 09:21:39,791 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 11:57:57,069 ]: Not Found: /static/yourwords/icons/favicon-32x32.png
+[ pid=84109, time=2017-06-16 11:57:57,753 ]: Not Found: /static/yourwords/icons/favicon-32x32.png
+[ pid=84109, time=2017-06-16 11:58:53,785 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-16 11:58:57,757 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 12:04:00,307 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 14:07:59,966 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 14:08:03,939 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-16 14:08:07,737 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 14:08:11,773 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-16 14:08:15,786 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 15:58:20,870 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-16 15:58:24,633 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 15:58:28,784 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 15:58:32,626 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-16 15:58:36,475 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-16 15:58:40,353 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 17:02:50,255 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 17:57:10,090 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 18:56:56,958 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 20:38:43,300 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-16 21:03:03,986 ]: Not Found: /en/wordlist/take/5/
+[ pid=84109, time=2017-06-16 21:19:31,129 ]: Not Found: /en/wordlist/take/20/
+[ pid=84109, time=2017-06-16 22:19:45,714 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-17 02:03:52,549 ]: Not Found: /robots.txt
+[ pid=84109, time=2017-06-17 02:03:56,315 ]: Not Found: /en/wordlist/take/5/
+[ pid=54446, time=2017-06-17 13:40:49,940 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-17 20:48:25,425 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-17 22:25:58,160 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-18 03:04:37,926 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-18 16:58:18,493 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-18 17:24:42,307 ]: Not Found: /favicon.ico
+[ pid=76704, time=2017-06-19 11:25:58,403 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-20 01:05:22,872 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-20 01:12:34,839 ]: Not Found: /en/wordlist/order/desc/
+[ pid=76704, time=2017-06-20 01:14:59,065 ]: Not Found: /en/wordlist/take/5/
+[ pid=76704, time=2017-06-20 01:16:09,536 ]: Not Found: /en/wordlist/order/desc/
+[ pid=76704, time=2017-06-20 01:22:05,383 ]: Not Found: /en/wordlist/order/desc/
+[ pid=76704, time=2017-06-20 01:31:40,861 ]: Not Found: /en/wordlist/take/20/
+[ pid=76704, time=2017-06-20 04:20:55,957 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-20 07:30:34,973 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-20 07:30:39,573 ]: Not Found: /en/wordlist/order/desc/
+[ pid=76704, time=2017-06-20 07:32:49,870 ]: Not Found: /en/wordlist/take/5/
+[ pid=76704, time=2017-06-20 07:35:08,175 ]: Not Found: /en/wordlist/take/20/
+[ pid=76704, time=2017-06-20 09:27:14,033 ]: Not Found: /en/wordlist/take/20/
+[ pid=76704, time=2017-06-20 15:28:07,099 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-20 15:28:11,049 ]: Not Found: /en/wordlist/take/20/
+[ pid=76704, time=2017-06-20 17:34:31,820 ]: Not Found: /en/wordlist/take/20/
+[ pid=76704, time=2017-06-20 19:54:18,983 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-21 07:54:47,462 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-21 23:31:20,315 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-22 03:04:42,026 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-22 03:34:27,289 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-22 12:13:27,611 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-22 12:20:08,771 ]: Not Found: /en/wordlist/take/100/
+[ pid=76704, time=2017-06-22 12:20:29,554 ]: Not Found: /en/wordlist/take/20/
+[ pid=76704, time=2017-06-22 12:20:33,585 ]: Not Found: /en/wordlist/take/5/
+[ pid=76704, time=2017-06-22 12:20:49,866 ]: Not Found: /en/wordlist/take/20/
+[ pid=76704, time=2017-06-22 12:21:07,901 ]: Not Found: /en/wordlist/take/5/
+[ pid=76704, time=2017-06-22 12:22:35,809 ]: Not Found: /en/wordlist/take/5/
+[ pid=76704, time=2017-06-22 12:29:30,946 ]: Not Found: /en/wordlist/order/desc/
+[ pid=76704, time=2017-06-22 12:59:02,685 ]: Not Found: /en/wordlist/take/100/
+[ pid=76704, time=2017-06-22 12:59:52,854 ]: Not Found: /en/wordlist/order/desc/
+[ pid=76704, time=2017-06-22 13:00:51,142 ]: Not Found: /en/wordlist/take/100/
+[ pid=76704, time=2017-06-22 14:16:57,100 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-22 22:11:25,431 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-23 02:16:59,648 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-23 03:11:38,890 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-23 03:23:15,996 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-23 04:09:18,691 ]: Not Found: /en/wordlist/order/desc/
+[ pid=76704, time=2017-06-23 04:16:25,810 ]: Not Found: /en/wordlist/take/20/
+[ pid=76704, time=2017-06-23 04:28:10,033 ]: Not Found: /en/wordlist/take/100/
+[ pid=76704, time=2017-06-23 04:39:58,047 ]: Not Found: /robots.txt
+[ pid=76704, time=2017-06-23 04:40:01,816 ]: Not Found: /en/wordlist/take/100/
+[ pid=57153, time=2017-06-23 21:23:53,669 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-24 05:44:00,233 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-24 12:25:30,709 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-24 12:53:50,350 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-06-24 12:55:53,004 ]: Not Found: /en/wordlist/take/100/
+[ pid=57153, time=2017-06-24 12:59:10,660 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-06-24 13:05:30,723 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-06-24 18:35:57,860 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-24 21:56:26,583 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-24 21:56:30,435 ]: Not Found: /en/wordlist/order/desc/
+[ pid=57153, time=2017-06-24 22:05:09,589 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-06-24 22:23:51,302 ]: Not Found: /en/wordlist/take/100/
+[ pid=57153, time=2017-06-25 02:42:10,495 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-25 02:42:14,455 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-06-25 02:45:48,310 ]: Not Found: /en/wordlist/take/20/
+[ pid=57153, time=2017-06-25 03:23:22,909 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-06-25 03:24:57,751 ]: Not Found: /en/wordlist/order/desc/
+[ pid=57153, time=2017-06-25 03:25:31,027 ]: Not Found: /en/wordlist/take/20/
+[ pid=57153, time=2017-06-25 03:25:38,356 ]: Not Found: /en/wordlist/take/20/
+[ pid=57153, time=2017-06-25 03:27:02,067 ]: Not Found: /en/wordlist/take/20/
+[ pid=57153, time=2017-06-25 04:00:44,946 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-06-25 04:00:57,151 ]: Not Found: /en/wordlist/order/desc/
+[ pid=57153, time=2017-06-25 06:44:19,282 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-25 07:26:08,428 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-25 14:23:20,164 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-25 14:33:20,874 ]: Not Found: /en/wordlist/take/20/
+[ pid=57153, time=2017-06-25 23:33:06,785 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-26 00:35:03,371 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-26 03:47:33,557 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-26 08:31:14,169 ]: Not Found: /pl/wordlist/take/100/
+[ pid=57153, time=2017-06-26 17:25:31,956 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-26 17:25:40,935 ]: Not Found: /static/yourwords/css/social-likes_flat.css
+[ pid=57153, time=2017-06-26 17:25:41,649 ]: Not Found: /static/yourwords/js/social-likes.min.js
+[ pid=57153, time=2017-06-27 05:07:20,160 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-27 05:33:12,237 ]: Not Found: /favicon.ico
+[ pid=57153, time=2017-06-27 05:33:31,314 ]: Not Found: /static/admin/js/change_form.js
+[ pid=57153, time=2017-06-27 05:33:31,340 ]: Not Found: /static/admin/js/prepopulate_init.js
+[ pid=57153, time=2017-06-27 05:33:31,770 ]: Not Found: /static/admin/js/change_form.js
+[ pid=57153, time=2017-06-27 05:33:31,887 ]: Not Found: /static/admin/js/prepopulate_init.js
+[ pid=57153, time=2017-06-27 05:41:30,253 ]: Not Found: /en/wordlist/take/20/
+[ pid=57153, time=2017-06-27 09:58:44,754 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-27 10:47:17,672 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-06-27 11:02:52,972 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-06-27 11:05:49,441 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-06-27 11:08:20,152 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-27 12:41:36,000 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-27 15:58:14,518 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-27 16:08:52,715 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-06-27 16:25:00,754 ]: Not Found: /en/wordlist/take/100/
+[ pid=57153, time=2017-06-27 17:13:11,257 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-06-27 17:17:37,721 ]: Not Found: /en/wordlist/take/100/
+[ pid=57153, time=2017-06-27 17:25:11,522 ]: Not Found: /en/wordlist/take/100/
+[ pid=57153, time=2017-06-27 18:44:23,501 ]: Not Found: /en/wordlist/take/20/
+[ pid=57153, time=2017-06-27 19:21:09,133 ]: Not Found: /en/wordlist/take/20/
+[ pid=57153, time=2017-06-27 23:35:08,242 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-27 23:35:08,467 ]: Not Found: /pl/wordlist/take/20/
+[ pid=57153, time=2017-06-28 02:48:03,251 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-28 02:48:34,124 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-28 07:14:47,368 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-28 07:41:23,073 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-06-28 07:44:18,550 ]: Not Found: /en/wordlist/take/20/
+[ pid=57153, time=2017-06-28 09:18:25,034 ]: Not Found: /en/wordlist/take/100/
+[ pid=57153, time=2017-06-28 14:49:38,151 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-28 14:49:39,039 ]: Not Found: /en/wordlist/take/100/
+[ pid=57153, time=2017-06-29 03:10:22,072 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-29 04:35:26,251 ]: Not Found: /pl/wordlist/take/20/
+[ pid=57153, time=2017-06-29 05:12:03,403 ]: Not Found: /favicon.ico
+[ pid=57153, time=2017-06-29 13:41:13,430 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-29 14:00:07,097 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-29 14:00:08,188 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-29 14:00:22,688 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-29 14:00:45,056 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-29 14:00:51,201 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-29 16:13:45,971 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-29 17:54:49,491 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-29 17:54:49,848 ]: Not Found: /sitemap.xml
+[ pid=57153, time=2017-06-29 18:24:52,051 ]: Internal Server Error: /pl/social-auth/complete/facebook/
+Traceback (most recent call last):
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_django/views.py", line 28, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/base.py", line 39, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/utils.py", line 253, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/facebook.py", line 108, in auth_complete
+    return self.do_auth(access_token, response, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/facebook.py", line 150, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_django/strategy.py", line 115, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 100, in authenticate
+    user = backend.authenticate(*args, **credentials)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/base.py", line 79, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/base.py", line 82, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/base.py", line 107, in run_pipeline
+    result = func(*args, **out) or {}
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/pipeline/social_auth.py", line 23, in social_user
+    raise AuthAlreadyAssociated(backend, msg)
+social_core.exceptions.AuthAlreadyAssociated: This facebook account is already in use.
+[ pid=57153, time=2017-06-29 18:24:52,648 ]: Not Found: /favicon.ico
+[ pid=57153, time=2017-06-29 18:25:19,124 ]: Internal Server Error: /pl/social-auth/complete/facebook/
+Traceback (most recent call last):
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/utils.py", line 253, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/facebook.py", line 98, in auth_complete
+    'code': self.data['code']
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/base.py", line 223, in request
+    response.raise_for_status()
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/requests/models.py", line 909, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 400 Client Error: Bad Request for url: https://graph.facebook.com/v2.8/oauth/access_token?client_id=837729266384283&redirect_uri=https%3A%2F%2Ftwojeslowka.online%2Fpl%2Fsocial-auth%2Fcomplete%2Ffacebook%2F%3Fredirect_state%3DPcvvHOI6Q6Yrm9WyV6AmpiaN5YrNbSLa&client_secret=ddd405da96df6dadb7b50b87df9ede38&code=AQAGaI8rMN5HBMYUFxtFs9yVjDzYLYCOVeobhjyoeRVvSN4u0IdWoN1BUkzYm9bj7LRlD6IXuyu2Tnaz9IhfsfhG2MJY2BGdw09fBUCS1PUowjtF9qNBUbHl0KqmsI-006zpVuUdCBdVR6zrV40qkDsmHLhSZWdnc57CdF9kiG1DY-BUXHuVXrprY_ycFD35_BDbgWbVLeX3J-yz-m4hwlP2ixdWYEOzeWBEKYHRr78tfqsEEuOB25Y1u6M-bhAnCRP8G8JbrPfZcflFxHdu0mIDdK4v1qctsnX_ImNMl4u89YT68kbF9Uvj4VaenzztMbz9HrVTZJhTYl3I2PLxQSPl
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_django/views.py", line 28, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/base.py", line 39, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/utils.py", line 256, in wrapper
+    raise AuthCanceled(args[0], response=err.response)
+social_core.exceptions.AuthCanceled: Authentication process canceled
+[ pid=57153, time=2017-06-29 18:25:30,179 ]: Internal Server Error: /pl/social-auth/complete/facebook/
+Traceback (most recent call last):
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_django/utils.py", line 50, in wrapper
+    return func(request, backend, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_django/views.py", line 28, in complete
+    redirect_name=REDIRECT_FIELD_NAME, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/actions.py", line 41, in do_complete
+    user = backend.complete(user=user, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/base.py", line 39, in complete
+    return self.auth_complete(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/utils.py", line 253, in wrapper
+    return func(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/facebook.py", line 108, in auth_complete
+    return self.do_auth(access_token, response, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/facebook.py", line 150, in do_auth
+    return self.strategy.authenticate(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_django/strategy.py", line 115, in authenticate
+    return authenticate(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 100, in authenticate
+    user = backend.authenticate(*args, **credentials)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/base.py", line 79, in authenticate
+    return self.pipeline(pipeline, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/base.py", line 82, in pipeline
+    out = self.run_pipeline(pipeline, pipeline_index, *args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/backends/base.py", line 107, in run_pipeline
+    result = func(*args, **out) or {}
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/social_core/pipeline/social_auth.py", line 23, in social_user
+    raise AuthAlreadyAssociated(backend, msg)
+social_core.exceptions.AuthAlreadyAssociated: This facebook account is already in use.
+[ pid=57153, time=2017-06-29 21:55:50,077 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-30 00:51:49,750 ]: Not Found: /pl/wordlist/order/desc/
+[ pid=57153, time=2017-06-30 04:18:42,517 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-30 18:31:20,335 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-06-30 20:00:52,092 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-07-01 02:09:20,764 ]: Not Found: /pl/wordlist/order/desc/
+[ pid=57153, time=2017-07-01 02:20:18,748 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-07-01 02:20:19,273 ]: Not Found: /wordlist/order/desc/
+[ pid=57153, time=2017-07-01 07:13:04,811 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-07-01 08:03:44,805 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-07-01 08:41:47,867 ]: Not Found: /en/wordlist/order/desc/
+[ pid=57153, time=2017-07-01 10:25:51,439 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-07-01 11:52:35,872 ]: Not Found: /wordlist/order/desc/
+[ pid=57153, time=2017-07-01 13:37:15,073 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-07-01 13:42:16,613 ]: Not Found: /en/wordlist/take/20/
+[ pid=57153, time=2017-07-01 13:49:36,028 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-07-01 13:59:12,571 ]: Not Found: /en/wordlist/take/100/
+[ pid=57153, time=2017-07-01 14:04:55,472 ]: Not Found: /en/wordlist/take/20/
+[ pid=57153, time=2017-07-01 14:15:28,682 ]: Not Found: /en/wordlist/take/20/
+[ pid=57153, time=2017-07-01 14:31:30,599 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-07-01 18:40:50,716 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-07-01 18:48:52,543 ]: Not Found: /en/wordlist/order/desc/
+[ pid=57153, time=2017-07-01 18:52:28,886 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-07-01 18:56:03,815 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-07-01 20:58:05,322 ]: Not Found: /en/wordlist/order/desc/
+[ pid=57153, time=2017-07-01 22:10:47,465 ]: Not Found: /en/wordlist/take/5/
+[ pid=57153, time=2017-07-01 22:54:21,279 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-07-01 22:54:21,715 ]: Not Found: /wordlist/order/desc/
+[ pid=57153, time=2017-07-02 05:09:49,072 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-07-02 09:02:12,901 ]: Not Found: /wordlist/order/desc/
+[ pid=57153, time=2017-07-02 10:32:18,305 ]: Not Found: /pl/wordlist/order/desc/
+[ pid=57153, time=2017-07-02 13:13:14,149 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-07-02 13:51:47,719 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-07-02 14:22:39,320 ]: Not Found: /en/wordlist/order/desc/
+[ pid=57153, time=2017-07-02 16:28:06,539 ]: Not Found: /en/wordlist/order/desc/
+[ pid=57153, time=2017-07-02 16:55:50,450 ]: Not Found: /en/wordlist/order/desc/
+[ pid=57153, time=2017-07-02 19:14:30,370 ]: Not Found: /pl/wordlist/order/desc/
+[ pid=57153, time=2017-07-02 19:23:02,468 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-07-02 21:35:57,610 ]: Not Found: /pl/wordlist/order/desc/
+[ pid=57153, time=2017-07-03 02:42:23,814 ]: Not Found: /robots.txt
+[ pid=57153, time=2017-07-03 09:56:19,375 ]: Not Found: /pl/wordlist/order/desc/
+[ pid=57153, time=2017-07-03 10:58:02,238 ]: Not Found: /robots.txt
+[ pid=24189, time=2017-07-03 13:04:07,937 ]: Not Found: /pl/wordlist/order/desc/
+[ pid=30506, time=2017-07-04 01:17:58,581 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-04 01:17:59,317 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-04 03:26:17,497 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-04 08:00:35,765 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-04 14:36:17,746 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-04 17:30:21,639 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-05 04:31:31,053 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-05 05:28:53,403 ]: Not Found: /favicon.ico
+[ pid=30506, time=2017-07-05 07:48:24,828 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-05 08:51:44,227 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-05 14:37:59,137 ]: Not Found: //wp-includes/wlwmanifest.xml
+[ pid=30506, time=2017-07-05 14:37:59,175 ]: Not Found: //xmlrpc.php
+[ pid=30506, time=2017-07-05 14:37:59,266 ]: Not Found: //blog/wp-includes/wlwmanifest.xml
+[ pid=30506, time=2017-07-05 14:37:59,304 ]: Not Found: //wordpress/wp-includes/wlwmanifest.xml
+[ pid=30506, time=2017-07-05 14:37:59,341 ]: Not Found: //wp/wp-includes/wlwmanifest.xml
+[ pid=30506, time=2017-07-05 14:37:59,380 ]: Not Found: //site/wp-includes/wlwmanifest.xml
+[ pid=30506, time=2017-07-05 15:33:25,848 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-05 21:36:05,586 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-06 01:30:38,872 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-06 06:34:53,945 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-06 06:41:49,205 ]: Not Found: /en/wordlist/order/desc/
+[ pid=30506, time=2017-07-06 11:03:19,000 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-06 13:47:20,138 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-06 19:22:45,398 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-06 20:15:20,545 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-07 00:52:58,955 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-07 04:50:06,495 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-07 09:25:40,694 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-07 12:01:18,574 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-07 12:01:19,108 ]: Not Found: /static/yourwords/css/social-likes_flat.css
+[ pid=30506, time=2017-07-07 12:01:19,158 ]: Not Found: /static/yourwords/js/social-likes.min.js
+[ pid=30506, time=2017-07-07 13:46:45,789 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-07 16:10:24,845 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-07 18:12:26,812 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-07 18:12:27,526 ]: Not Found: /favicon.ico
+[ pid=30506, time=2017-07-07 18:36:43,129 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-08 00:57:12,143 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-08 03:13:40,841 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-08 10:47:44,702 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-08 13:04:27,899 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-08 15:20:07,372 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-08 21:20:03,971 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-08 22:45:53,774 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-09 07:42:09,055 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-09 08:30:42,376 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-09 11:47:04,816 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-09 12:41:42,288 ]: Not Found: /en/wordlist/take/5/
+[ pid=30506, time=2017-07-09 14:17:25,092 ]: Not Found: /en/wordlist/take/5/
+[ pid=30506, time=2017-07-09 17:12:45,937 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-09 17:40:45,629 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-09 20:42:36,554 ]: Not Found: /en/wordlist/order/desc/
+[ pid=30506, time=2017-07-09 21:09:04,546 ]: Not Found: /en/wordlist/take/20/
+[ pid=30506, time=2017-07-10 01:39:56,942 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-10 02:20:41,030 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-10 05:37:30,721 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-10 10:03:59,771 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-10 12:24:29,025 ]: Not Found: /en/wordlist/take/20/
+[ pid=30506, time=2017-07-10 20:59:01,111 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-10 20:59:04,661 ]: Not Found: /en/wordlist/take/5/
+[ pid=30506, time=2017-07-11 01:18:20,841 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-11 05:27:57,151 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: typo | LITERÓWKA>]>
+  UnorderedObjectListWarning
+
+[ pid=30506, time=2017-07-11 09:56:02,421 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-11 10:58:30,481 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-11 15:17:17,574 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-11 15:17:18,105 ]: Not Found: /favicon.ico
+[ pid=30506, time=2017-07-11 18:15:57,512 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-11 19:30:49,051 ]: Not Found: /favicon.ico
+[ pid=30506, time=2017-07-11 22:38:30,860 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-12 00:01:09,112 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-12 01:15:15,454 ]: Not Found: /en/wordlist/take/100/
+[ pid=30506, time=2017-07-12 04:06:37,136 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-12 05:03:03,615 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-12 11:38:34,800 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-12 11:40:26,817 ]: Not Found: /en/wordlist/take/5/
+[ pid=30506, time=2017-07-12 13:31:16,760 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-12 14:00:17,781 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-12 17:01:01,532 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-12 19:07:57,225 ]: Not Found: /en/wordlist/order/desc/
+[ pid=30506, time=2017-07-12 23:56:22,337 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-13 09:28:59,997 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-13 10:09:39,803 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-13 10:09:43,731 ]: Not Found: /en/wordlist/order/desc/
+[ pid=30506, time=2017-07-13 16:09:08,146 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-14 00:48:57,053 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-14 01:26:06,774 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-14 05:09:47,764 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-14 06:22:39,510 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-14 11:01:51,186 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-14 15:43:07,490 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-14 15:58:44,863 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-14 19:13:34,222 ]: Not Found: /en/wordlist/take/100/
+[ pid=30506, time=2017-07-14 23:06:02,651 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-15 06:14:44,851 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-15 13:56:10,879 ]: Not Found: /robots.txt
+[ pid=30506, time=2017-07-15 15:28:01,324 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-15 20:27:39,582 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-15 20:27:39,929 ]: Not Found: /en/wordlist/take/20/
+[ pid=99030, time=2017-07-16 03:01:59,617 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-16 04:00:51,213 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-16 09:52:51,915 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-16 11:07:04,885 ]: Not Found: /en/wordlist/take/20/
+[ pid=99030, time=2017-07-16 18:54:49,642 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-16 20:52:27,077 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-17 02:35:38,018 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-17 05:25:07,957 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-17 05:25:07,998 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-17 14:35:40,002 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-17 16:12:45,604 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-18 06:44:40,377 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-18 06:44:44,428 ]: Not Found: /en/wordlist/order/desc/
+[ pid=99030, time=2017-07-18 08:23:46,289 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-18 10:40:27,759 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-18 13:26:17,027 ]: Not Found: /pl/wordlist/take/100/
+[ pid=99030, time=2017-07-18 13:39:06,779 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-18 13:39:07,434 ]: Not Found: /wordlist/take/100/
+[ pid=99030, time=2017-07-18 14:41:51,944 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-18 22:20:13,474 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-19 01:09:25,163 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-19 05:08:15,435 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-19 07:31:47,663 ]: Not Found: /en/wordlist/take/5/
+[ pid=99030, time=2017-07-19 15:08:12,236 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-19 15:13:05,265 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-19 22:41:04,024 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-19 22:41:05,038 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-19 23:23:02,939 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-19 23:23:08,337 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-20 00:24:23,078 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-20 04:21:41,375 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-20 11:55:12,841 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-20 14:32:48,667 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-20 21:13:32,050 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-21 12:25:07,970 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-21 13:23:11,842 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-22 00:28:47,670 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-22 00:53:09,724 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-22 06:47:00,483 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-22 17:16:25,348 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-23 04:43:50,650 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-23 11:20:16,205 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-23 13:12:24,057 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-24 00:04:13,522 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-24 07:11:56,032 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-24 21:08:56,572 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-25 09:50:20,241 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-25 14:00:32,439 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-25 14:36:54,306 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-25 14:36:55,328 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-25 14:39:18,742 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-25 14:39:23,272 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-25 16:51:21,243 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-26 05:14:58,180 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-26 13:44:13,380 ]: Not Found: /favicon.ico
+[ pid=99030, time=2017-07-26 14:30:46,055 ]: Not Found: /static/yourwords/js/
+[ pid=99030, time=2017-07-26 18:50:58,631 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-27 03:42:27,036 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-27 07:04:04,107 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-27 08:12:39,391 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-27 09:02:49,138 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-27 11:09:38,342 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-28 04:50:12,538 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-28 18:47:54,902 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-29 08:34:04,702 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-29 09:59:45,796 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-29 12:03:29,142 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-29 21:37:25,964 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-30 03:55:50,890 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-30 20:28:18,704 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-30 21:22:03,442 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-30 21:22:03,801 ]: Not Found: /sitemap.xml
+[ pid=99030, time=2017-07-30 22:25:26,513 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-31 16:44:29,250 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-07-31 20:58:26,210 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-01 06:57:57,167 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-01 09:22:51,867 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-01 23:50:38,044 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-02 15:46:30,303 ]: Not Found: //wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-08-02 15:46:30,340 ]: Not Found: //xmlrpc.php
+[ pid=99030, time=2017-08-02 15:46:30,416 ]: Not Found: //blog/wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-08-02 15:46:30,452 ]: Not Found: //wordpress/wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-08-02 15:46:30,489 ]: Not Found: //wp/wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-08-02 15:46:30,528 ]: Not Found: //site/wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-08-02 15:46:30,574 ]: Not Found: //cms/wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-08-02 16:54:36,511 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-02 16:54:37,480 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-02 19:50:08,941 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-03 02:54:52,852 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-03 02:54:53,477 ]: Not Found: /wordlist/
+[ pid=99030, time=2017-08-03 05:36:07,377 ]: Not Found: /favicon.ico
+[ pid=99030, time=2017-08-03 14:15:03,635 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-03 16:34:12,429 ]: Not Found: //pl/
+[ pid=99030, time=2017-08-04 06:19:22,218 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-05 02:55:35,269 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-05 06:23:20,130 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-05 10:31:47,356 ]: Not Found: /favicon.ico
+[ pid=99030, time=2017-08-06 04:38:22,153 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-06 11:29:25,338 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-07 02:47:22,607 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-07 16:49:48,459 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-08 02:19:39,942 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-08 15:49:08,971 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-08 16:28:18,562 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-09 03:06:53,997 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-09 03:06:55,090 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-09 05:29:19,340 ]: Not Found: /favicon.ico
+[ pid=99030, time=2017-08-09 05:29:39,670 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-09 05:29:59,798 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-09 11:49:58,218 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-09 14:02:40,760 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-09 17:24:45,281 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: entrance | WSTÊP>, <English: different kinds of | RÓ¯NEGO RODZAJU>, <English: indigenous people | LUDNO¦Æ TUBYLCZA>, <English: muse | DUMAÆ, ROZMY¦LAÆ>]>
+  UnorderedObjectListWarning
+
+[ pid=99030, time=2017-08-09 17:27:08,814 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: shy | NIE¦MIA£Y>, <English: arrange | ORGANIZOWAÆ>, <English: duty | OBOWI¡ZEK>, <English: price list | CENNIK>, <English: principal | PRZE£O¯ONY>, <English: gape | GAPIÆ SIÊ>, <English: speech | PRZEMÓWIENIE>, <English: open up | OTWIERAÆ SIÊ>, <English: remind | PRZYPOMNIEÆ>, <English: briefcase | TECZKA>, <English: rewrite | PRZEPISAÆ>, <English: form | TWORZYÆ, UTWORZYÆ>, <English: recognisable | ROZPOZNAWALNY>, <English: work on | PRACOWAÆ NAD>, <English: unique | WYJ¡TKOWY>, <English: praise | POCHWALIÆ>, <English: walk to | PODEJ¦Æ DO>, <English: carry | NIE¦Æ>, <English: far away | DALEKO>, <English: suspicious | PODEJRZANIE>, '...(remaining elements truncated)...']>
+  UnorderedObjectListWarning
+
+[ pid=99030, time=2017-08-09 17:27:32,249 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: be in doubt | BYÆ NIEPEWNYM>]>
+  UnorderedObjectListWarning
+
+[ pid=99030, time=2017-08-09 22:25:02,920 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-10 05:33:08,105 ]: Not Found: /favicon.ico
+[ pid=99030, time=2017-08-10 09:46:17,027 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-10 23:23:47,068 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-11 05:23:25,772 ]: Not Found: /favicon.ico
+[ pid=51371, time=2017-08-11 12:24:33,713 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-12 03:04:35,286 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-12 13:41:35,347 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-12 16:01:42,057 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-13 08:37:08,472 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-13 11:23:56,458 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-14 08:25:52,172 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-14 08:25:56,146 ]: Not Found: /en/wordlist/order/desc/
+[ pid=51371, time=2017-08-14 23:15:32,315 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-15 02:14:25,079 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-15 14:39:58,837 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-15 15:55:13,751 ]: Not Found: /favicon.ico
+[ pid=51371, time=2017-08-15 20:23:04,433 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-16 14:43:57,409 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-16 19:44:28,751 ]: Not Found: /static/yourwords/js/
+[ pid=51371, time=2017-08-17 08:17:41,065 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-18 01:08:31,712 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-18 08:45:53,360 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-18 17:09:22,512 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-19 13:31:15,406 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-19 23:32:27,952 ]: Not Found: /robots.txt
+[ pid=51371, time=2017-08-20 00:33:09,285 ]: Not Found: /en/wordlist/take/100/
+[ pid=51371, time=2017-08-20 03:32:41,258 ]: Not Found: //wp-includes/wlwmanifest.xml
+[ pid=51371, time=2017-08-20 03:32:41,296 ]: Not Found: //xmlrpc.php
+[ pid=51371, time=2017-08-20 03:32:41,372 ]: Not Found: //blog/wp-includes/wlwmanifest.xml
+[ pid=51371, time=2017-08-20 03:32:41,410 ]: Not Found: //wordpress/wp-includes/wlwmanifest.xml
+[ pid=51371, time=2017-08-20 03:32:41,445 ]: Not Found: //wp/wp-includes/wlwmanifest.xml
+[ pid=51371, time=2017-08-20 03:32:41,487 ]: Not Found: //site/wp-includes/wlwmanifest.xml
+[ pid=51371, time=2017-08-20 03:32:41,524 ]: Not Found: //cms/wp-includes/wlwmanifest.xml
+[ pid=51371, time=2017-08-20 07:19:06,936 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: frenetic | GOR¡CZKOWY (ZABIEGANY)>]>
+  UnorderedObjectListWarning
+
+[ pid=99030, time=2017-08-23 11:41:34,007 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-23 22:24:49,001 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-24 03:22:35,298 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-25 00:33:42,252 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-25 08:50:18,388 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-26 03:19:03,030 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-26 03:19:06,837 ]: Not Found: /static/yourwords/css/social-likes_flat.css
+[ pid=99030, time=2017-08-26 03:19:08,496 ]: Not Found: /static/yourwords/js/social-likes.min.js
+[ pid=99030, time=2017-08-26 04:39:34,394 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-26 04:39:38,292 ]: Not Found: /en/wordlist/take/5/
+[ pid=99030, time=2017-08-26 19:54:59,963 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-27 00:19:57,160 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-28 05:21:57,875 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: threaten | GROZIÆ, STRASZYÆ>, <English: threat | GRO¬BA>, <English: punitive | ODWETOWY>, <English: measures | DZIA£ANIA, ¦RODKI>, <English: be on a par with something | BYÆ NA RÓWNI Z CZYM¦>, <English: threat | ZAGRO¯ENIE>, <English: convene | ZWO£YWAÆ>, <English: convene | ZWO£YWAÆ>, <English: repel | ODPIERAÆ, ODRZUCAÆ>, <English: be in bad shape | BYÆ W Z£YM STANIE>, <English: pose | STANOWIÆ (NP.  PROBLEM)>, <English: be imminent | ZAGRA¯AÆ>]>
+  UnorderedObjectListWarning
+
+[ pid=99030, time=2017-08-28 10:04:28,408 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-28 12:14:55,307 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-28 15:38:40,100 ]: Not Found: /sharer/sharer.php
+[ pid=99030, time=2017-08-28 15:39:11,524 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-29 05:10:25,187 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: meaningless | BEZSENSOWNY>]>
+  UnorderedObjectListWarning
+
+[ pid=99030, time=2017-08-29 05:18:58,334 ]: Not Found: /favicon.ico
+[ pid=99030, time=2017-08-29 10:17:31,870 ]: Not Found: //wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-08-29 10:17:31,911 ]: Not Found: //xmlrpc.php
+[ pid=99030, time=2017-08-29 10:17:31,986 ]: Not Found: //blog/wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-08-29 10:17:32,031 ]: Not Found: //wordpress/wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-08-29 10:17:32,081 ]: Not Found: //wp/wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-08-29 10:17:32,117 ]: Not Found: //site/wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-08-29 10:17:32,155 ]: Not Found: //cms/wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-08-30 10:25:11,123 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-30 21:42:05,355 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-31 01:18:24,027 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-31 02:16:11,475 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-08-31 02:16:14,690 ]: Not Found: /favicon.ico
+[ pid=99030, time=2017-09-01 08:12:52,982 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-02 12:16:59,034 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-02 14:58:50,080 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-03 03:04:03,138 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-04 20:02:31,087 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-06 14:30:15,413 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-06 16:00:16,213 ]: Not Found: /favicon.ico
+[ pid=99030, time=2017-09-07 18:57:39,354 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-08 06:34:16,578 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-08 13:17:19,664 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-08 14:58:05,879 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-08 19:21:18,135 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-08 20:48:40,100 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-08 23:52:54,786 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-09 01:23:51,793 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-09 02:55:47,699 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-09 02:55:48,054 ]: Not Found: /sitemap.xml
+[ pid=99030, time=2017-09-09 10:37:47,093 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-09 12:11:28,224 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-09 18:55:54,479 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-10 05:10:31,346 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-10 16:49:52,568 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-12 05:00:25,107 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: deteriorate | POGARSZAÆ SIÊ (O STANIE CZEGO¦)>]>
+  UnorderedObjectListWarning
+
+[ pid=99030, time=2017-09-12 05:24:50,981 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: identity | TO¯SAMO¦Æ>, <English: rent out, let | WYNAJ¡Æ>, <English: expel | WYGNAÆ>, <English: welcomed by someone | PRZYJÊTY PRZEZ KOGO¦>, <English: terrible, awful | STRASZNY, OKROPNY>, <English: scrap | ODDAWAÆ (NA Z£OM), WYRZUCAÆ (NA ¦MIETNIK)>, <English: obvious | OCZYWISTY, EWIDENTNY>, <English: benefit from | ZYSKAÆ DZIÊKI, ODNIE¦Æ KORZY¦Æ Z>, <English: confident | PEWNY SIEBIE>, <English: focus | UWAGA, SKUPIENIE>, <English: take the oath | Z£O¯YÆ PRZYSIÊGÊ>, <English: shock | ZSZOKOWAÆ, ZASZOKOWAÆ>, <English: range | ZAKRES, PRZEDZIA£>, <English: rally | ZBIERAÆ SIÊ, JEDNOCZYÆ>, <English: demand | ¯¡DAÆ, DOMAGAÆ SIÊ>, <English: tribute | HO£D, WYRAZY UZNANIA>, <English: on record | W HISTORII>, <English: consider | UWA¯AÆ, UZNAWAÆ>, <English: inquiry | DOCHODZENIE, ¦LEDZTWO>, <English: peer | RÓWIE¦NIK>, '...(remaining elements truncated)...']>
+  UnorderedObjectListWarning
+
+[ pid=99030, time=2017-09-13 04:39:26,317 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-13 05:26:12,100 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: straightforward | PROSTY, £ATWY>, <English: eating healthily | ZDROWE OD¯YWIANIE>]>
+  UnorderedObjectListWarning
+
+[ pid=99030, time=2017-09-13 08:56:24,591 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-13 09:46:49,642 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-13 18:32:33,152 ]: Not Found: //wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-09-13 18:32:33,192 ]: Not Found: //xmlrpc.php
+[ pid=99030, time=2017-09-13 18:32:33,277 ]: Not Found: //blog/wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-09-13 18:32:33,322 ]: Not Found: //wordpress/wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-09-13 18:32:33,361 ]: Not Found: //wp/wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-09-13 18:32:33,397 ]: Not Found: //site/wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-09-13 18:32:33,438 ]: Not Found: //cms/wp-includes/wlwmanifest.xml
+[ pid=99030, time=2017-09-14 15:50:32,300 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-15 00:49:10,561 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-15 02:32:11,088 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-15 18:08:02,032 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-15 18:08:03,132 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-15 20:41:44,036 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-15 20:41:51,738 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-15 22:40:19,080 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-16 07:18:34,806 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-16 14:03:40,812 ]: Not Found: /robots.txt
+[ pid=99030, time=2017-09-16 16:34:42,695 ]: Not Found: /robots.txt
+[ pid=94547, time=2017-09-16 20:12:46,176 ]: Not Found: //wp-includes/wlwmanifest.xml
+[ pid=94547, time=2017-09-16 20:12:46,330 ]: Not Found: //xmlrpc.php
+[ pid=94547, time=2017-09-16 20:12:46,650 ]: Not Found: //blog/wp-includes/wlwmanifest.xml
+[ pid=94547, time=2017-09-16 20:12:46,802 ]: Not Found: //wordpress/wp-includes/wlwmanifest.xml
+[ pid=94547, time=2017-09-16 20:12:46,953 ]: Not Found: //wp/wp-includes/wlwmanifest.xml
+[ pid=94547, time=2017-09-16 20:12:47,103 ]: Not Found: //site/wp-includes/wlwmanifest.xml
+[ pid=94547, time=2017-09-16 20:12:47,254 ]: Not Found: //cms/wp-includes/wlwmanifest.xml
+[ pid=94547, time=2017-09-16 21:52:23,297 ]: Not Found: //wp-includes/wlwmanifest.xml
+[ pid=94547, time=2017-09-16 21:52:23,522 ]: Not Found: //xmlrpc.php
+[ pid=94547, time=2017-09-16 21:52:24,091 ]: Not Found: //blog/wp-includes/wlwmanifest.xml
+[ pid=94547, time=2017-09-16 21:52:24,317 ]: Not Found: //wordpress/wp-includes/wlwmanifest.xml
+[ pid=94547, time=2017-09-16 21:52:24,542 ]: Not Found: //wp/wp-includes/wlwmanifest.xml
+[ pid=94547, time=2017-09-16 21:52:24,766 ]: Not Found: //site/wp-includes/wlwmanifest.xml
+[ pid=94547, time=2017-09-16 21:52:24,996 ]: Not Found: //cms/wp-includes/wlwmanifest.xml
+[ pid=30553, time=2017-09-18 06:05:18,926 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/backends/mysql/base.py:101: Warning: (1364, "Field 'email_message_create_listing' doesn't have a default value")
+  return self.cursor.execute(query, args)
+
+[ pid=30553, time=2017-09-18 13:02:26,886 ]: Not Found: /robots.txt
+[ pid=30553, time=2017-09-18 17:41:02,136 ]: Not Found: /favicon.ico
+[ pid=30553, time=2017-09-18 17:41:30,154 ]: Not Found: /static/admin/js/prepopulate_init.js
+[ pid=30553, time=2017-09-18 17:41:30,195 ]: Not Found: /static/admin/js/change_form.js
+[ pid=30553, time=2017-09-18 17:41:30,731 ]: Not Found: /static/admin/js/change_form.js
+[ pid=30553, time=2017-09-18 17:41:30,928 ]: Not Found: /static/admin/js/prepopulate_init.js
+[ pid=30553, time=2017-09-18 17:45:02,274 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: miss | CHYBIÆ, NIE TRAFIÆ>]>
+  UnorderedObjectListWarning
+
+[ pid=30553, time=2017-09-19 02:00:06,209 ]: Not Found: /robots.txt
+[ pid=30553, time=2017-09-19 05:32:18,477 ]: /usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/paginator.py:112: UnorderedObjectListWarning: Pagination may yield inconsistent results with an unordered object_list: <QuerySet [<English: incentive | BODZIEC>]>
+  UnorderedObjectListWarning
+
+[ pid=30553, time=2017-09-19 05:37:45,427 ]: Not Found: /favicon.ico
+[ pid=30553, time=2017-09-19 05:38:00,355 ]: Not Found: /static/admin/js/change_form.js
+[ pid=3153, time=2017-09-19 05:38:00,420 ]: Not Found: /static/admin/js/prepopulate_init.js
+[ pid=28765, time=2017-09-19 17:44:47,965 ]: Internal Server Error: /pl/authentication/signin/
+Traceback (most recent call last):
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/fields/related_descriptors.py", line 382, in __get__
+    rel_obj = getattr(instance, self.cache_name)
+AttributeError: 'User' object has no attribute '_option_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/connections.py", line 292, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1054, "Unknown column 'accounts_option.only_full_words_searching' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/home/thirtiethsite/domains/twojeslowka.online/public_python/authentication/views.py", line 28, in signin
+    login(request, user)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 156, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/dispatch/dispatcher.py", line 193, in send
+    for receiver in self._live_receivers(sender)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/dispatch/dispatcher.py", line 193, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 25, in update_last_login
+    user.save(update_fields=['last_login'])
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 80, in save
+    super(AbstractBaseUser, self).save(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/base.py", line 806, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/base.py", line 846, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/dispatch/dispatcher.py", line 193, in send
+    for receiver in self._live_receivers(sender)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/dispatch/dispatcher.py", line 193, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/usr/home/thirtiethsite/domains/twojeslowka.online/public_python/accounts/models.py", line 42, in save_user_option
+    instance.option.save()
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/fields/related_descriptors.py", line 390, in __get__
+    rel_obj = self.get_queryset(instance=instance).get(**filter_args)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/query.py", line 373, in get
+    num = len(clone)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/query.py", line 1102, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 876, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/connections.py", line 292, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'accounts_option.only_full_words_searching' in 'field list'")
+[ pid=28765, time=2017-09-19 17:44:49,117 ]: Not Found: /favicon.ico
+[ pid=28765, time=2017-09-19 17:45:13,335 ]: Internal Server Error: /pl/authentication/signin/
+Traceback (most recent call last):
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/fields/related_descriptors.py", line 382, in __get__
+    rel_obj = getattr(instance, self.cache_name)
+AttributeError: 'User' object has no attribute '_option_cache'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/connections.py", line 292, in query
+    _mysql.connection.query(self, query)
+_mysql_exceptions.OperationalError: (1054, "Unknown column 'accounts_option.only_full_words_searching' in 'field list'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/exception.py", line 41, in inner
+    response = get_response(request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 249, in _legacy_get_response
+    response = self._get_response(request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/core/handlers/base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/views/decorators/csrf.py", line 58, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/views/decorators/cache.py", line 57, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "/usr/home/thirtiethsite/domains/twojeslowka.online/public_python/authentication/views.py", line 28, in signin
+    login(request, user)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/contrib/auth/__init__.py", line 156, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/dispatch/dispatcher.py", line 193, in send
+    for receiver in self._live_receivers(sender)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/dispatch/dispatcher.py", line 193, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/contrib/auth/models.py", line 25, in update_last_login
+    user.save(update_fields=['last_login'])
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/contrib/auth/base_user.py", line 80, in save
+    super(AbstractBaseUser, self).save(*args, **kwargs)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/base.py", line 806, in save
+    force_update=force_update, update_fields=update_fields)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/base.py", line 846, in save_base
+    update_fields=update_fields, raw=raw, using=using,
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/dispatch/dispatcher.py", line 193, in send
+    for receiver in self._live_receivers(sender)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/dispatch/dispatcher.py", line 193, in <listcomp>
+    for receiver in self._live_receivers(sender)
+  File "/usr/home/thirtiethsite/domains/twojeslowka.online/public_python/accounts/models.py", line 42, in save_user_option
+    instance.option.save()
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/fields/related_descriptors.py", line 390, in __get__
+    rel_obj = self.get_queryset(instance=instance).get(**filter_args)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/query.py", line 373, in get
+    num = len(clone)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/query.py", line 232, in __len__
+    self._fetch_all()
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/query.py", line 1102, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/query.py", line 53, in __iter__
+    results = compiler.execute_sql(chunked_fetch=self.chunked_fetch)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/models/sql/compiler.py", line 876, in execute_sql
+    cursor.execute(sql, params)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/utils.py", line 94, in __exit__
+    six.reraise(dj_exc_type, dj_exc_value, traceback)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/utils/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/backends/utils.py", line 65, in execute
+    return self.cursor.execute(sql, params)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/django/db/backends/mysql/base.py", line 101, in execute
+    return self.cursor.execute(query, args)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 250, in execute
+    self.errorhandler(self, exc, value)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/connections.py", line 50, in defaulterrorhandler
+    raise errorvalue
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 247, in execute
+    res = self._query(query)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 411, in _query
+    rowcount = self._do_query(q)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/cursors.py", line 374, in _do_query
+    db.query(q)
+  File "/usr/home/thirtiethsite/.virtualenvs/myenv/lib/python3.6/site-packages/MySQLdb/connections.py", line 292, in query
+    _mysql.connection.query(self, query)
+django.db.utils.OperationalError: (1054, "Unknown column 'accounts_option.only_full_words_searching' in 'field list'")

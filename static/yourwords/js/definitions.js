@@ -73,8 +73,12 @@
 		})
 	}
 
-	function showAndHideModalConfirm(txt, fYes, type='')
+	function showAndHideModalConfirm(txt, fYes, type = '', onlyOk = false)
 	{
+		if (onlyOk) {
+			$('.no').hide();
+		}
+
 		$('.modal-confirm').find('header').text(txt)
 		if (type == 'danger') {
 			$('.modal-confirm').find('header').addClass('w3-red')

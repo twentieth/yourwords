@@ -39,7 +39,8 @@ class CollectionManager:
         self._message = ''
 
     def get_collection(self):
-        records_list = English.users.where_user(self._request.user).filter(id__in=self._records_ids)
+        records_list = English.users.where_user(self._request.user).filter(
+            id__in=list(self._records_ids))
         return queryset_to_json_like(records_list)
 
     def get_count(self):
@@ -54,17 +55,23 @@ class DaysBeforeManager(CollectionManager):
         CollectionManager.__init__(self, request)
         self.__days_before = int(self._request.POST.get('days_before'))
         if self.__days_before == -1:
-            self._records_ids = English.users.where_user(self._request.user).order_by('?').values_list('id', flat=True)
+            self._records_ids = English.users.where_user(
+                self._request.user).order_by('?').values_list(
+                    'id', flat=True)
             self._count = len(self._records_ids)
         else:
-            self._records_ids = English.users.where_user(self._request.user).filter(created_at__gte=timezone.now() - datetime.timedelta(days=self.__days_before)).order_by('?').values_list('id', flat=True)
+            self._records_ids = English.users.where_user(
+                self._request.user).filter(
+                    created_at__gte=timezone.now() - datetime.timedelta(
+                        days=self.__days_before)).order_by('?').values_list(
+                            'id', flat=True)
             self._count = len(self._records_ids)
             self._message = 'Losowanie spośród słówek wprowadzonych w okresie ostatnich ' + \
                             '<span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + \
                             str(self.__days_before) + '</span> dni.' + \
                             ' Słówek: <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + \
                             str(self._count) + '</span>'
-        
+
 
 class DaysAgoManager(CollectionManager):
     def __init__(self, request):
@@ -72,12 +79,19 @@ class DaysAgoManager(CollectionManager):
         if 'main_repeat_manually' not in self._request.POST:
             self.__days_ago = int(self._request.POST.get('main_repeat'))
         elif 'main_repeat_manually' in self._request.POST:
-            self.__days_ago = int(self._request.POST.get('main_repeat_manually'))
+            self.__days_ago = int(
+                self._request.POST.get('main_repeat_manually'))
         i = self.__days_ago - 1
         i_plus = self.__days_ago + 1
-        self._records_ids = English.users.where_user(request.user).filter(created_at__gte=timezone.now() - datetime.timedelta(days=i_plus), created_at__lte=timezone.now() - datetime.timedelta(days=i)).order_by('?').values_list('id', flat=True)
+        self._records_ids = English.users.where_user(request.user).filter(
+            created_at__gte=timezone.now() - datetime.timedelta(days=i_plus),
+            created_at__lte=timezone.now() - datetime.timedelta(
+                days=i)).order_by('?').values_list(
+                    'id', flat=True)
         if self.__days_ago == 1:
-            self._message = _('Losowanie spośród słówek wprowadzonych w ciągu ostatniego dnia')
+            self._message = _(
+                'Losowanie spośród słówek wprowadzonych w ciągu ostatniego dnia'
+            )
         elif self.__days_ago == 7:
             self._message = _('Losowanie spośród słówek wprowadzonych') + \
                 ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">1 ' + \
@@ -109,7 +123,7 @@ class DaysAgoManager(CollectionManager):
 
 
 class NumberWordsManager(CollectionManager):
-    __RATING_NONE = 0
+    __RATING_ALL = 0
     __RATING_EASY = 1
     __RATING_MEDIUM = 2
     __RATING_DIFFICULT = 3
@@ -128,25 +142,35 @@ class NumberWordsManager(CollectionManager):
             rating_word = _('Trudny')
         else:
             rating_word = ''
-        if self.__rating == self.__RATING_NONE and self.__number_words == self.__NUMBER_WORDS_ALL:
-            self._records_ids = English.users.where_user(self._request.user).order_by('?').values_list('id', flat = True)
+        if self.__rating == self.__RATING_ALL and self.__number_words == self.__NUMBER_WORDS_ALL:
+            self._records_ids = English.users.where_user(
+                self._request.user).order_by('?').values_list(
+                    'id', flat=True)
             self._count = len(self._records_ids)
-        elif self.__rating == self.__RATING_NONE and self.__number_words != self.__NUMBER_WORDS_ALL:
-            self._records_ids = English.users.where_user(self._request.user).order_by('?').values_list('id', flat=True)[:self.__number_words]
+        elif self.__rating == self.__RATING_ALL and self.__number_words != self.__NUMBER_WORDS_ALL:
+            self._records_ids = English.users.where_user(
+                self._request.user).order_by('?').values_list(
+                    'id', flat=True)[:self.__number_words]
             self._count = len(self._records_ids)
             self._message = _('Losowanie spośród słówek w liczbie') + \
                 ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + \
                 str(self.__number_words) + '</span>'
-        elif self.__rating != self.__RATING_NONE and self.__number_words == self.__NUMBER_WORDS_ALL:
-            self._records_ids = English.users.where_user(self._request.user).filter(rating=self.__rating).order_by('?').values_list('id', flat=True)
+        elif self.__rating != self.__RATING_ALL and self.__number_words == self.__NUMBER_WORDS_ALL:
+            self._records_ids = English.users.where_user(
+                self._request.user).filter(
+                    rating=self.__rating).order_by('?').values_list(
+                        'id', flat=True)
             self._count = len(self._records_ids)
             self._message = _('Losowanie spośród słówek o poziomie trudności') + ' ' + '<span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + \
                 rating_word + '</span> ' + \
                 _('Słówek') + ': <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + \
                 str(self._count) + '</span>'
         else:
-            # self.__rating != self.__RATING_NONE and self.__number_words != self.__NUMBER_WORDS_ALL
-            self._records_ids = English.users.where_user(self._request.user).filter(rating=self.__rating).order_by('?').values_list('id', flat=True)[:self.__number_words]
+            # self.__rating != self.__RATING_ALL and self.__number_words != self.__NUMBER_WORDS_ALL
+            self._records_ids = English.users.where_user(
+                self._request.user).values_list(
+                    'id', flat=True).filter(rating=self.__rating).order_by(
+                        '?')[:self.__number_words]
             self._count = len(self._records_ids)
             self._message = _('Losowanie spośród słówek o poziomie trudności') + ' ' + '<span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + \
                 rating_word + '</span> ' + \
@@ -161,7 +185,10 @@ class RepeatCheckedManager(CollectionManager):
         if len(self.__repeat_checked) > 0:
             self._records_ids = self.__repeat_checked
             self._count = len(self._records_ids)
-            self._message = _('Losowanie sposród zaznaczonych słówek w liczbie') + ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + str(self._count) + '</span>'
+            self._message = _(
+                'Losowanie sposród zaznaczonych słówek w liczbie'
+            ) + ' <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + str(
+                self._count) + '</span>'
             if self._request.user.is_authenticated():
                 listing = Listing()
                 listing.user = self._request.user
@@ -169,12 +196,14 @@ class RepeatCheckedManager(CollectionManager):
                 listing.save()
                 how_many = Listing.users.where_user(self._request.user).count()
                 if how_many > 10:
-                    Listing.users.where_user(self._request.user).order_by('-created_at').last().delete()
+                    Listing.users.where_user(self._request.user).order_by(
+                        '-created_at').last().delete()
 
 
 class AllWordsManager(CollectionManager):
     def __init__(self, request):
         CollectionManager.__init__(self, request)
-        self._records_ids = English.users.where_user(self._request.user).order_by('?').values_list('id', flat=True)
+        self._records_ids = English.users.where_user(
+            self._request.user).order_by('?').values_list(
+                'id', flat=True)
         self._count = len(self._records_ids)
-        

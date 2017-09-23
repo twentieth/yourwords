@@ -1,0 +1,203 @@
+{% extends 'yourwords/base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<style>
+    .padding {
+        padding: 20px;
+    }
+    .answer_icon img {
+        width: 80px;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+</style>
+{% if records_data %}
+<script>
+    $(function () {
+    var recordsData = {{ records_data|safe }};
+    var recordsList = recordsData.record_list;
+    var readPolish = $('#read_polish');
+    var readEnglish = $('#read_english');
+    var answerPolish = $('#answer_polish');
+    var answerEnglish = $('#answer_english');
+    var textField = $('#text');
+    var sentenceField = $('#sentence');
+    var checkButton = $('#check');
+    var continueButton = $('#continue');
+    var sadIcon = $('#sad_icon');
+    var happyIcon = $('#happy_icon');
+    var showButton = $('#show_answer');
+    var language;
+    var randomRecord;
+    var reversedLanguage;
+    var points = 0;
+    var negativePoints = 0;
+
+    function addPoint() {
+        points += 1;
+    }
+
+    function addNegativePoint()
+    {
+        negativePoints += 1;
+    }
+
+
+    function languageToDisplay() {
+        var languages = ['polish', 'english'];
+        var randomLanguageId = Math.floor(Math.random() * 2);
+        return languages[randomLanguageId];
+    }
+    function getRandomRecord(recordsList) {
+        var randomRecordId = Math.floor(Math.random() * recordsList.length);
+        recordsList[randomRecordId].randomRecordId = randomRecordId;
+        return recordsList[randomRecordId];
+    }
+
+    function cleanFields() {
+        continueButton.hide();
+        readPolish.html('').hide();
+        readEnglish.html('').hide();
+        answerPolish.html('').hide();
+        answerEnglish.html('').hide();
+        sentenceField.html('').hide();
+        textField.val('').hide();
+        checkButton.hide();
+        showButton.hide();
+        sadIcon.hide();
+        happyIcon.hide();
+    }
+    function cleanAnswers()
+    {
+        answerPolish.html('').hide();
+        answerEnglish.html('').hide();
+        sentenceField.html('').hide();
+        showButton.hide();
+        sadIcon.hide();
+        happyIcon.hide();
+    }
+
+    function initialize() {
+        language = languageToDisplay();
+        randomRecord = getRandomRecord(recordsList);
+        if (language == 'polish') {
+            reversedLanguage = 'english';
+            answerEnglish.html(randomRecord.english)
+            textField.attr('placeholder', "{% trans 'wpisz słówko języka obcego' %}");
+            readPolish.html(randomRecord.polish).fadeIn(500);
+            textField.fadeIn(500);
+            checkButton.fadeIn(500);
+        } else {
+            reversedLanguage = 'polish';
+            answerPolish.html(randomRecord.polish)
+            textField.attr('placeholder', "{% trans 'wpisz słówko polskie' %}");
+            readEnglish.html(randomRecord.english).fadeIn(500);
+            textField.fadeIn(500);
+            checkButton.fadeIn(500);
+        }
+    }
+
+    function reloadPage()
+    {
+        location.reload();
+    }
+
+    checkButton.click(function () {
+        cleanAnswers();
+        var promptedText = textField.val().trim().toLowerCase();
+        if (promptedText == randomRecord[reversedLanguage].toLowerCase()) {
+            addPoint();
+            recordsList.splice(randomRecord.randomRecordId, 1)
+            checkButton.hide();
+            happyIcon.fadeIn(500, function() {
+                $('#answer_' + reversedLanguage).html(randomRecord[reversedLanguage]).fadeIn(500, function () {
+                    sentenceField.html(randomRecord.sentence).fadeIn(500, function () {
+                        continueButton.fadeIn(500)
+                    });
+                });
+            });
+        } else {
+            addNegativePoint();
+            sadIcon.fadeIn(500, function() {
+                showButton.fadeIn(500, function() {
+                    continueButton.fadeIn(500);
+                });
+            });
+        }
+    });
+
+    showButton.click(function() {
+        $(this).hide();
+        checkButton.hide();
+        $('#answer_' + reversedLanguage).html(randomRecord[reversedLanguage]).fadeIn(500, function () {
+            sentenceField.html(randomRecord.sentence).fadeIn(500, function() {
+                continueButton.fadeIn(500);
+            });
+        });
+    });
+
+    continueButton.on('click', function () {
+        cleanFields();
+        if (recordsList.length) {
+            initialize();
+        } else {
+            showAndHideModalConfirm('Gratulacje, ukończyłeś powtórkę! Poprawnych odpowiedzi: ' + points + '. Błędnych: ' + negativePoints + '.', reloadPage, '', 1);
+        }
+    });
+    initialize(); 
+});
+
+</script>
+{% endif %}
+
+
+
+<div class="w3-row">
+    <div class="w3-card-2 w3-center w3-red w3-center w3-block w3-margin-bottom w3-margin-top padding h" id="read_polish"></div>
+</div>
+<div class="w3-row">
+    <div class="w3-card-2 w3-center w3-orange w3-center w3-block w3-margin-bottom w3-margin-top w3-text-light-grey padding h" id="read_english"></div>
+</div>
+<div class="w3-row">
+    <div class="w3-margin-bottom">
+        <input type="text" id="text" class="w3-input w3-border h">
+    </div>
+</div>
+<div class="w3-row">
+    <div id="check" class="w3-indigo w3-center w3-btn w3-block w3-hover-white w3-margin-bottom padding h">{% trans 'Sprawdź' %}</div>
+</div>
+<div class="w3-row">
+    <div id="sad_icon" class="w3-center answer_icon h">
+        <img src="{% static 'yourwords/icons/sad_icon.png' %}" alt="{% trans 'Sad' %}">
+    </div>
+</div>
+<div class="w3-row">
+    <div id="happy_icon" class="w3-center answer_icon h">
+        <img src="{% static 'yourwords/icons/happy_icon.png' %}" alt="{% trans 'Happy' %}">
+    </div>
+</div>
+<div class="w3-row">
+    <div id="show_answer" class="w3-indigo w3-center w3-btn w3-block w3-hover-white w3-margin-bottom padding h">{% trans 'Pokaż odpowiedzi' %}</div>
+</div>
+<div class="w3-row">
+    <div class="w3-card-2 w3-green w3-center w3-block w3-margin-bottom padding h" id="answer_polish"></div>
+</div>
+<div class="w3-row">
+    <div class="w3-card-2 w3-blue w3-center w3-block w3-margin-bottom padding h" id="answer_english"></div>
+</div>
+<div class="w3-row">
+    <div class="w3-card-2 w3-teal w3-center w3-block w3-margin-bottom padding h" id="sentence"></div>
+</div>
+<div class="w3-row">
+    <div id="continue" class="w3-indigo w3-center w3-btn w3-block w3-hover-white w3-margin-bottom padding h">{% trans 'Kontynuuj' %}</div>
+</div>
+
+
+
+
+
+
+
+{% endblock %}

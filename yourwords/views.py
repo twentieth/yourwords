@@ -1,5 +1,6 @@
+from random import randint
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import JsonResponse
+from django.http import JsonResponse, HttpResponse
 from django.utils import timezone
 from django.contrib.auth.models import User
 from .models import English
@@ -18,18 +19,19 @@ from common.draw_factory import DrawFactory
 
 
 @csrf_exempt
-def index(request):
+def index(request, kind='read'):
     collection_manager = DrawFactory.get_collection_manager(request)
     record_list = collection_manager.get_collection()
     record_count = len(record_list)
     message_text = collection_manager.get_message()
 
     if not record_count:
-        message_text = _('Brak słówek spełniających wybrane kryteria. Spróbuj jeszcze raz. A może jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!')
+        message_text = _(
+            'Brak słówek spełniających wybrane kryteria. Spróbuj jeszcze raz. A może jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!')
         messages.info(request, message_text)
         return redirect('yourwords:set_repeat')
 
-    messages.info(request, message_text, extra_tags = 'safe')
+    messages.info(request, message_text, extra_tags='safe')
     records_to_json = {
         'record_count': record_count,
         'record_list': record_list
@@ -37,11 +39,13 @@ def index(request):
     context = {
         'records_data': records_to_json
     }
+    if kind == 'read':
+        return render(request, 'yourwords/index.html', context)
+    else:
+        return render(request, 'yourwords/repeat_writing.html', context)
 
-    return render(request, 'yourwords/index.html', context)
 
-
-def wordlist(request, kind = ''):
+def wordlist(request, kind=''):
     if kind == '' or kind == 'descending':
         ordering = '-created_at'
         message_text = _('Lista słówek w kolejności wg daty wprowadzenia malejąco.')
@@ -94,7 +98,7 @@ def search(request):
             record_list = list(English.objects.raw(query))
             record_count = len(record_list)
         elif user_has_option(request.user, 'only_full_words_searching'):
-            record_list = English.users.where_user(request.user).filter(Q(polish__iregex = r"\b{}\b".format(searched_text)) | Q(english__iregex = r"\b{}\b".format(searched_text)) | Q(sentence__iregex = r"\b{}\b".format(searched_text)))
+            record_list = English.users.where_user(request.user).filter(Q(polish__iregex=r"[[:<:]]{}[[:>:]]".format(searched_text)) | Q(english__iregex=r"[[:<:]]{}[[:>:]]".format(searched_text)) | Q(sentence__iregex=r"[[:<:]]{}[[:>:]]".format(searched_text)))
             record_count = record_list.count()
         else:
             record_list = English.users.where_user(request.user).filter(Q(polish__icontains=searched_text) | Q(english__icontains=searched_text) | Q(sentence__icontains=searched_text))
@@ -198,9 +202,10 @@ def ajax_edit_rating(request):
 
 
 @csrf_exempt
-def set_repeat(request):
+def set_repeat(request, kind='read'):
     context = {
         'title': _('Ustaw zakres powtórki'),
+        'kind': kind
     }
     return render(request, 'yourwords/set_repeat.html', context)
 
