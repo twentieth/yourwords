@@ -107,7 +107,6 @@
 			$('.modal-confirm').find('.yes').removeClass('w3-teal, w3-red')
 		})
 	}
-
 	function showAndHideModalFancybox(header, view)
 	{
 		$('.modal-fancybox .modal-header #modal-fancybox-text').text(header)

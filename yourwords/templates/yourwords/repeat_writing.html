@@ -12,19 +12,24 @@
         height: auto;
         margin-bottom: 10px;
     }
+    #text {
+        padding: 17px;
+    }
+    .button {
+        cursor: pointer;
+    }
 </style>
 {% if records_data %}
 <script>
     $(function () {
-    var recordsData = {{ records_data|safe }};
-    var recordsList = recordsData.record_list;
+    var recordsDataOriginal = {{ records_data|safe }};
+    var recordsList;
     var readPolish = $('#read_polish');
     var readEnglish = $('#read_english');
     var answerPolish = $('#answer_polish');
     var answerEnglish = $('#answer_english');
     var textField = $('#text');
     var sentenceField = $('#sentence');
-    var checkButton = $('#check');
     var continueButton = $('#continue');
     var sadIcon = $('#sad_icon');
     var happyIcon = $('#happy_icon');
@@ -34,7 +39,7 @@
     var reversedLanguage;
     var points = 0;
     var negativePoints = 0;
-
+    var fadeTime = 500;
     function addPoint() {
         points += 1;
     }
@@ -44,13 +49,49 @@
         negativePoints += 1;
     }
 
+    function getPercentsFromPoints(positives, negatives)
+    {
+        var r = {}
+        var all = positives + negatives;
+        var onePart = 100 / all;
+        r.positivesPercents = Math.round(positives * onePart);
+        r.negativesPercents = Math.round(negatives * onePart);
+        return r;
+    }
+    function removeRedundantSigns(s)
+    {
+        return s.replace(/[,.;:?!\(\)]/ig, '');
+    }
+
+    function prepareWordsArray(a)
+    {
+        var additionalArray = [];
+        var endOfVerbRegex1 = /(ić)$/i;
+        var endOfVerbRegex2 = /(ać)$/i;
+        for (var i = 0; i < a.length; i++) {
+            a[i] = removeRedundantSigns(a[i]);
+            if (endOfVerbRegex1.test(a[i])) {
+                additionalArray.push(a[i].replace(endOfVerbRegex1, 'iać'));
+            }
+            if (endOfVerbRegex2.test(a[i])) {
+                additionalArray.push(a[i].replace(endOfVerbRegex2, 'ić'));
+            }
+        }
+        return a.concat(additionalArray);
+    }
+
+    function reloadWordsSet()
+    {
+        //todo
+    }
+
 
     function languageToDisplay() {
         var languages = ['polish', 'english'];
         var randomLanguageId = Math.floor(Math.random() * 2);
         return languages[randomLanguageId];
     }
-    function getRandomRecord(recordsList) {
+    function getRandomRecord() {
         var randomRecordId = Math.floor(Math.random() * recordsList.length);
         recordsList[randomRecordId].randomRecordId = randomRecordId;
         return recordsList[randomRecordId];
@@ -64,7 +105,6 @@
         answerEnglish.html('').hide();
         sentenceField.html('').hide();
         textField.val('').hide();
-        checkButton.hide();
         showButton.hide();
         sadIcon.hide();
         happyIcon.hide();
@@ -80,23 +120,21 @@
     }
 
     function initialize() {
+        recordsList = recordsDataOriginal.record_list;
         language = languageToDisplay();
-        randomRecord = getRandomRecord(recordsList);
+        randomRecord = getRandomRecord();
         if (language == 'polish') {
             reversedLanguage = 'english';
-            answerEnglish.html(randomRecord.english)
-            textField.attr('placeholder', "{% trans 'wpisz słówko języka obcego' %}");
-            readPolish.html(randomRecord.polish).fadeIn(500);
-            textField.fadeIn(500);
-            checkButton.fadeIn(500);
+            answerEnglish.html(randomRecord.english);
+            readPolish.html(randomRecord.polish).fadeIn(fadeTime);
+            textField.fadeIn(fadeTime);
         } else {
             reversedLanguage = 'polish';
-            answerPolish.html(randomRecord.polish)
-            textField.attr('placeholder', "{% trans 'wpisz słówko polskie' %}");
-            readEnglish.html(randomRecord.english).fadeIn(500);
-            textField.fadeIn(500);
-            checkButton.fadeIn(500);
+            answerPolish.html(randomRecord.polish);
+            readEnglish.html(randomRecord.english).fadeIn(fadeTime);
+            textField.fadeIn(fadeTime);
         }
+        textField.focus();
     }
 
     function reloadPage()
@@ -104,38 +142,39 @@
         location.reload();
     }
 
-    checkButton.click(function () {
-        cleanAnswers();
-        var promptedText = textField.val().trim().toLowerCase();
-        if (promptedText == randomRecord[reversedLanguage].toLowerCase()) {
-            addPoint();
-            recordsList.splice(randomRecord.randomRecordId, 1)
-            checkButton.hide();
-            happyIcon.fadeIn(500, function() {
-                $('#answer_' + reversedLanguage).html(randomRecord[reversedLanguage]).fadeIn(500, function () {
-                    sentenceField.html(randomRecord.sentence).fadeIn(500, function () {
-                        continueButton.fadeIn(500)
-                    });
-                });
-            });
-        } else {
-            addNegativePoint();
-            sadIcon.fadeIn(500, function() {
-                showButton.fadeIn(500, function() {
-                    continueButton.fadeIn(500);
-                });
-            });
+    $(document).keypress(function (e) {
+        if (e.which === 13) {
+            cleanAnswers();
+            var promptedText = textField.val().trim().toLowerCase();
+            var answerValue = randomRecord[reversedLanguage].toLowerCase();
+            var answerValueArray = prepareWordsArray(answerValue.split(' '));
+            if (answerValueArray.includes(promptedText)) {
+                addPoint();
+                textField.hide();
+                recordsList.splice(randomRecord.randomRecordId, 1);
+                happyIcon.fadeIn(fadeTime)
+                $('#answer_' + reversedLanguage).html(randomRecord[reversedLanguage]).fadeIn(fadeTime);
+                if (randomRecord.sentence.length) {
+                    sentenceField.html(randomRecord.sentence).fadeIn(fadeTime);
+                }
+                continueButton.fadeIn(fadeTime);
+            } else {
+                addNegativePoint();
+                sadIcon.fadeIn(fadeTime);
+                showButton.fadeIn(fadeTime);
+                continueButton.fadeIn(fadeTime);
+            }
         }
     });
 
     showButton.click(function() {
         $(this).hide();
-        checkButton.hide();
-        $('#answer_' + reversedLanguage).html(randomRecord[reversedLanguage]).fadeIn(500, function () {
-            sentenceField.html(randomRecord.sentence).fadeIn(500, function() {
-                continueButton.fadeIn(500);
-            });
-        });
+        textField.hide();
+        $('#answer_' + reversedLanguage).html(randomRecord[reversedLanguage]).fadeIn(fadeTime);
+        if (randomRecord.sentence.length) {
+            sentenceField.html(randomRecord.sentence).fadeIn(fadeTime);
+        }
+        continueButton.fadeIn(fadeTime);
     });
 
     continueButton.on('click', function () {
@@ -143,10 +182,12 @@
         if (recordsList.length) {
             initialize();
         } else {
-            showAndHideModalConfirm('Gratulacje, ukończyłeś powtórkę! Poprawnych odpowiedzi: ' + points + '. Błędnych: ' + negativePoints + '.', reloadPage, '', 1);
+            var percentsFromPoints = getPercentsFromPoints(points, negativePoints);
+            var textToModal = '{% trans "Gratulacje, ukończyłeś powtórkę! Poprawnych odpowiedzi" %}: ' + percentsFromPoints.positivesPercents + '%. {% trans "Błędnych" %}: ' + percentsFromPoints.negativesPercents + '%.';
+            showAndHideModalConfirm(textToModal, reloadPage, '', 1);
         }
     });
-    initialize(); 
+    initialize();
 });
 
 </script>
@@ -161,12 +202,7 @@
     <div class="w3-card-2 w3-center w3-orange w3-center w3-block w3-margin-bottom w3-margin-top w3-text-light-grey padding h" id="read_english"></div>
 </div>
 <div class="w3-row">
-    <div class="w3-margin-bottom">
-        <input type="text" id="text" class="w3-input w3-border h">
-    </div>
-</div>
-<div class="w3-row">
-    <div id="check" class="w3-indigo w3-center w3-btn w3-block w3-hover-white w3-margin-bottom padding h">{% trans 'Sprawdź' %}</div>
+    <input type="text" id="text" class="w3-input w3-border-0 w3-card-2 w3-center w3-margin-bottom h">
 </div>
 <div class="w3-row">
     <div id="sad_icon" class="w3-center answer_icon h">
@@ -179,7 +215,7 @@
     </div>
 </div>
 <div class="w3-row">
-    <div id="show_answer" class="w3-indigo w3-center w3-btn w3-block w3-hover-white w3-margin-bottom padding h">{% trans 'Pokaż odpowiedzi' %}</div>
+    <div id="show_answer" class="w3-indigo w3-hover-white w3-center w3-card-2 w3-block w3-margin-bottom button padding h" title="{% trans 'Pokaż odpowiedź' %}"><i class="material-icons">visibility</i></div>
 </div>
 <div class="w3-row">
     <div class="w3-card-2 w3-green w3-center w3-block w3-margin-bottom padding h" id="answer_polish"></div>
@@ -191,7 +227,7 @@
     <div class="w3-card-2 w3-teal w3-center w3-block w3-margin-bottom padding h" id="sentence"></div>
 </div>
 <div class="w3-row">
-    <div id="continue" class="w3-indigo w3-center w3-btn w3-block w3-hover-white w3-margin-bottom padding h">{% trans 'Kontynuuj' %}</div>
+    <div id="continue" class="w3-indigo w3-hover-white w3-center w3-card-2 w3-block w3-margin-bottom button padding h" title="{% trans 'Kontynuuj' %}"><i class="material-icons">trending_flat</i></div>
 </div>
 
 
