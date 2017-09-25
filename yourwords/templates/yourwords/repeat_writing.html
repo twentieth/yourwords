@@ -115,6 +115,7 @@
         answerEnglish.html('').hide();
         sentenceField.html('').hide();
         showButton.hide();
+        continueButton.hide();
         sadIcon.hide();
         happyIcon.hide();
     }
@@ -142,13 +143,14 @@
         location.reload();
     }
 
-    $(document).keypress(function (e) {
+    textField.keypress(function (e) {
         if (e.which === 13) {
             cleanAnswers();
             var promptedText = textField.val().trim().toLowerCase();
+            var promptedTextWordsLength = promptedText.split(' ').length;
             var answerValue = randomRecord[reversedLanguage].toLowerCase();
             var answerValueArray = prepareWordsArray(answerValue.split(' '));
-            if (answerValueArray.includes(promptedText)) {
+            if (answerValueArray.includes(promptedText) || (answerValue.indexOf(promptedText) !== -1 && promptedTextWordsLength > 1)) {
                 addPoint();
                 textField.hide();
                 recordsList.splice(randomRecord.randomRecordId, 1);
