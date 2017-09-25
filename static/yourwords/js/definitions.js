@@ -39,16 +39,6 @@
 		})
 	}
 
-	function showAndHideMessageJs(txt)
-	{
-		$('.message_frame, .message_frame_js').hide();
-		$('.message_js').text(txt);
-		$('.message_frame_js').show()
-		$('.message_frame, .message_frame_js, button[type="reset"]').on('click', function(){
-			$('.message_frame, .message_frame_js').hide()
-		})
-	}
-
 	function showAndHideModal(type, content)
 	{
 		$('.modal-header').removeClass('w3-blue').removeClass('w3-orange').removeClass('w3-red')
@@ -107,7 +97,6 @@
 			$('.modal-confirm').find('.yes').removeClass('w3-teal, w3-red')
 		})
 	}
-
 	function showAndHideModalFancybox(header, view)
 	{
 		$('.modal-fancybox .modal-header #modal-fancybox-text').text(header)

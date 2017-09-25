@@ -81,12 +81,11 @@
 		<div class="w3-modal-content w3-card-2">
 			<header class="w3-container w3-padding modal-header">
 			</header>
-			<div class="w3-container w3-padding w3-light-grey modal-content">
-			</div>
 			<footer class="w3-container w3-padding w3-light-grey modal-content">
 				<button class="w3-btn w3-hover-white yes">{% trans 'OK' %}</button>
 				<button class="w3-btn w3-light-grey w3-hover-white no">{% trans 'Anuluj' %}</button>
 			</footer>
+			</div>
 		</div>
 	</div>
 
@@ -146,7 +145,7 @@
 				<div class="w3-container menu-container" style="right:70px;z-index:3">
 						<ul class="w3-navbar w3-card-2 w3-green menu-list menu3">
 							<li><a href="{% url 'yourwords:add' %}">{% trans 'DODAJ NOWE SŁÓWKO' %} <i class="material-icons">add</i></a></li>
-							<li><a href="{% url 'yourwords:set_repeat' kind='read' %}">{% trans 'POWTÓRZ POPRZEZ LOSOWANIE' %} <i class="material-icons">school</i></a></li>
+							<li><a href="{% url 'yourwords:set_repeat' kind='read' %}">{% trans 'POWTÓRKA - LOSOWANIE' %} <i class="material-icons">school</i></a></li>
 							<li><a href="{% url 'yourwords:set_repeat' kind='write' %}">{% trans 'SPRAWDŹ, ILE PAMIĘTASZ' %} <i class="material-icons">input</i></a></li>
 						</ul>
 						<ul>
