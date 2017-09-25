@@ -145,6 +145,7 @@
 
     textField.keypress(function (e) {
         if (e.which === 13) {
+            $(this).blur();
             cleanAnswers();
             var promptedText = textField.val().trim().toLowerCase();
             var promptedTextWordsLength = promptedText.split(' ').length;
