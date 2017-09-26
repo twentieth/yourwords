@@ -40,6 +40,7 @@
     var points = 0;
     var negativePoints = 0;
     var fadeTime = 500;
+
     function addPoint() {
         points += 1;
     }
@@ -58,6 +59,7 @@
         r.negativesPercents = Math.round(negatives * onePart);
         return r;
     }
+
     function removeRedundantSigns(s)
     {
         return s.replace(/[,.;:?!\(\)]/ig, '');
@@ -80,17 +82,19 @@
         return a.concat(additionalArray);
     }
 
-    function reloadWordsSet()
-    {
-        //todo
+    function initialize() {
+        var recordsData = $.extend(true, {}, recordsDataOriginal);
+        recordsList = recordsData.record_list;
+        hideModalConfirm();
+        newIteration();
     }
-
 
     function languageToDisplay() {
         var languages = ['polish', 'english'];
         var randomLanguageId = Math.floor(Math.random() * 2);
         return languages[randomLanguageId];
     }
+
     function getRandomRecord() {
         var randomRecordId = Math.floor(Math.random() * recordsList.length);
         recordsList[randomRecordId].randomRecordId = randomRecordId;
@@ -109,6 +113,7 @@
         sadIcon.hide();
         happyIcon.hide();
     }
+
     function cleanAnswers()
     {
         answerPolish.html('').hide();
@@ -120,8 +125,7 @@
         happyIcon.hide();
     }
 
-    function initialize() {
-        recordsList = recordsDataOriginal.record_list;
+    function newIteration() {
         language = languageToDisplay();
         randomRecord = getRandomRecord();
         if (language == 'polish') {
@@ -183,11 +187,11 @@
     continueButton.on('click', function () {
         cleanFields();
         if (recordsList.length) {
-            initialize();
+            newIteration();
         } else {
             var percentsFromPoints = getPercentsFromPoints(points, negativePoints);
             var textToModal = '{% trans "Gratulacje, ukończyłeś powtórkę! Poprawnych odpowiedzi" %}: ' + percentsFromPoints.positivesPercents + '%. {% trans "Błędnych" %}: ' + percentsFromPoints.negativesPercents + '%.';
-            showAndHideModalConfirm(textToModal, reloadPage, '', 1);
+            showAndHideModalConfirm(textToModal, initialize, '', 1);
         }
     });
     initialize();

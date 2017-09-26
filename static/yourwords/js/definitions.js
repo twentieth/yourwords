@@ -83,19 +83,19 @@
 		$('.yes').click(function() {
 			fYes()
 		})
-		$('.no').click(function() {
-			$('.modal-confirm').hide()
-			$('.modal-confirm').find('header').
-			$(this).html('')
-			$(this).removeClass('w3-red, w3-teal')
-			$('.modal-confirm').find('.yes').removeClass('w3-teal, w3-red')
+		$('.no').click(function () {
+			hideModalConfirm()
 		})
 		$('.modal-confirm').find('header').click(function() {
-			$('.modal-confirm').hide()
-			$(this).html('')
-			$(this).removeClass('w3-red, w3-teal')
-			$('.modal-confirm').find('.yes').removeClass('w3-teal, w3-red')
+			hideModalConfirm()
 		})
+	}
+	function hideModalConfirm()
+	{
+		$('.modal-confirm').hide();
+		$('.no').removeClass('w3-red, w3-teal');
+		$('.modal-confirm').find('header').removeClass('w3-red, w3-teal').html('');
+		$('.modal-confirm').find('.yes').removeClass('w3-teal, w3-red');
 	}
 	function showAndHideModalFancybox(header, view)
 	{
