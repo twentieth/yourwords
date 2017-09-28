@@ -99,7 +99,9 @@ function showModal(txt, options = {}) {
 	defs.header.prepend(defs.txt);
 	if (options.confirm !== undefined) {
 		defs.confirm = options.confirm;
-		defs.cancel.show();
+		if (options.cancel !== undefined && options.cancel) {
+			defs.cancel.show();
+		}
 		defs.ok.click(function() {
 			defs.confirm();
 			defs.hideModal();

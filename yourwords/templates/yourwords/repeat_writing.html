@@ -37,8 +37,8 @@
     var language;
     var randomRecord;
     var reversedLanguage;
-    var points = 0;
-    var negativePoints = 0;
+    var points;
+    var negativePoints;
     var fadeTime = 500;
 
     function addPoint() {
@@ -85,6 +85,8 @@
     function initialize() {
         var recordsData = $.extend(true, {}, recordsDataOriginal);
         recordsList = recordsData.record_list;
+        points = 0;
+        negativePoints = 0;
         newIteration();
     }
 
