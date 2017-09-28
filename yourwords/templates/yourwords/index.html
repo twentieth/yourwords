@@ -8,7 +8,6 @@
 	<script>
 		$(function() {
 			var records_data = {{ records_data|safe }}
-			console.log(records_data.record_list.length)
 			function getDataFromDatabase(fieldToShow)
 			{
 				var random_record = Math.floor((Math.random() * records_data.record_count) + 0)

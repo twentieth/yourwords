@@ -85,7 +85,6 @@
     function initialize() {
         var recordsData = $.extend(true, {}, recordsDataOriginal);
         recordsList = recordsData.record_list;
-        hideModalConfirm();
         newIteration();
     }
 
@@ -126,20 +125,19 @@
     }
 
     function newIteration() {
+        cleanFields();
         language = languageToDisplay();
         randomRecord = getRandomRecord();
         if (language == 'polish') {
+            readPolish.html(randomRecord.polish).fadeIn(fadeTime);
             reversedLanguage = 'english';
             answerEnglish.html(randomRecord.english);
-            readPolish.html(randomRecord.polish).fadeIn(fadeTime);
-            textField.fadeIn(fadeTime);
-        } else {
+        } else if (language == 'english') {
+            readEnglish.html(randomRecord.english).fadeIn(fadeTime);
             reversedLanguage = 'polish';
             answerPolish.html(randomRecord.polish);
-            readEnglish.html(randomRecord.english).fadeIn(fadeTime);
-            textField.fadeIn(fadeTime);
         }
-        textField.focus();
+        textField.fadeIn(fadeTime).focus();
     }
 
     function reloadPage()
@@ -184,14 +182,14 @@
         continueButton.fadeIn(fadeTime);
     });
 
-    continueButton.on('click', function () {
+    continueButton.click(function () {
         cleanFields();
         if (recordsList.length) {
             newIteration();
         } else {
             var percentsFromPoints = getPercentsFromPoints(points, negativePoints);
             var textToModal = '{% trans "Gratulacje, ukończyłeś powtórkę! Poprawnych odpowiedzi" %}: ' + percentsFromPoints.positivesPercents + '%. {% trans "Błędnych" %}: ' + percentsFromPoints.negativesPercents + '%.';
-            showAndHideModalConfirm(textToModal, initialize, '', 1);
+            showModal(textToModal, {confirm: initialize});
         }
     });
     initialize();
