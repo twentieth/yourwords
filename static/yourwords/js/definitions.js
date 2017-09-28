@@ -45,19 +45,19 @@
 
 		if(type == 'error')
 		{
-			$('.modal-header').addClass('w3-red')
+			$('.modal-header, .ok').addClass('w3-red')
 		}
 		if(type == 'warning')
 		{
-			$('.modal-header').addClass('w3-orange')
+			$('.modal-header, .ok').addClass('w3-orange')
 		}
 		if(type == 'info')
 		{
-			$('.modal-header').addClass('w3-blue')
+			$('.modal-header, .ok').addClass('w3-blue')
 		}
 		$('.modal-content').html(content)
 		$('.modal-base').show()
-		$('.modal-base').find('header, .modal-close').click(function() {
+		$('.modal-base').find('.modal-header, .ok').click(function() {
 			$('.modal-content').html('')
 			$('.modal-base').hide()
 		})
