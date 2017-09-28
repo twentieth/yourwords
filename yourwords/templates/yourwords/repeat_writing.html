@@ -40,6 +40,7 @@
     var points = 0;
     var negativePoints = 0;
     var fadeTime = 500;
+
     function addPoint() {
         points += 1;
     }
@@ -58,6 +59,7 @@
         r.negativesPercents = Math.round(negatives * onePart);
         return r;
     }
+
     function removeRedundantSigns(s)
     {
         return s.replace(/[,.;:?!\(\)]/ig, '');
@@ -80,17 +82,18 @@
         return a.concat(additionalArray);
     }
 
-    function reloadWordsSet()
-    {
-        //todo
+    function initialize() {
+        var recordsData = $.extend(true, {}, recordsDataOriginal);
+        recordsList = recordsData.record_list;
+        newIteration();
     }
-
 
     function languageToDisplay() {
         var languages = ['polish', 'english'];
         var randomLanguageId = Math.floor(Math.random() * 2);
         return languages[randomLanguageId];
     }
+
     function getRandomRecord() {
         var randomRecordId = Math.floor(Math.random() * recordsList.length);
         recordsList[randomRecordId].randomRecordId = randomRecordId;
@@ -109,6 +112,7 @@
         sadIcon.hide();
         happyIcon.hide();
     }
+
     function cleanAnswers()
     {
         answerPolish.html('').hide();
@@ -120,22 +124,20 @@
         happyIcon.hide();
     }
 
-    function initialize() {
-        recordsList = recordsDataOriginal.record_list;
+    function newIteration() {
+        cleanFields();
         language = languageToDisplay();
         randomRecord = getRandomRecord();
         if (language == 'polish') {
+            readPolish.html(randomRecord.polish).fadeIn(fadeTime);
             reversedLanguage = 'english';
             answerEnglish.html(randomRecord.english);
-            readPolish.html(randomRecord.polish).fadeIn(fadeTime);
-            textField.fadeIn(fadeTime);
-        } else {
+        } else if (language == 'english') {
+            readEnglish.html(randomRecord.english).fadeIn(fadeTime);
             reversedLanguage = 'polish';
             answerPolish.html(randomRecord.polish);
-            readEnglish.html(randomRecord.english).fadeIn(fadeTime);
-            textField.fadeIn(fadeTime);
         }
-        textField.focus();
+        textField.fadeIn(fadeTime).focus();
     }
 
     function reloadPage()
@@ -180,14 +182,14 @@
         continueButton.fadeIn(fadeTime);
     });
 
-    continueButton.on('click', function () {
+    continueButton.click(function () {
         cleanFields();
         if (recordsList.length) {
-            initialize();
+            newIteration();
         } else {
             var percentsFromPoints = getPercentsFromPoints(points, negativePoints);
             var textToModal = '{% trans "Gratulacje, ukończyłeś powtórkę! Poprawnych odpowiedzi" %}: ' + percentsFromPoints.positivesPercents + '%. {% trans "Błędnych" %}: ' + percentsFromPoints.negativesPercents + '%.';
-            showAndHideModalConfirm(textToModal, reloadPage, '', 1);
+            showModal(textToModal, {confirm: initialize});
         }
     });
     initialize();

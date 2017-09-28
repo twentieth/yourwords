@@ -32,9 +32,8 @@
 			$('.modal-rating').hide()
 		});
 
-		$(document).on('click', function (e) {
-			e.stopPropagation();
-			$('.message_frame').hide();
+		$(document).on('click', function () {
+			$('.message_frame').fadeOut(500);
 		});
 
 		$('.menu1-btn').on('click', function () {
