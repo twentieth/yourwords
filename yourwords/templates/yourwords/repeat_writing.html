@@ -142,6 +142,14 @@
         textField.fadeIn(fadeTime).focus();
     }
 
+    function showAnswer() {
+        textField.hide();
+        $('#answer_' + reversedLanguage).html(randomRecord[reversedLanguage]).fadeIn(fadeTime);
+        if (randomRecord.sentence.length) {
+            sentenceField.html(randomRecord.sentence).fadeIn(fadeTime);
+        }
+    }
+
     function reloadPage()
     {
         location.reload();
@@ -157,18 +165,18 @@
             var answerValueArray = prepareWordsArray(answerValue.split(' '));
             if (answerValueArray.includes(promptedText) || (answerValue.indexOf(promptedText) !== -1 && promptedTextWordsLength > 1)) {
                 addPoint();
-                textField.hide();
                 recordsList.splice(randomRecord.randomRecordId, 1);
-                happyIcon.fadeIn(fadeTime)
-                $('#answer_' + reversedLanguage).html(randomRecord[reversedLanguage]).fadeIn(fadeTime);
-                if (randomRecord.sentence.length) {
-                    sentenceField.html(randomRecord.sentence).fadeIn(fadeTime);
-                }
+                happyIcon.fadeIn(fadeTime);
+                showAnswer();
                 continueButton.fadeIn(fadeTime);
             } else {
                 addNegativePoint();
                 sadIcon.fadeIn(fadeTime);
-                showButton.fadeIn(fadeTime);
+                if (promptedText.length) {
+                    showButton.fadeIn(fadeTime);
+                } else {
+                    showAnswer();
+                }
                 continueButton.fadeIn(fadeTime);
             }
         }

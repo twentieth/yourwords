@@ -65,7 +65,7 @@
 
 		$('#search').on('submit', function () {
 			if ($('input[name="searched_text"]').val() == '') {
-				showAndHideModal('warning', '{% trans "Nie podano frazy wyszukiwania." %}')
+				showModal('{% trans "Nie podano frazy wyszukiwania." %}', {type: 'warning'})
 				return false
 			}
 		})
@@ -106,7 +106,7 @@
 				var val_number = $('input[name="main_repeat_manually"]').val().trim()
 
 				if (!regex_number.test(val_number) || val_number < 1 || val_number > 99999) {
-					showAndHideModal('warning', '{% trans "Wprowadzona wartość musi być liczbą w zakresie" %} 1-99999.')
+					showModal('{% trans "Wprowadzona wartość musi być liczbą w zakresie" %} 1-99999.', {type: 'warning'})
 					return false
 				}
 			}

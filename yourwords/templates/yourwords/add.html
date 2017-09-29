@@ -33,7 +33,7 @@
 						$('#input_english').val('');
 						$('#input_sentence').val('');
 						$('.message_frame').hide();
-						showAndHideModal('info', '{% trans "Rekord został dodany. Rekordów w bazie" %}: <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + data.records_count + '</span>')
+						showModal('{% trans "Rekord został dodany. Rekordów w bazie" %}: <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + data.records_count + '</span>')
 					}
 					if (data.clean_form == 0) {
 						var errors = JSON.parse(data.errors)
@@ -56,7 +56,7 @@
 						})
 					}
 				}).fail(function() {
-					 showAndHideModal('error', '{% trans "Przepraszamy, wystąpił błąd. Problem z odebraniem danych z serwera." %}');
+					 showModal('{% trans "Przepraszamy, wystąpił błąd. Problem z odebraniem danych z serwera." %}', {type: 'error'});
 				});
 				$('button[type="reset"]').on('click', function(){
 					$('.message_frame').fadeOut(200)

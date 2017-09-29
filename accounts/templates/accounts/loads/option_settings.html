@@ -21,10 +21,10 @@ $(function() {
   			data: data
   		}).done(function(data) {
   			hideModalFancybox()
-  			showAndHideModal('info', '{% trans "Ustawienia zostały zapisane." %}')
+  			showModal('{% trans "Ustawienia zostały zapisane." %}')
   		}).fail(function() {
   			hideModalFancybox()
-  			showAndHideModal('error', '{% trans "Wystąpił błąd. Ustawienia nie zostały zapisane." %}')
+  			showModal('{% trans "Wystąpił błąd. Ustawienia nie zostały zapisane." %}', {type: 'error'})
   		});
   	});
 
