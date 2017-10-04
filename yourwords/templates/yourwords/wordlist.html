@@ -14,7 +14,7 @@
 
 
 {% if record_list %}
-	<form method="POST" action="{% url 'yourwords:index' %}" id="repeat-checked">
+	<form method="POST" action="{% url 'yourwords:repeat' %}" id="repeat-checked">
 	{% csrf_token %}
 	<div class="w3-row">
 			<div class="w3-col" style="width:40px;height:1px;visibility:hidden;">
