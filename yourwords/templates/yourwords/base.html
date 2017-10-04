@@ -176,7 +176,7 @@
 						      	<li><a href="#" class="w3-bar-item w3-button app_settings_menu_section_button">{% trans 'USTAWIENIA APLIKACJI' %} <i class="material-icons">expand_more</i></a></li>
 							        <li><a class="w3-bar-item w3-button" href="{% url 'yourwords:contact' %}">{% trans 'WYŚLIJ WIADOMOŚĆ' %} <i class="material-icons">email</i></a></li>
 							        <li><a href="{% url 'yourwords:about' %}">{% trans 'O APLIKACJI' %} <i class="material-icons">info</i></a></li>
-							        <li><a href="{% url 'yourwords:index' kind='read' %}">{% trans 'WRÓĆ DO STRONY GŁÓWNEJ' %} <i class="material-icons">home</i></a></li>
+							        <li><a href="{% url 'yourwords:index' %}">{% trans 'WRÓĆ DO STRONY GŁÓWNEJ' %} <i class="material-icons">home</i></a></li>
 							        <div class="w3-right">
 							      	{% if user.is_authenticated and not user.profile.is_socialuser %}
 							      		{% if user.is_superuser %}

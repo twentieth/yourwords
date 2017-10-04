@@ -10,10 +10,10 @@
   </div>
 </div>
 
-<section id="set_repeat_forms">
+<section id="repeat_forms">
 <div class="w3-row">
   <div class="w3-rest">
-    <form action="{% url 'yourwords:index' kind=kind %}" method="POST" id="main_repeat_form">
+    <form action="{% url 'yourwords:repeat' kind=kind %}" method="POST">
     {% csrf_token %}
       <label for="set_main_repeat" class="w3-label w3-text-blue w3-medium">{% trans 'Wybierz słówka wprowadzone' %}:</label>
       <br>
@@ -58,7 +58,7 @@
 
 <div class="w3-row">
   <div class="w3-rest">
-	<form action="{% url 'yourwords:index' kind=kind %}" method="POST" id="settings_form">
+	<form action="{% url 'yourwords:repeat' kind=kind %}" method="POST">
   {% csrf_token %}
 			<label for="set_day_before" class="w3-label w3-text-blue">{% trans 'Zaznacz okres, z którego chcesz wyświetlić słówka.' %}</label>
 			<select class="w3-select" id="set_day_before" name="days_before">
@@ -80,7 +80,7 @@
 
 <div class="w3-row">
   <div class="w3-rest">
-<form action="{% url 'yourwords:index' kind=kind %}" method="POST" id="settings_form">
+<form action="{% url 'yourwords:repeat' kind=kind %}" method="POST">
 {% csrf_token %}
     <label for="set_number_words" class="w3-label w3-text-blue">{% trans 'Zaznacz liczbę słówek, które chcesz powtórzyć, uwzględniając poziom trudności.' %}</label>
       <select class="w3-select" id="set_number_words" name="number_words">
