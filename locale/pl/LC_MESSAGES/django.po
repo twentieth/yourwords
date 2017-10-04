@@ -132,9 +132,9 @@ msgstr ""
 #: authentication/templates/authentication/signup.html:28
 #: yourwords/templates/yourwords/add.html:128
 #: yourwords/templates/yourwords/contact.html:44
-#: yourwords/templates/yourwords/set_repeat.html:52
-#: yourwords/templates/yourwords/set_repeat.html:74
-#: yourwords/templates/yourwords/set_repeat.html:107
+#: yourwords/templates/yourwords/repeat.html:52
+#: yourwords/templates/yourwords/repeat.html:74
+#: yourwords/templates/yourwords/repeat.html:107
 msgid "Wyczyść"
 msgstr ""
 
@@ -386,19 +386,19 @@ msgstr ""
 
 #: yourwords/templates/yourwords/add.html:113
 #: yourwords/templates/yourwords/index.html:52
-#: yourwords/templates/yourwords/set_repeat.html:97 yourwords/views.py:78
+#: yourwords/templates/yourwords/repeat.html:97 yourwords/views.py:78
 msgid "Łatwy"
 msgstr ""
 
 #: yourwords/templates/yourwords/add.html:115
 #: yourwords/templates/yourwords/index.html:54
-#: yourwords/templates/yourwords/set_repeat.html:100 yourwords/views.py:80
+#: yourwords/templates/yourwords/repeat.html:100 yourwords/views.py:80
 msgid "Średni"
 msgstr ""
 
 #: yourwords/templates/yourwords/add.html:117
 #: yourwords/templates/yourwords/index.html:56
-#: yourwords/templates/yourwords/set_repeat.html:103 yourwords/views.py:82
+#: yourwords/templates/yourwords/repeat.html:103 yourwords/views.py:82
 msgid "Trudny"
 msgstr ""
 
@@ -589,76 +589,76 @@ msgstr ""
 msgid "Wybierz język interfejsu"
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:9
+#: yourwords/templates/yourwords/repeat.html:9
 msgid "Ustaw zakres powtórki słówek"
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:18
+#: yourwords/templates/yourwords/repeat.html:18
 msgid "Wybierz słówka wprowadzone"
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:22
+#: yourwords/templates/yourwords/repeat.html:22
 msgid "dziś oraz wczoraj"
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:26 yourwords/views.py:51
+#: yourwords/templates/yourwords/repeat.html:26 yourwords/views.py:51
 msgid "tydzień temu"
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:30 yourwords/views.py:53
+#: yourwords/templates/yourwords/repeat.html:30 yourwords/views.py:53
 msgid "miesiąc temu"
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:34 yourwords/views.py:55
+#: yourwords/templates/yourwords/repeat.html:34 yourwords/views.py:55
 msgid "miesiące temu"
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:38 yourwords/views.py:57
+#: yourwords/templates/yourwords/repeat.html:38 yourwords/views.py:57
 msgid "miesięcy temu"
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:42 yourwords/views.py:59
+#: yourwords/templates/yourwords/repeat.html:42 yourwords/views.py:59
 msgid "rok temu"
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:46
+#: yourwords/templates/yourwords/repeat.html:46
 msgid "Zaznacz, aby wprowadzić liczbę dni ręcznie"
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:51
-#: yourwords/templates/yourwords/set_repeat.html:73
-#: yourwords/templates/yourwords/set_repeat.html:106
+#: yourwords/templates/yourwords/repeat.html:51
+#: yourwords/templates/yourwords/repeat.html:73
+#: yourwords/templates/yourwords/repeat.html:106
 msgid "Pokaż"
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:63
+#: yourwords/templates/yourwords/repeat.html:63
 msgid "Zaznacz okres, z którego chcesz wyświetlić słówka."
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:65
-#: yourwords/templates/yourwords/set_repeat.html:87
+#: yourwords/templates/yourwords/repeat.html:65
+#: yourwords/templates/yourwords/repeat.html:87
 msgid "Wszystkie słówka"
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:66
+#: yourwords/templates/yourwords/repeat.html:66
 msgid "dzień"
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:67
-#: yourwords/templates/yourwords/set_repeat.html:68
-#: yourwords/templates/yourwords/set_repeat.html:69
-#: yourwords/templates/yourwords/set_repeat.html:70
-#: yourwords/templates/yourwords/set_repeat.html:71 yourwords/views.py:70
+#: yourwords/templates/yourwords/repeat.html:67
+#: yourwords/templates/yourwords/repeat.html:68
+#: yourwords/templates/yourwords/repeat.html:69
+#: yourwords/templates/yourwords/repeat.html:70
+#: yourwords/templates/yourwords/repeat.html:71 yourwords/views.py:70
 msgid "dni"
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:85
+#: yourwords/templates/yourwords/repeat.html:85
 msgid ""
 "Zaznacz liczbę słówek, które chcesz powtórzyć, uwzględniając poziom "
 "trudności."
 msgstr ""
 
-#: yourwords/templates/yourwords/set_repeat.html:94
+#: yourwords/templates/yourwords/repeat.html:94
 msgid "Wszystkie"
 msgstr ""
 

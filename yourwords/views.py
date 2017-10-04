@@ -19,7 +19,7 @@ from common.draw_factory import DrawFactory
 
 
 @csrf_exempt
-def index(request, kind='read'):
+def index(request):
     collection_manager = DrawFactory.get_collection_manager(request)
     record_list = collection_manager.get_collection()
     record_count = len(record_list)
@@ -29,7 +29,7 @@ def index(request, kind='read'):
         message_text = _(
             'Brak słówek spełniających wybrane kryteria. Spróbuj jeszcze raz. A może jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!')
         messages.info(request, message_text)
-        return redirect('yourwords:set_repeat')
+        return redirect('yourwords:repeat', kind='write')
 
     messages.info(request, message_text, extra_tags='safe')
     records_to_json = {
@@ -37,12 +37,10 @@ def index(request, kind='read'):
         'record_list': record_list
     }
     context = {
+        'title': _('Strona domowa - losowanie'),
         'records_data': records_to_json
     }
-    if kind == 'read':
-        return render(request, 'yourwords/index.html', context)
-    else:
-        return render(request, 'yourwords/repeat_writing.html', context)
+    return render(request, 'yourwords/index.html', context)
 
 
 def wordlist(request, kind=''):
@@ -149,15 +147,15 @@ def edit(request, record_id):
         messages.warning(request, _('Nie masz uprawnień do żądanej strony.'))
         return redirect('yourwords:index')
     if request.method == 'POST':
-            form = AddRecordForm(request.POST, instance=record)
-            if form.is_valid():
-                instance = form.save(commit=False)
-                instance.rating = request.POST.get('rating')
-                instance.updated_at = timezone.now()
-                instance.save()
-                message_text = _('Wybrany rekord został zedytowany.')
-                messages.success(request, message_text)
-            return redirect('yourwords:edit', record_id=record.id)
+        form = AddRecordForm(request.POST, instance=record)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.rating = request.POST.get('rating')
+            instance.updated_at = timezone.now()
+            instance.save()
+            message_text = _('Wybrany rekord został zedytowany.')
+            messages.success(request, message_text)
+        return redirect('yourwords:edit', record_id=record.id)
     else:
         form = AddRecordForm(instance=record)
         context['title'] = _('Edytuj słówko')
@@ -202,12 +200,35 @@ def ajax_edit_rating(request):
 
 
 @csrf_exempt
-def set_repeat(request, kind='read'):
+def repeat(request, kind='read'):
+    if request.method == 'POST':
+        collection_manager = DrawFactory.get_collection_manager(request)
+        record_list = collection_manager.get_collection()
+        record_count = len(record_list)
+        message_text = collection_manager.get_message()
+
+        if not record_count:
+            message_text = _(
+                'Brak słówek spełniających wybrane kryteria. Spróbuj jeszcze raz. A może jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!'
+            )
+            messages.info(request, message_text)
+            return redirect('yourwords:repeat', kind='write')
+
+        messages.info(request, message_text, extra_tags='safe')
+        records_to_json = {
+            'record_count': record_count,
+            'record_list': record_list
+        }
+        context = {'records_data': records_to_json}
+        if kind == 'read':
+            return render(request, 'yourwords/index.html', context)
+        else:
+            return render(request, 'yourwords/repeat_writing.html', context)
     context = {
         'title': _('Ustaw zakres powtórki'),
         'kind': kind
     }
-    return render(request, 'yourwords/set_repeat.html', context)
+    return render(request, 'yourwords/repeat.html', context)
 
 
 @csrf_exempt
