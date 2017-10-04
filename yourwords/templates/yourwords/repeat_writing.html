@@ -34,6 +34,7 @@
     var sadIcon = $('#sad_icon');
     var happyIcon = $('#happy_icon');
     var showButton = $('#show_answer');
+    var rating = $('.rating');
     var language;
     var randomRecord;
     var reversedLanguage;
@@ -113,6 +114,7 @@
         showButton.hide();
         sadIcon.hide();
         happyIcon.hide();
+        rating.hide();
     }
 
     function cleanAnswers()
@@ -128,6 +130,7 @@
 
     function newIteration() {
         cleanFields();
+        rating.fadeIn(fadeTime)
         language = languageToDisplay();
         randomRecord = getRandomRecord();
         if (language == 'polish') {
