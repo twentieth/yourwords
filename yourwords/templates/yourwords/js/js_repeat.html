@@ -1,0 +1,286 @@
+{% load i18n %}
+
+{% if records_data %}
+<script>
+$(function () {
+    var recordsDataOriginal = {{ records_data|safe }};
+    var recordsList;
+    var readPolish = $('#read_polish');
+    var readEnglish = $('#read_english');
+    var answerPolish = $('#answer_polish');
+    var answerEnglish = $('#answer_english');
+    var textField = $('#text');
+    var sentenceField = $('#sentence');
+    var continueButton = $('#continue');
+    var sadIcon = $('#sad_icon');
+    var happyIcon = $('#happy_icon');
+    var showButton = $('#show_answer');
+    var rating = $('.rating');
+    var language;
+    var randomRecord;
+    var reversedLanguage;
+    var points;
+    var negativePoints;
+    var fadeTime = 500;
+
+    function addPoint() {
+        points += 1;
+    }
+
+    function addNegativePoint() {
+        negativePoints += 1;
+    }
+
+    function getPercentsFromPoints(positives, negatives) {
+        var r = {}
+        var all = positives + negatives;
+        var onePart = 100 / all;
+        r.positivesPercents = Math.round(positives * onePart);
+        r.negativesPercents = Math.round(negatives * onePart);
+        return r;
+    }
+
+    function removeRedundantSigns(s) {
+        return s.replace(/[,.;:?!\(\)]/ig, '');
+    }
+
+    function prepareWordsArray(a) {
+        var additionalArray = [];
+        var endOfVerbRegex1 = /(ić)$/i;
+        var endOfVerbRegex2 = /(ać)$/i;
+        for (var i = 0; i < a.length; i++) {
+            a[i] = removeRedundantSigns(a[i]);
+            if (endOfVerbRegex1.test(a[i])) {
+                additionalArray.push(a[i].replace(endOfVerbRegex1, 'iać'));
+            }
+            if (endOfVerbRegex2.test(a[i])) {
+                additionalArray.push(a[i].replace(endOfVerbRegex2, 'ić'));
+            }
+        }
+        return a.concat(additionalArray);
+    }
+
+    function initialize() {
+        var recordsData = $.extend(true, {}, recordsDataOriginal);
+        recordsList = recordsData.record_list;
+        points = 0;
+        negativePoints = 0;
+        newIteration();
+    }
+
+    function languageToDisplay() {
+        var languages = ['polish', 'english'];
+        var randomLanguageId = Math.floor(Math.random() * 2);
+        return languages[randomLanguageId];
+    }
+
+    function getRandomRecord() {
+        var randomRecordId = Math.floor(Math.random() * recordsList.length);
+        recordsList[randomRecordId].randomRecordId = randomRecordId;
+        return recordsList[randomRecordId];
+    }
+
+    function cleanFields() {
+        continueButton.hide();
+        readPolish.html('').hide();
+        readEnglish.html('').hide();
+        answerPolish.html('').hide();
+        answerEnglish.html('').hide();
+        sentenceField.html('').hide();
+        textField.val('').hide();
+        showButton.hide();
+        sadIcon.hide();
+        happyIcon.hide();
+        rating.hide();
+    }
+
+    function cleanAnswers() {
+        answerPolish.html('').hide();
+        answerEnglish.html('').hide();
+        sentenceField.html('').hide();
+        showButton.hide();
+        continueButton.hide();
+        sadIcon.hide();
+        happyIcon.hide();
+    }
+
+    function newIteration() {
+        cleanFields();
+        rating.fadeIn(fadeTime)
+        language = languageToDisplay();
+        randomRecord = getRandomRecord();
+        if (language == 'polish') {
+            readPolish.html(randomRecord.polish).fadeIn(fadeTime);
+            reversedLanguage = 'english';
+            answerEnglish.html(randomRecord.english);
+        } else if (language == 'english') {
+            readEnglish.html(randomRecord.english).fadeIn(fadeTime);
+            reversedLanguage = 'polish';
+            answerPolish.html(randomRecord.polish);
+        }
+        textField.fadeIn(fadeTime).focus();
+    }
+
+    function showAnswer() {
+        textField.hide();
+        $('#answer_' + reversedLanguage).html(randomRecord[reversedLanguage]).fadeIn(fadeTime);
+        if (randomRecord.sentence.length) {
+            sentenceField.html(randomRecord.sentence).fadeIn(fadeTime);
+        }
+    }
+
+    textField.keypress(function (e) {
+        if (e.which === 13) {
+            $(this).blur();
+            cleanAnswers();
+            var promptedText = textField.val().trim().toLowerCase();
+            var promptedTextWordsLength = promptedText.split(' ').length;
+            var answerValue = randomRecord[reversedLanguage].toLowerCase();
+            var answerValueArray = prepareWordsArray(answerValue.split(' '));
+            if (answerValueArray.includes(promptedText) || (answerValue.indexOf(promptedText) !== -1 && promptedTextWordsLength > 1)) {
+                addPoint();
+                recordsList.splice(randomRecord.randomRecordId, 1);
+                happyIcon.fadeIn(fadeTime);
+                showAnswer();
+                continueButton.fadeIn(fadeTime);
+            } else {
+                addNegativePoint();
+                sadIcon.fadeIn(fadeTime);
+                if (promptedText.length) {
+                    showButton.fadeIn(fadeTime);
+                } else {
+                    showAnswer();
+                }
+                continueButton.fadeIn(fadeTime);
+            }
+        }
+    });
+
+    showButton.click(function () {
+        $(this).hide();
+        textField.hide();
+        $('#answer_' + reversedLanguage).html(randomRecord[reversedLanguage]).fadeIn(fadeTime);
+        if (randomRecord.sentence.length) {
+            sentenceField.html(randomRecord.sentence).fadeIn(fadeTime);
+        }
+        continueButton.fadeIn(fadeTime);
+    });
+
+    continueButton.click(function () {
+        cleanFields();
+        if (recordsList.length) {
+            newIteration();
+        } else {
+            var percentsFromPoints = getPercentsFromPoints(points, negativePoints);
+            var textToModal = '{% trans "Gratulacje, ukończyłeś powtórkę! Poprawnych odpowiedzi" %}: ' + percentsFromPoints.positivesPercents + '%. {% trans "Błędnych" %}: ' + percentsFromPoints.negativesPercents + '%.';
+            showModal(textToModal, { confirm: initialize });
+        }
+    });
+    initialize();
+
+    {% if user.is_authenticated %}
+    rating.click(function () {
+        var init = {
+            modal_rating: $('.modal-rating'),
+            radio_button: $('#rating-form input[type="radio"]'),
+            submit_button: $('#submit-rating-btn-ang'),
+            rating_form: $('#rating-form'),
+            clean_form: function () {
+                init.rating_form.trigger('reset');
+                init.submit_button.css({ 'visibility': 'hidden' });
+                init.modal_rating.hide();
+            }
+        }
+        init.modal_rating.show();
+        init.radio_button.click(function () {
+            init.submit_button.css({ 'visibility': 'visible' });
+        })
+
+        init.rating_form.submit(function (e) {
+            e.preventDefault();
+            var id = parseInt(randomRecord.id, 10);
+            var rating = $('input[name="rating"]:checked').val()
+            $.ajax({
+                type: 'post',
+                url: '{% url "yourwords:ajax_edit_rating" %}',
+                dataType: 'json',
+                data: {
+                    id: id,
+                    rating: rating
+                }
+            }).done(function (data) {
+                if (data.success == 1) {
+                    init.clean_form();
+                }
+            }).fail(function () {
+
+            });
+        });
+    });
+    {% endif %}
+
+    function clean() {
+        $(".field_polish_polish, .field_english_polish, .field_english_english, .field_polish_english, .field_sentence_polish, .field_sentence_english").hide().text('')
+        $('.rating').hide()
+    }
+    function getDataFromDatabase(fieldToShow) {
+        var random_record = Math.floor((Math.random() * recordsDataOriginal.record_count) + 0)
+        clean()
+        var id = recordsDataOriginal.record_list[random_record].id
+        var polish = recordsDataOriginal.record_list[random_record].polish
+        var english = recordsDataOriginal.record_list[random_record].english
+        var sentence = recordsDataOriginal.record_list[random_record].sentence
+        var rating = recordsDataOriginal.record_list[random_record].rating
+        $(".field_word_id").text(id)
+        $(".field_polish_polish").text(polish)
+        $(".field_polish_english").text(polish)
+        $(".field_english_polish").text(english)
+        $(".field_english_english").text(english)
+        $(".field_sentence_polish").text(sentence)
+        $(".field_sentence_english").text(sentence)
+        $("." + fieldToShow + ", .rating").fadeIn().css('cursor', 'pointer')
+    }
+
+    $(".rand_polish").on('click', function () {
+        getDataFromDatabase('field_polish_polish')
+    });
+    $(".field_polish_polish").on('click', function () {
+        $(".field_polish_polish").css('cursor', 'default')
+        $(".field_english_polish").fadeIn().css('cursor', 'pointer')
+    });
+    $(".field_english_polish").on('click', function () {
+        $(".field_english_polish").css('cursor', 'default')
+        if ($('.field_sentence_polish').text() == '') {
+            getDataFromDatabase('field_polish_polish')
+        }
+        else {
+            $(".field_sentence_polish").fadeIn().css('cursor', 'pointer')
+        }
+    });
+    $(".field_sentence_polish").on('click', function () {
+        getDataFromDatabase('field_polish_polish')
+    });
+
+    $(".rand_english").on('click', function () {
+        getDataFromDatabase('field_english_english')
+    });
+    $(".field_english_english").on('click', function () {
+        $(".field_english_english").css('cursor', 'default')
+        $(".field_polish_english").fadeIn().css('cursor', 'pointer')
+    });
+    $(".field_polish_english").on('click', function () {
+        $(".field_polish_english").css('cursor', 'default')
+        if ($('.field_sentence_english').text() == '') {
+            getDataFromDatabase('field_english_english')
+        }
+        else {
+            $(".field_sentence_english").fadeIn().css('cursor', 'pointer')
+        }
+    });
+    $(".field_sentence_english").on('click', function () {
+        getDataFromDatabase('field_english_english')
+    });
+});
+
+</script>
+{% endif %}
