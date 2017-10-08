@@ -142,12 +142,6 @@ function showModal(txt, options = {}) {
 		$('.modal-fancybox .modal-content').html('')
 	}
 
-	function cleanFields()
-	{
-		$(".field_polish_polish, .field_english_polish, .field_english_english, .field_polish_english, .field_sentence_polish, .field_sentence_english").hide().text('')
-		$('.rating').hide()
-	}
-
 	function clickExpandMenuButton(button_class, item_class)
 	{
 		$('.' + button_class).click(function(e) {

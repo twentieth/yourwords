@@ -23,7 +23,8 @@
  	<script src="{% static 'yourwords/js/jquery-3.0.0.min.js' %}"></script>
  	<script src="{% static 'yourwords/js/jquery-cookie.js' %}"></script>
  	<script src="{% static 'yourwords/js/definitions.js' %}"></script>
- 	{% include 'yourwords/js/scripts.html' %}
+	 {% include 'yourwords/js/scripts.html' %}
+	 {% include 'yourwords/js/js_repeat.html' %}
  	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -92,6 +93,28 @@
 			<div class="w3-container w3-padding w3-light-grey modal-content"></div>
 		</div>
 	</div>
+
+	{% if user.is_authenticated %}
+		<div class="w3-modal modal-rating">
+			<div class="w3-modal-content w3-card-2">
+				<header class="w3-container w3-padding w3-blue modal-rating-header">{% trans 'Oznacz poziom trudności słówka' %}
+					<div class="w3-display-topright"><i class="material-icons modal-close modal-rating-close">close</i></div>
+				</header>
+				<div class="w3-container w3-padding w3-light-grey w3-lato-regular modal-rating-content">
+					<form method="POST" action="{% url 'yourwords:ajax_edit_rating' %}" id="rating-form">
+						{% csrf_token %}
+						<label for="rating1" class="w3-validate w3-text-blue">{% trans 'Łatwy' %}</label>
+						<input type="radio" name="rating" value="1" class="w3-radio" id="rating1">
+						<label for="rating2" class="w3-validate w3-text-blue">{% trans 'Średni' %}</label>
+						<input type="radio" name="rating" value="2" class="w3-radio" id="rating2">
+						<label for="rating3" class="w3-validate w3-text-blue">{% trans 'Trudny' %}</label>
+						<input type="radio" name="rating" value="3" class="w3-radio" id="rating3">
+						<button type="submit" class="w3-btn w3-medium w3-blue w3-hover-white" id="submit-rating-btn-ang">OK</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	{% endif %}
 
 	<div class="w3-container frame">
 
