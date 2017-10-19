@@ -3,7 +3,7 @@ from django.template.loader import render_to_string
 
 
 class Email:
-    __slots__ = ('_subject', '_sender', '_recipients', '_message')
+    __slots__ = ('_subject', '_sender', '_recipients', '_message', '_contenttype')
 
     def __init__(self):
         self._subject = None
@@ -23,6 +23,10 @@ class Email:
     def set_message(self, message):
         self._message = str(message)
         return self
+
+    def set_template(self, template_path, context=None):
+        self._message = render_to_string(template_path, context)
+        return self;
 
     def set_recipients(self, recipients):
         if not isinstance(recipients, list):
@@ -48,4 +52,24 @@ class Email:
         msg = EmailMultiAlternatives(self._subject, self._message,
                                      self._sender, self._recipients)
         msg.content_subtype = self._contenttype
-        msg.send(fail_silently=True)
+        try:
+            msg.send()
+            return True
+        except SMTPServerDisconnected:
+            return 'SMTPServerDisconnected'
+        except SMTPResponseException:
+            return 'SMTPResponseException'
+        except SMTPSenderRefused:
+            return 'SMTPSenderRefused'
+        except SMTPRecipientsRefused:
+            return 'SMTPRecipientsRefused'
+        except SMTPDataError:
+            return 'SMTPDataError'
+        except SMTPConnectError:
+            return 'SMTPConnectError'
+        except SMTPHeloError:
+            return 'SMTPHeloError'
+        except SMTPAuthenticationError:
+            return 'SMTPAuthenticationError'
+        except SMTPException:
+            return 'SMTPException'
