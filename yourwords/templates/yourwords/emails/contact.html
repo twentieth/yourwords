@@ -1,0 +1,21 @@
+{% load i18n %}
+
+<div>
+    <b>{% trans 'Wiadomość od użytkownika' %}:</b> {{ name }} {% if is_registered %} ({% trans 'zarejestrowany' %}) {% endif %}
+</div>
+
+<div>
+    <b>E-mail:</b> {{ email }}
+</div>
+
+<div>
+    <b>{% trans 'Temat' %}:</b> {{ subject }}
+</div>
+
+<div>
+    <b>{% trans 'Treść' %}:</b>
+</div>
+
+<div>
+    {{ content }}
+</div>

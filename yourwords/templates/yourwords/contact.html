@@ -15,27 +15,27 @@
 	<form name="contact" method="POST" action="" id="contact">
 	{% csrf_token %}
 
-		<label for="id_your_name" class="w3-label w3-text-blue">{% trans 'Twoje imię' %}</label>
-		{% if form.your_name.errors %}
-    		{% for error in form.your_name.errors %}
+		<label for="id_name" class="w3-label w3-text-blue">{% trans 'Twoje imię' %}</label>
+		{% if form.name.errors %}
+    		{% for error in form.name.errors %}
         		<span class="w3-small w3-text-red errors">{{ error|escape }} </span>
     		{% endfor %}
 		{% endif %}
-		{{ form.your_name }}
-		<label for="id_your_email" class="w3-label w3-text-blue">{% trans 'Twój e-mail' %}</label>
-		{% if form.your_email.errors %}
-    		{% for error in form.your_email.errors %}
+		{{ form.name }}
+		<label for="id_email" class="w3-label w3-text-blue">{% trans 'Twój e-mail' %}</label>
+		{% if form.email.errors %}
+    		{% for error in form.email.errors %}
         		<span class="w3-small w3-text-red errors">{{ error|escape }} </span>
     		{% endfor %}
 		{% endif %}
-		{{ form.your_email }}
-		<label for="id_your_message" class="w3-label w3-text-blue">{% trans 'Twoja wiadomość' %}</label>
-		{% if form.your_message.errors %}
-    		{% for error in form.your_message.errors %}
-        		<span class="w3-small w3-text-red errors" style="">{{ error|escape }} </span>
+		{{ form.email }}
+		<label for="id_content" class="w3-label w3-text-blue">{% trans 'Twoja wiadomość' %}</label>
+		{% if form.content.errors %}
+    		{% for error in form.content.errors %}
+        		<span class="w3-small w3-text-red errors">{{ error|escape }} </span>
     		{% endfor %}
 		{% endif %}
-		{{ form.your_message }}
+		{{ form.content }}
 		<label for="id_cc_myself" class="w3-label w3-text-blue">{% trans 'Czy wysłać kopię wiadomości do Ciebie?' %}</label>
 		<input type="checkbox" name="cc_myself" id="id_cc_myself" class="w3-check" checked>
 		<br>

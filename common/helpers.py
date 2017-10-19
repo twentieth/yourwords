@@ -62,3 +62,7 @@ def queryset_to_json_like(queryset):
                 record[key] = "0000-00-00 00:00:00"
         array.append(record)
     return array
+
+def safe_string(string):
+    from django.utils.safestring import mark_safe
+    return mark_safe(string.strip().replace("\n", "<br>\n"))

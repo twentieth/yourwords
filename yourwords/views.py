@@ -15,7 +15,9 @@ from django.core.mail import send_mail
 from django.utils.translation import ugettext as _
 from django.db.models import Q
 from django.core.cache import cache
-from common.draw_factory import DrawFactory
+from yourwords.my_classes.draw_factory import DrawFactory
+from common.emailer import Email
+from common.helpers import safe_string
 
 
 @csrf_exempt
@@ -237,30 +239,36 @@ def contact(request):
     if request.method == 'POST':
         form = ContactForm(request.POST)
         if form.is_valid():
-            name = form.cleaned_data['your_name']
-            email = form.cleaned_data['your_email']
-            message = form.cleaned_data['your_message']
+            name = form.cleaned_data['name']
+            email = form.cleaned_data['email']
+            content = form.cleaned_data['content']
             cc_myself = form.cleaned_data['cc_myself']
 
-            subject = _('[[yourwords]] Wiadomość od użytkownika ') + name
+            emailObject = Email()
+            emailObject.set_sender('twojeslowka.online')
+            subject = 'twojeslowka.online - ' + _(
+                'wiadomość od Użytkownika')
             if User.objects.filter(email=email).exists():
-                subject = '#' + subject
-
-            mail_content = '''
-Wiadomość od: ''' + name + '''
-E-mail: ''' + email + '''
-
-"
-''' + message + '''
-"
-'''
-
+                is_registered = True
+            else:
+                is_registered = False
+            emailObject.set_subject(subject)
+            email_context = {
+                'name': name,
+                'email': email,
+                'subject': subject,
+                'content': safe_string(content),
+                'is_registered': is_registered,
+            }
+            emailObject.set_template('yourwords/emails/contact.html',
+                                     email_context)
             recipients = ['twentiethsite@linux.pl']
             if cc_myself:
                 recipients.append(email)
-
-            ifTrue = send_mail(subject, mail_content, 'twentiethsite@linux.pl', recipients)
-            if ifTrue:
+            emailObject.set_recipients(recipients)
+            email_send = emailObject.send()
+            if email_send == True:
+                form.save()
                 message_text = _('Dziękuję, wiadomość została wysłana.')
                 messages.info(request, message_text)
             else:
