@@ -14,6 +14,7 @@ from django.utils.http import urlsafe_base64_decode
 from django.views.decorators.debug import sensitive_post_parameters
 from accounts.models import Profile
 from django.core.mail import send_mail
+from administration.models import Log
 
 
 @csrf_exempt
@@ -27,12 +28,8 @@ def signin(request):
                 if user.is_active:
                     login(request, user)
                     messages.success(request, _('Nastąpiło poprawne zalogowanie użytkownika'))
-                    if 'next' in request.GET:
-                        next_page = request.GET.get('next')
-                        next_page = re.sub('/', '', next_page)
-                        return redirect('yourwords:' + next_page)
-                    else:
-                        return redirect('yourwords:index')
+                    Log.apply(user, 1)
+                    return redirect(request.POST.get('next', '/'))
                 else:
                     messages.info(request, _('Twoje konto użytkownika nie jest aktywne. Skontaktuj się z administratorem strony.'))
             else:
@@ -75,6 +72,7 @@ def signup(request):
 
 @never_cache
 def logout_page(request):
+    Log.apply(request.user, 2)
     logout(request)
     messages.info(request, _('Nastąpiło poprawne wylogowanie użytkownika.'))
     return redirect('yourwords:index')

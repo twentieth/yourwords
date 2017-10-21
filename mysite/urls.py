@@ -22,11 +22,11 @@ from django.conf.urls.i18n import i18n_patterns
 
 urlpatterns = i18n_patterns(
     url(r'^admin/', admin.site.urls),
-    url(r'^yourwords/', include('yourwords.urls')),
-    url(r'^', include('yourwords.urls')),
+    url(r'', include('yourwords.urls')),
     url(r'^testing/', include('testing.urls')),
     url(r'^authentication/', include('authentication.urls')),
     url(r'^accounts/', include('accounts.urls')),
+    url(r'^administration/', include('administration.urls')),
     url(r'^social-auth/', include('social_django.urls', namespace='social')),
-    url(r'^rosetta/', include('rosetta.urls')),
-) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    url(r'^rosetta/', include('rosetta.urls')), ) + static(
+        settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -178,7 +178,7 @@
 				<div class="w3-container menu-container" style="right:0px;z-index:2">
 						<ul class="w3-navbar w3-card-2 w3-white menu-list menu1">
 						      {% if not user.is_authenticated %}
-						      	<li><a class="w3-bar-item w3-button" href="{% url 'authentication:signin' %}">{% trans 'ZALOGUJ SIĘ' %} <i class="material-icons">account_box</i></a></li>
+						      	<li><a class="w3-bar-item w3-button" href="{% url 'authentication:signin' %}?next={{ request.path|urlencode }}">{% trans 'ZALOGUJ SIĘ' %} <i class="material-icons">account_box</i></a></li>
 						      {% endif %}
 						      	{% if user.is_authenticated %}
 						      		<li class="admin_menu_section_item"><a class="w3-bar-item w3-button" href="{% url 'authentication:logout_page' %}">{% trans 'WYLOGUJ SIĘ' %} <i class="material-icons">redo</i></a></li>

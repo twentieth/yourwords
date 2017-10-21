@@ -3,6 +3,7 @@ from .models import English
 from .models import Listing
 from .models import Contact
 
+
 class EnglishAdmin(admin.ModelAdmin):
     list_display = ('english', 'polish', 'rating', 'created_at', 'user')
     list_filter = ('rating', 'created_at', 'updated_at', 'user')

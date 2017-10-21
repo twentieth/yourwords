@@ -28,7 +28,6 @@ class ContactForm(forms.ModelForm):
     email = forms.EmailField(label='Twój adres e-mail', widget=forms.EmailInput(attrs={'class': 'w3-input w3-border', 'placeholder': _('pole wymagane')}))
     content = forms.CharField(
         label='Twoja wiadomość',
-        max_length=500,
         widget=forms.Textarea(attrs={
             'class': 'w3-input w3-border',
             'rows': '5',

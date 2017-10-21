@@ -24,6 +24,8 @@
 				{{ field }}
 		{% endfor %}
 
+		<input type="hidden" name="next" value="{{ request.GET.next }}">
+
 		<button type="submit" class="w3-btn w3-medium w3-blue w3-hover-white">{% trans 'Zaloguj się' %}</button>
 		<button type="reset" class="w3-btn w3-medium w3-light-grey w3-hover-white reset_button">{% trans 'Wyczyść' %}</button>
 	</form>
