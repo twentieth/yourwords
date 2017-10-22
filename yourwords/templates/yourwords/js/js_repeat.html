@@ -3,281 +3,284 @@
 {% if records_data %}
 <script>
 $(function () {
-    var recordsDataOriginal = {{ records_data|safe }};
-    var recordsList;
-    var readPolish = $('#read_polish');
-    var readEnglish = $('#read_english');
-    var answerPolish = $('#answer_polish');
-    var answerEnglish = $('#answer_english');
-    var textField = $('#text');
-    var sentenceField = $('#sentence');
-    var continueButton = $('#continue');
-    var sadIcon = $('#sad_icon');
-    var happyIcon = $('#happy_icon');
-    var showButton = $('#show_answer');
-    var ratingButton = $('.rating');
-    var language;
-    var randomRecord;
-    var reversedLanguage;
-    var points;
-    var negativePoints;
-    var fadeTime = 500;
-
-    function addPoint() {
-        points += 1;
-    }
-
-    function addNegativePoint() {
-        negativePoints += 1;
-    }
-
-    function getPercentsFromPoints(positives, negatives) {
-        var r = {}
-        var all = positives + negatives;
-        var onePart = 100 / all;
-        r.positivesPercents = Math.round(positives * onePart);
-        r.negativesPercents = Math.round(negatives * onePart);
-        return r;
-    }
-
-    function removeRedundantSigns(s) {
-        return s.replace(/[,.;:?!\(\)]/ig, '');
-    }
-
-    function prepareWordsArray(a) {
-        var additionalArray = [];
-        var endOfVerbRegex1 = /(ić)$/i;
-        var endOfVerbRegex2 = /(ać)$/i;
-        for (var i = 0; i < a.length; i++) {
-            a[i] = removeRedundantSigns(a[i]);
-            if (endOfVerbRegex1.test(a[i])) {
-                additionalArray.push(a[i].replace(endOfVerbRegex1, 'iać'));
+    var init = {
+        recordsDataOriginal: {{ records_data|safe }},
+        recordsList: {},
+        readPolish: $('#read_polish'),
+        readEnglish: $('#read_english'),
+        answerPolish: $('#answer_polish'),
+        answerEnglish: $('#answer_english'),
+        textField: $('#text'),
+        sentenceField: $('#sentence'),
+        continueButton: $('#continue'),
+        sadIcon: $('#sad_icon'),
+        happyIcon: $('#happy_icon'),
+        showButton: $('#show_answer'),
+        ratingButton: $('.rating'),
+        language: null,
+        randomRecord: null,
+        reversedLanguage: null,
+        points: null,
+        negativePoints: null,
+        fadeTime: 500,
+        modalRating: $('.modal-rating'),
+        radioButton: $('#rating-form input[type="radio"]'),
+        submitButton: $('#submit-rating-btn-ang'),
+        ratingForm: $('#rating-form'),
+        fieldPolishPolish: $(".field_polish_polish"),
+        fieldPolishEnglish: $(".field_polish_english"),
+        fieldEnglishPolish: $(".field_english_polish"),
+        fieldEnglishEnglish: $(".field_english_english"),
+        fieldSentencePolish: $(".field_sentence_polish"),
+        fieldSentenceEnglish: $(".field_sentence_english"),
+        randEnglish: $(".rand_english"),
+        randPolish: $(".rand_polish"),
+        cleanForm: function () {
+            this.ratingForm.trigger('reset');
+            this.submitButton.css({ 'visibility': 'hidden' });
+            this.modalRating.hide();
+        },
+        getDataFromDatabase: function (fieldToShow) {
+            this.randomRecord = this.getRandomRecord();
+            this.clean();
+            var polish = this.randomRecord.polish;
+            var english = this.randomRecord.english;
+            var sentence = this.randomRecord.sentence;
+            var rating = this.randomRecord.rating;
+            this.fieldPolishPolish.text(polish);
+            this.fieldPolishEnglish.text(polish);
+            this.fieldEnglishPolish.text(english);
+            this.fieldEnglishEnglish.text(english);
+            this.fieldSentencePolish.text(sentence);
+            this.fieldSentenceEnglish.text(sentence);
+            this.ratingButton.fadeIn().css('cursor', 'pointer');
+            fieldToShow.fadeIn().css('cursor', 'pointer');
+        },
+        initialize: function () {
+            var recordsData = $.extend(true, {}, this.recordsDataOriginal);
+            this.recordsList = recordsData.record_list;
+            this.points = 0;
+            this.negativePoints = 0;
+            this.newIteration();
+        },
+        getRandomRecord: function () {
+            var randomRecordId = Math.floor(Math.random() * this.recordsList.length);
+            this.recordsList[randomRecordId].randomRecordId = randomRecordId;
+            return this.recordsList[randomRecordId];
+        },
+        clean: function () {
+            this.fieldPolishPolish.hide().text('');
+            this.fieldEnglishPolish.hide().text('');
+            this.fieldEnglishEnglish.hide().text('');
+            this.fieldPolishEnglish.hide().text('');
+            this.fieldSentencePolish.hide().text('');
+            this.fieldSentenceEnglish.hide().text('');
+            this.ratingButton.hide();
+        },
+        showAnswer: function () {
+            this.textField.hide();
+            $('#answer_' + this.reversedLanguage).html(this.randomRecord[this.reversedLanguage]).fadeIn(this.fadeTime);
+            if (this.randomRecord.sentence.length) {
+                this.sentenceField.html(this.randomRecord.sentence).fadeIn(this.fadeTime);
             }
-            if (endOfVerbRegex2.test(a[i])) {
-                additionalArray.push(a[i].replace(endOfVerbRegex2, 'ić'));
+        },
+        newIteration: function () {
+            this.cleanFields();
+            this.language = this.languageToDisplay();
+            this.randomRecord = this.getRandomRecord();
+            if (this.language == 'polish') {
+                this.readPolish.html(this.randomRecord.polish).fadeIn(this.fadeTime);
+                this.reversedLanguage = 'english';
+                this.answerEnglish.html(this.randomRecord.english);
+            } else if (this.language == 'english') {
+                this.readEnglish.html(this.randomRecord.english).fadeIn(this.fadeTime);
+                this.reversedLanguage = 'polish';
+                this.answerPolish.html(this.randomRecord.polish);
             }
-        }
-        return a.concat(additionalArray);
-    }
-
-    function initialize() {
-        var recordsData = $.extend(true, {}, recordsDataOriginal);
-        recordsList = recordsData.record_list;
-        points = 0;
-        negativePoints = 0;
-        newIteration();
-    }
-
-    function languageToDisplay() {
-        var languages = ['polish', 'english'];
-        var randomLanguageId = Math.floor(Math.random() * 2);
-        return languages[randomLanguageId];
-    }
-
-    function getRandomRecord() {
-        var randomRecordId = Math.floor(Math.random() * recordsList.length);
-        recordsList[randomRecordId].randomRecordId = randomRecordId;
-        return recordsList[randomRecordId];
-    }
-
-    function cleanFields() {
-        continueButton.hide();
-        readPolish.html('').hide();
-        readEnglish.html('').hide();
-        answerPolish.html('').hide();
-        answerEnglish.html('').hide();
-        sentenceField.html('').hide();
-        textField.val('').hide();
-        showButton.hide();
-        sadIcon.hide();
-        happyIcon.hide();
-        ratingButton.hide();
-    }
-
-    function cleanAnswers() {
-        answerPolish.html('').hide();
-        answerEnglish.html('').hide();
-        sentenceField.html('').hide();
-        showButton.hide();
-        continueButton.hide();
-        sadIcon.hide();
-        happyIcon.hide();
-    }
-
-    function newIteration() {
-        cleanFields();
-        language = languageToDisplay();
-        randomRecord = getRandomRecord();
-        if (language == 'polish') {
-            readPolish.html(randomRecord.polish).fadeIn(fadeTime);
-            reversedLanguage = 'english';
-            answerEnglish.html(randomRecord.english);
-        } else if (language == 'english') {
-            readEnglish.html(randomRecord.english).fadeIn(fadeTime);
-            reversedLanguage = 'polish';
-            answerPolish.html(randomRecord.polish);
-        }
-        textField.fadeIn(fadeTime).focus();
-    }
-
-    function showAnswer() {
-        textField.hide();
-        $('#answer_' + reversedLanguage).html(randomRecord[reversedLanguage]).fadeIn(fadeTime);
-        if (randomRecord.sentence.length) {
-            sentenceField.html(randomRecord.sentence).fadeIn(fadeTime);
+            this.textField.fadeIn(this.fadeTime).focus();
+        },
+        cleanAnswers: function () {
+            this.answerPolish.html('').hide();
+            this.answerEnglish.html('').hide();
+            this.sentenceField.html('').hide();
+            this.showButton.hide();
+            this.continueButton.hide();
+            this.sadIcon.hide();
+            this.happyIcon.hide();
+        },
+        cleanFields: function () {
+            this.continueButton.hide();
+            this.readPolish.html('').hide();
+            this.readEnglish.html('').hide();
+            this.answerPolish.html('').hide();
+            this.answerEnglish.html('').hide();
+            this.sentenceField.html('').hide();
+            this.textField.val('').hide();
+            this.showButton.hide();
+            this.sadIcon.hide();
+            this.happyIcon.hide();
+            this.ratingButton.hide();
+        },
+        languageToDisplay: function () {
+            var languages = ['polish', 'english'];
+            var randomLanguageId = Math.floor(Math.random() * 2);
+            return languages[randomLanguageId];
+        },
+        prepareWordsArray: function (a) {
+            var additionalArray = [];
+            var endOfVerbRegex1 = /(ić)$/i;
+            var endOfVerbRegex2 = /(ać)$/i;
+            for (var i = 0; i < a.length; i++) {
+                a[i] = this.removeRedundantSigns(a[i]);
+                if (endOfVerbRegex1.test(a[i])) {
+                    additionalArray.push(a[i].replace(endOfVerbRegex1, 'iać'));
+                }
+                if (endOfVerbRegex2.test(a[i])) {
+                    additionalArray.push(a[i].replace(endOfVerbRegex2, 'ić'));
+                }
+            }
+            return a.concat(additionalArray);
+        },
+        removeRedundantSigns: function (s) {
+            return s.replace(/[,.;:?!\(\)]/ig, '');
+        },
+        getPercentsFromPoints: function (positives, negatives) {
+            var r = {}
+            var all = positives + negatives;
+            var onePart = 100 / all;
+            r.positivesPercents = Math.round(positives * onePart);
+            r.negativesPercents = Math.round(negatives * onePart);
+            return r;
+        },
+        addNegativePoint: function () {
+            this.negativePoints += 1;
+        },
+        addPoint: function () {
+            this.points += 1;
         }
     }
 
-    textField.keypress(function (e) {
+    init.textField.keypress(function (e) {
         if (e.which === 13) {
             $(this).blur();
-            cleanAnswers();
-            ratingButton.fadeIn(fadeTime);
-            var promptedText = textField.val().trim().toLowerCase();
+            init.cleanAnswers();
+            init.ratingButton.fadeIn(init.fadeTime);
+            var promptedText = init.textField.val().trim().toLowerCase();
             var promptedTextWordsLength = promptedText.split(' ').length;
-            var answerValue = randomRecord[reversedLanguage].toLowerCase();
-            var answerValueArray = prepareWordsArray(answerValue.split(' '));
+            var answerValue = init.randomRecord[init.reversedLanguage].toLowerCase();
+            var answerValueArray = init.prepareWordsArray(answerValue.split(' '));
             if (answerValueArray.includes(promptedText) || (answerValue.indexOf(promptedText) !== -1 && promptedTextWordsLength > 1)) {
-                addPoint();
-                recordsList.splice(randomRecord.randomRecordId, 1);
-                happyIcon.fadeIn(fadeTime);
-                showAnswer();
-                continueButton.fadeIn(fadeTime);
+                init.addPoint();
+                init.recordsList.splice(init.randomRecord.randomRecordId, 1);
+                init.happyIcon.fadeIn(init.fadeTime);
+                init.showAnswer();
+                init.continueButton.fadeIn(init.fadeTime);
             } else {
-                addNegativePoint();
-                sadIcon.fadeIn(fadeTime);
+                init.addNegativePoint();
+                init.sadIcon.fadeIn(init.fadeTime);
                 if (promptedText.length) {
-                    showButton.fadeIn(fadeTime);
+                    init.showButton.fadeIn(init.fadeTime);
                 } else {
-                    showAnswer();
+                    init.showAnswer();
                 }
-                continueButton.fadeIn(fadeTime);
+                init.continueButton.fadeIn(init.fadeTime);
             }
         }
     });
 
-    showButton.click(function () {
+    init.showButton.click(function () {
         $(this).hide();
-        textField.hide();
-        $('#answer_' + reversedLanguage).html(randomRecord[reversedLanguage]).fadeIn(fadeTime);
-        if (randomRecord.sentence.length) {
-            sentenceField.html(randomRecord.sentence).fadeIn(fadeTime);
+        init.textField.hide();
+        $('#answer_' + init.reversedLanguage).html(init.randomRecord[init.reversedLanguage]).fadeIn(init.fadeTime);
+        if (init.randomRecord.sentence.length) {
+            init.sentenceField.html(init.randomRecord.sentence).fadeIn(init.fadeTime);
         }
-        continueButton.fadeIn(fadeTime);
+        init.continueButton.fadeIn(init.fadeTime);
     });
 
-    continueButton.click(function () {
-        cleanFields();
-        if (recordsList.length) {
-            newIteration();
+    init.continueButton.click(function () {
+        init.cleanFields();
+        if (init.recordsList.length) {
+            init.newIteration();
         } else {
-            var percentsFromPoints = getPercentsFromPoints(points, negativePoints);
+            var percentsFromPoints = init.getPercentsFromPoints(init.points, init.negativePoints);
             var textToModal = '{% trans "Gratulacje, ukończyłeś powtórkę! Poprawnych odpowiedzi" %}: ' + percentsFromPoints.positivesPercents + '%. {% trans "Błędnych" %}: ' + percentsFromPoints.negativesPercents + '%.';
-            showModal(textToModal, { confirm: initialize });
+            showModal(textToModal, { confirm: init.initialize });
         }
     });
-    initialize();
+    init.initialize();
 
     {% if user.is_authenticated %}
-    ratingButton.click(function () {
-        var init = {
-            modal_rating: $('.modal-rating'),
-            radio_button: $('#rating-form input[type="radio"]'),
-            submit_button: $('#submit-rating-btn-ang'),
-            rating_form: $('#rating-form'),
-            clean_form: function () {
-                init.rating_form.trigger('reset');
-                init.submit_button.css({ 'visibility': 'hidden' });
-                init.modal_rating.hide();
+    
+    init.ratingForm.submit(function (e) {
+        e.preventDefault();
+        var id = parseInt(init.randomRecord.id, 10);
+        var rating = $('input[name="rating"]:checked').val();
+        $.ajax({
+            type: 'post',
+            url: '{% url "yourwords:ajax_edit_rating" %}',
+            dataType: 'json',
+            data: {
+                id: id,
+                rating: rating
             }
-        }
-        init.modal_rating.show();
-        init.radio_button.click(function () {
-            init.submit_button.css({ 'visibility': 'visible' });
-        })
-
-        init.rating_form.submit(function (e) {
-            e.preventDefault();
-            var id = parseInt(randomRecord.id, 10);
-            var rating = $('input[name="rating"]:checked').val();
-            $.ajax({
-                type: 'post',
-                url: '{% url "yourwords:ajax_edit_rating" %}',
-                dataType: 'json',
-                data: {
-                    id: id,
-                    rating: rating
-                }
-            }).done(function (data) {
-                if (data.success == 1) {
-                    init.clean_form();
-                }
-            }).fail(function () {
-                init.clean_form();
-                showModal('{% trans "Wystąpił błąd. Ustawienie nie zostało zapisane." %}', { type: 'error' });
-            });
+        }).done(function (data) {
+            if (data.success == 1) {
+                init.cleanForm();
+                init.randomRecord.rating = rating;
+            }
+        }).fail(function () {
+            init.cleanForm();
+            showModal('{% trans "Wystąpił błąd. Ustawienie nie zostało zapisane." %}', { type: 'error' });
+        });
+    });
+    init.ratingButton.click(function () {
+        $('#rating' + init.randomRecord.rating).prop('checked', true);
+        init.modalRating.show();
+        init.radioButton.click(function () {
+            init.submitButton.css({ 'visibility': 'visible' });
         });
     });
     {% endif %}
 
-    function clean() {
-        $(".field_polish_polish, .field_english_polish, .field_english_english, .field_polish_english, .field_sentence_polish, .field_sentence_english").hide().text('');
-        ratingButton.hide();
-    }
-    function getDataFromDatabase(fieldToShow) {
-        var randomRecord = Math.floor((Math.random() * recordsDataOriginal.record_count) + 0)
-        clean();
-        var polish = recordsDataOriginal.record_list[randomRecord].polish
-        var english = recordsDataOriginal.record_list[randomRecord].english
-        var sentence = recordsDataOriginal.record_list[randomRecord].sentence
-        var rating = recordsDataOriginal.record_list[randomRecord].rating
-        $(".field_polish_polish").text(polish)
-        $(".field_polish_english").text(polish)
-        $(".field_english_polish").text(english)
-        $(".field_english_english").text(english)
-        $(".field_sentence_polish").text(sentence)
-        $(".field_sentence_english").text(sentence)
-        $("." + fieldToShow + ", .rating").fadeIn().css('cursor', 'pointer')
-    }
-
-    $(".rand_polish").on('click', function () {
-        getDataFromDatabase('field_polish_polish')
+    init.randPolish.on('click', function () {
+        init.getDataFromDatabase(init.fieldPolishPolish);
     });
-    $(".field_polish_polish").on('click', function () {
-        $(".field_polish_polish").css('cursor', 'default')
-        $(".field_english_polish").fadeIn().css('cursor', 'pointer')
+    init.fieldPolishPolish.on('click', function () {
+        $(this).css('cursor', 'default');
+        init.fieldEnglishPolish.fadeIn().css('cursor', 'pointer')
     });
-    $(".field_english_polish").on('click', function () {
-        $(".field_english_polish").css('cursor', 'default')
-        if ($('.field_sentence_polish').text() == '') {
-            getDataFromDatabase('field_polish_polish')
+    init.fieldEnglishPolish.on('click', function () {
+        $(this).css('cursor', 'default')
+        if (init.fieldSentencePolish.text() == '') {
+            init.getDataFromDatabase(init.fieldPolishPolish);
         }
         else {
-            $(".field_sentence_polish").fadeIn().css('cursor', 'pointer')
+            init.fieldSentencePolish.fadeIn().css('cursor', 'pointer')
         }
     });
-    $(".field_sentence_polish").on('click', function () {
-        getDataFromDatabase('field_polish_polish')
+    init.fieldSentencePolish.on('click', function () {
+        init.getDataFromDatabase(init.fieldPolishPolish);
     });
 
-    $(".rand_english").on('click', function () {
-        getDataFromDatabase('field_english_english')
+    init.randEnglish.on('click', function () {
+        init.getDataFromDatabase(init.fieldEnglishEnglish);
     });
-    $(".field_english_english").on('click', function () {
-        $(".field_english_english").css('cursor', 'default')
-        $(".field_polish_english").fadeIn().css('cursor', 'pointer')
+    init.fieldEnglishEnglish.on('click', function () {
+        $(this).css('cursor', 'default');
+        init.fieldPolishEnglish.fadeIn().css('cursor', 'pointer');
     });
-    $(".field_polish_english").on('click', function () {
-        $(".field_polish_english").css('cursor', 'default')
-        if ($('.field_sentence_english').text() == '') {
-            getDataFromDatabase('field_english_english')
+    init.fieldPolishEnglish.on('click', function () {
+        $(this).css('cursor', 'default')
+        if (init.fieldSentenceEnglish.text() == '') {
+            init.getDataFromDatabase(init.fieldEnglishEnglish);
         }
         else {
-            $(".field_sentence_english").fadeIn().css('cursor', 'pointer')
+            init.fieldSentenceEnglish.fadeIn().css('cursor', 'pointer')
         }
     });
-    $(".field_sentence_english").on('click', function () {
-        getDataFromDatabase('field_english_english')
+    init.fieldSentenceEnglish.on('click', function () {
+        init.getDataFromDatabase(init.fieldEnglishEnglish);
     });
 });
 
