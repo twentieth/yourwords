@@ -114,7 +114,7 @@ def search(request):
     return render(request, 'yourwords/wordlist.html', context)
 
 
-@login_required(login_url='/authentication/signin/')
+@login_required()
 @csrf_exempt
 def add(request):
     context = {}
@@ -140,7 +140,7 @@ def add(request):
     return render(request, 'yourwords/add.html', context)
 
 
-@login_required(login_url='/authentication/signin/')
+@login_required()
 @csrf_exempt
 def edit(request, record_id):
     context = {}
@@ -168,7 +168,7 @@ def edit(request, record_id):
         return render(request, 'yourwords/add.html', context)
 
 
-@login_required(login_url='/authentication/signin/')
+@login_required()
 @csrf_exempt
 @require_http_methods(['POST'])
 def delete(request):
@@ -189,7 +189,7 @@ def delete(request):
 
 @require_http_methods(['POST'])
 @csrf_exempt
-@login_required(login_url='/authentication/signin/')
+@login_required()
 def ajax_edit_rating(request):
     if request.is_ajax():
         response_data = {}
@@ -283,7 +283,7 @@ def contact(request):
     return render(request, 'yourwords/contact.html', context)
 
 
-@login_required(login_url='/authentication/signin/')
+@login_required()
 def listings(request):
     listings_queryset = Listing.users.where_user(request.user).order_by('-created_at')
     context = {
