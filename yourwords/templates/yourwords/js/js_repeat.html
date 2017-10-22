@@ -215,9 +215,7 @@ $(function () {
     init.ratingForm.submit(function (e) {
         e.preventDefault();
         var id = parseInt(init.randomRecord.id, 10);
-        console.log(init.randomRecord)
         var rating = $('input[name="rating"]:checked').val();
-        console.log(rating)
         $.ajax({
             type: 'post',
             url: '{% url "yourwords:ajax_edit_rating" %}',
@@ -237,7 +235,6 @@ $(function () {
         });
     });
     init.ratingButton.click(function () {
-        console.log(init.randomRecord.rating)
         $('#rating' + init.randomRecord.rating).prop('checked', true);
         init.modalRating.show();
         init.radioButton.click(function () {

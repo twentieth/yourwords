@@ -193,11 +193,14 @@ def delete(request):
 def ajax_edit_rating(request):
     if request.is_ajax():
         response_data = {}
-        instance = English.users.where_user(request.user).get(id=request.POST.get('id'))
-        instance.rating = request.POST.get('rating')
-        instance.updated_at = timezone.now()
-        instance.save()
-        response_data['success'] = 1
+        try:
+            instance = English.users.where_user(request.user).get(id=request.POST.get('id'))
+            instance.rating = request.POST.get('rating')
+            instance.updated_at = timezone.now()
+            instance.save()
+            response_data['success'] = 1
+        except ObjectDoesNotExist:
+            response_data['success'] = 0
         return JsonResponse(response_data)
 
 
