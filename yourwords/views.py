@@ -18,6 +18,7 @@ from django.core.cache import cache
 from yourwords.my_classes.draw_factory import DrawFactory
 from common.emailer import Email
 from common.helpers import safe_string
+from django.core.exceptions import ObjectDoesNotExist
 
 
 @csrf_exempt

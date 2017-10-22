@@ -1,4 +1,6 @@
 from django.db import models
+from django.contrib.auth.signals import user_logged_in, user_logged_out
+from django.dispatch import receiver
 
 
 class Log(models.Model):
@@ -15,7 +17,30 @@ class Log(models.Model):
 
     @classmethod
     def apply(cls, user, action):
-        logModel = cls(user=user, action=action)
+        # logModel = cls(user=user, action=action)
+        # try:
+        #     logModel.save()
+        #     return True
+        # except IntegrityError:
+        #     return False
+        # except ValueError:
+        #     return False
+        pass
+
+    @receiver(user_logged_in)
+    def user_has_been_logged_in(sender, user, request, **kwargs):
+        logModel = Log(user=user, action='1')
+        try:
+            logModel.save()
+            return True
+        except IntegrityError:
+            return False
+        except ValueError:
+            return False
+
+    @receiver(user_logged_out)
+    def user_has_been_logged_out(sender, user, request, **kwargs):
+        logModel = Log(user=user, action='2')
         try:
             logModel.save()
             return True
