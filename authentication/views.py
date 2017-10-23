@@ -28,7 +28,6 @@ def signin(request):
                 if user.is_active:
                     login(request, user)
                     messages.success(request, _('Nastąpiło poprawne zalogowanie użytkownika'))
-                    Log.apply(user, 1)
                     return redirect(request.POST.get('next', '/'))
                 else:
                     messages.info(request, _('Twoje konto użytkownika nie jest aktywne. Skontaktuj się z administratorem strony.'))
@@ -72,7 +71,6 @@ def signup(request):
 
 @never_cache
 def logout_page(request):
-    Log.apply(request.user, 2)
     logout(request)
     messages.info(request, _('Nastąpiło poprawne wylogowanie użytkownika.'))
     return redirect('yourwords:index')

@@ -12,7 +12,7 @@ class Profile(models.Model):
 
     def is_socialuser(self):
         try:
-            user = UserSocialAuth.objects.get(user=self.user)
+            UserSocialAuth.objects.get(user=self.user)
             return True
         except ObjectDoesNotExist:
             return False
