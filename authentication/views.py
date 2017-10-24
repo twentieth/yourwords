@@ -20,6 +20,10 @@ from administration.models import Log
 @csrf_exempt
 @never_cache
 def signin(request):
+    if request.user.is_authenticated():
+        messages.warning(request, _(
+            'Brak dostępu do wybranego zasobu.'))
+        return redirect('yourwords:index')
     if request.method == 'POST':
         form = SigninForm(request.POST)
         if form.is_valid():
