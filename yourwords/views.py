@@ -3,10 +3,6 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse, HttpResponse
 from django.utils import timezone
 from django.contrib.auth.models import User
-from .models import English
-from .models import Listing
-from common.helpers import user_has_option, set_pagination
-from .forms import AddRecordForm, ContactForm, SearchForm
 from django.views.decorators.csrf import csrf_exempt
 from django.contrib.auth.decorators import login_required
 from django.views.decorators.http import require_http_methods
@@ -15,10 +11,15 @@ from django.core.mail import send_mail
 from django.utils.translation import ugettext as _
 from django.db.models import Q
 from django.core.cache import cache
+from django.core.exceptions import ObjectDoesNotExist
 from yourwords.my_classes.draw_factory import DrawFactory
 from common.emailer import Email
 from common.helpers import safe_string
-from django.core.exceptions import ObjectDoesNotExist
+from common.helpers import user_has_option, set_pagination
+from .forms import AddRecordForm, ContactForm, SearchForm
+from .models import English
+from .models import Listing
+from administration.models import Log
 
 
 @csrf_exempt
@@ -29,8 +30,14 @@ def index(request):
     message_text = collection_manager.get_message()
 
     if not record_count:
-        message_text = _(
-            'Brak słówek spełniających wybrane kryteria. Spróbuj jeszcze raz. A może jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!')
+        if not request.user.is_authenticated() or request.user.is_authenticated() and Log.objects.filter(user=request.user, action='1').count() > 1:
+            message_text = _(
+                'Brak słówek spełniających wybrane kryteria wyszukiwania. Spróbuj jeszcze raz.'
+            )
+        else:
+            message_text = _(
+                'Jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!'
+            )
         messages.info(request, message_text)
         return redirect('yourwords:repeat', kind='write')
 
@@ -214,9 +221,15 @@ def repeat(request, kind='read'):
         message_text = collection_manager.get_message()
 
         if not record_count:
-            message_text = _(
-                'Brak słówek spełniających wybrane kryteria. Spróbuj jeszcze raz. A może jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!'
-            )
+            if not request.user.is_authenticated() or request.user.is_authenticated() and Log.objects.filter(user=request.user, action='1').count() > 1:
+                message_text = _(
+                    'Brak słówek spełniających wybrane kryteria wyszukiwania. Spróbuj jeszcze raz.'
+                )
+            else:
+                message_text = _(
+                    'Jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!'
+                )
+            
             messages.info(request, message_text)
             return redirect('yourwords:repeat', kind='write')
 
