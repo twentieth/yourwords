@@ -102,29 +102,28 @@
 
 		$('#main_repeat_form').submit(function () {
 			if (!$('input[name="main_repeat_manually"]').is(':disabled')) {
-				var regex_number = /^[\d]+$/
-				var val_number = $('input[name="main_repeat_manually"]').val().trim()
+				var regex_number = /^[\d]+$/;
+				var val_number = $('input[name="main_repeat_manually"]').val().trim();
 
 				if (!regex_number.test(val_number) || val_number < 1 || val_number > 99999) {
-					showModal('{% trans "Wprowadzona wartość musi być liczbą w zakresie" %} 1-99999.', {type: 'warning'})
-					return false
+					showModal('{% trans "Wprowadzona wartość musi być liczbą w zakresie" %} 1-99999.', {type: 'warning'});
+					return false;
 				}
 			}
 		})
 
 
-		$('#main_repeat_form input[type="radio"]').click(function () {
-			if ($('input[value="manually"]').is(':checked')) {
-				$('#main_repeat_form input[name="main_repeat_manually"]').prop('disabled', false).focus()
+		$('[name="main_repeat"], [name="main_repeat_manually"]').change(function () {
+			if ($('[value="manually"]').is(':checked')) {
+				$('[name="main_repeat_manually"]').prop('disabled', false).focus();
+			} else {
+				$('[name="main_repeat_manually"]').prop('disabled', true);
+				$('[name="main_repeat_manually"]').val('');
 			}
-			else {
-				$('#main_repeat_form input[name="main_repeat_manually"]').prop('disabled', true)
-				$('#main_repeat_form input[name="main_repeat_manually"]').val('')
-			}
-		})
+		});
 
 		$('.disabled').click(function (e) {
-			e.preventDefault()
+			e.preventDefault();
 		})
 
 		$('#option_settings').click(function (e) {

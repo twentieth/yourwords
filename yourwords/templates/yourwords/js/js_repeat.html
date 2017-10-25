@@ -36,90 +36,90 @@ $(function () {
         randEnglish: $(".rand_english"),
         randPolish: $(".rand_polish"),
         cleanForm: function () {
-            this.ratingForm.trigger('reset');
-            this.submitButton.css({ 'visibility': 'hidden' });
-            this.modalRating.hide();
+            init.ratingForm.trigger('reset');
+            init.submitButton.css({ 'visibility': 'hidden' });
+            init.modalRating.hide();
         },
         getDataFromDatabase: function (fieldToShow) {
-            this.randomRecord = this.getRandomRecord();
-            this.clean();
-            var polish = this.randomRecord.polish;
-            var english = this.randomRecord.english;
-            var sentence = this.randomRecord.sentence;
-            var rating = this.randomRecord.rating;
-            this.fieldPolishPolish.text(polish);
-            this.fieldPolishEnglish.text(polish);
-            this.fieldEnglishPolish.text(english);
-            this.fieldEnglishEnglish.text(english);
-            this.fieldSentencePolish.text(sentence);
-            this.fieldSentenceEnglish.text(sentence);
-            this.ratingButton.fadeIn().css('cursor', 'pointer');
+            init.randomRecord = init.getRandomRecord();
+            init.clean();
+            var polish = init.randomRecord.polish;
+            var english = init.randomRecord.english;
+            var sentence = init.randomRecord.sentence;
+            var rating = init.randomRecord.rating;
+            init.fieldPolishPolish.text(polish);
+            init.fieldPolishEnglish.text(polish);
+            init.fieldEnglishPolish.text(english);
+            init.fieldEnglishEnglish.text(english);
+            init.fieldSentencePolish.text(sentence);
+            init.fieldSentenceEnglish.text(sentence);
+            init.ratingButton.fadeIn().css('cursor', 'pointer');
             fieldToShow.fadeIn().css('cursor', 'pointer');
         },
         initialize: function () {
-            var recordsData = $.extend(true, {}, this.recordsDataOriginal);
-            this.recordsList = recordsData.record_list;
-            this.points = 0;
-            this.negativePoints = 0;
-            this.newIteration();
+            var recordsData = $.extend(true, {}, init.recordsDataOriginal);
+            init.recordsList = recordsData.record_list;
+            init.points = 0;
+            init.negativePoints = 0;
+            init.newIteration();
         },
         getRandomRecord: function () {
-            var randomRecordId = Math.floor(Math.random() * this.recordsList.length);
-            this.recordsList[randomRecordId].randomRecordId = randomRecordId;
-            return this.recordsList[randomRecordId];
+            var randomRecordId = Math.floor(Math.random() * init.recordsList.length);
+            init.recordsList[randomRecordId].randomRecordId = randomRecordId;
+            return init.recordsList[randomRecordId];
         },
         clean: function () {
-            this.fieldPolishPolish.hide().text('');
-            this.fieldEnglishPolish.hide().text('');
-            this.fieldEnglishEnglish.hide().text('');
-            this.fieldPolishEnglish.hide().text('');
-            this.fieldSentencePolish.hide().text('');
-            this.fieldSentenceEnglish.hide().text('');
-            this.ratingButton.hide();
+            init.fieldPolishPolish.hide().text('');
+            init.fieldEnglishPolish.hide().text('');
+            init.fieldEnglishEnglish.hide().text('');
+            init.fieldPolishEnglish.hide().text('');
+            init.fieldSentencePolish.hide().text('');
+            init.fieldSentenceEnglish.hide().text('');
+            init.ratingButton.hide();
         },
         showAnswer: function () {
-            this.textField.hide();
-            $('#answer_' + this.reversedLanguage).html(this.randomRecord[this.reversedLanguage]).fadeIn(this.fadeTime);
-            if (this.randomRecord.sentence.length) {
-                this.sentenceField.html(this.randomRecord.sentence).fadeIn(this.fadeTime);
+            init.textField.hide();
+            $('#answer_' + init.reversedLanguage).html(init.randomRecord[init.reversedLanguage]).fadeIn(init.fadeTime);
+            if (init.randomRecord.sentence.length) {
+                init.sentenceField.html(init.randomRecord.sentence).fadeIn(init.fadeTime);
             }
         },
         newIteration: function () {
-            this.cleanFields();
-            this.language = this.languageToDisplay();
-            this.randomRecord = this.getRandomRecord();
-            if (this.language == 'polish') {
-                this.readPolish.html(this.randomRecord.polish).fadeIn(this.fadeTime);
-                this.reversedLanguage = 'english';
-                this.answerEnglish.html(this.randomRecord.english);
-            } else if (this.language == 'english') {
-                this.readEnglish.html(this.randomRecord.english).fadeIn(this.fadeTime);
-                this.reversedLanguage = 'polish';
-                this.answerPolish.html(this.randomRecord.polish);
+            init.cleanFields();
+            init.language = init.languageToDisplay();
+            init.randomRecord = init.getRandomRecord();
+            if (init.language == 'polish') {
+                init.readPolish.html(init.randomRecord.polish).fadeIn(init.fadeTime);
+                init.reversedLanguage = 'english';
+                init.answerEnglish.html(init.randomRecord.english);
+            } else if (init.language == 'english') {
+                init.readEnglish.html(init.randomRecord.english).fadeIn(init.fadeTime);
+                init.reversedLanguage = 'polish';
+                init.answerPolish.html(init.randomRecord.polish);
             }
-            this.textField.fadeIn(this.fadeTime).focus();
+            init.textField.fadeIn(init.fadeTime).focus();
         },
         cleanAnswers: function () {
-            this.answerPolish.html('').hide();
-            this.answerEnglish.html('').hide();
-            this.sentenceField.html('').hide();
-            this.showButton.hide();
-            this.continueButton.hide();
-            this.sadIcon.hide();
-            this.happyIcon.hide();
+            init.answerPolish.html('').hide();
+            init.answerEnglish.html('').hide();
+            init.sentenceField.html('').hide();
+            init.showButton.hide();
+            init.continueButton.hide();
+            init.sadIcon.hide();
+            init.happyIcon.hide();
         },
         cleanFields: function () {
-            this.continueButton.hide();
-            this.readPolish.html('').hide();
-            this.readEnglish.html('').hide();
-            this.answerPolish.html('').hide();
-            this.answerEnglish.html('').hide();
-            this.sentenceField.html('').hide();
-            this.textField.val('').hide();
-            this.showButton.hide();
-            this.sadIcon.hide();
-            this.happyIcon.hide();
-            this.ratingButton.hide();
+            init.continueButton.hide();
+            init.readPolish.html('').hide();
+            init.readEnglish.html('').hide();
+            init.answerPolish.html('').hide();
+            init.answerEnglish.html('').hide();
+            init.sentenceField.html('').hide();
+            init.textField.val('').hide();
+            init.showButton.hide();
+            init.sadIcon.hide();
+            init.happyIcon.hide();
+            init.ratingButton.hide();
         },
         languageToDisplay: function () {
             var languages = ['polish', 'english'];
@@ -131,7 +131,7 @@ $(function () {
             var endOfVerbRegex1 = /(ić)$/i;
             var endOfVerbRegex2 = /(ać)$/i;
             for (var i = 0; i < a.length; i++) {
-                a[i] = this.removeRedundantSigns(a[i]);
+                a[i] = init.removeRedundantSigns(a[i]);
                 if (endOfVerbRegex1.test(a[i])) {
                     additionalArray.push(a[i].replace(endOfVerbRegex1, 'iać'));
                 }
@@ -153,10 +153,10 @@ $(function () {
             return r;
         },
         addNegativePoint: function () {
-            this.negativePoints += 1;
+            init.negativePoints += 1;
         },
         addPoint: function () {
-            this.points += 1;
+            init.points += 1;
         }
     }
 
