@@ -71,16 +71,21 @@
 		})
 
 		$('#submit-btn-delete').on('click', function (e) {
-			e.preventDefault()
+			e.preventDefault();
 			function delRecord() {
-				$('#delete_record').submit()
+				$('#delete_record').submit();
 			}
-			showAndHideModalConfirm('{% trans "Czy na pewno chcesz usunąć wybrany rekord?" %}', delRecord, 'danger')
-		})
+			var opts = {
+				type: 'error',
+				confirm: delRecord,
+				cancel: true
+			}
+			showModal('{% trans "Czy na pewno chcesz usunąć wybrany rekord?" %}', opts);
+		});
 
 		$('#listing_choice').click(function (e) {
-			e.preventDefault()
-			showAndHideModalFancybox('{% trans "Powtórz słówka z wybranej listy" %}', '/yourwords/listings/')
+			e.preventDefault();
+			showAndHideModalFancybox('{% trans "Powtórz słówka z wybranej listy" %}', '/listings/');
 		})
 
 

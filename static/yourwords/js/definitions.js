@@ -96,36 +96,6 @@ function showModal(txt, options = {}) {
 	});
 }
 
-	function showAndHideModalConfirm(txt, fYes, type = '')
-	{
-		$('.modal-confirm').find('header').text(txt)
-		if (type == 'danger') {
-			$('.modal-confirm').find('header').addClass('w3-red')
-			$('.modal-confirm').find('.yes').addClass('w3-red')
-
-		}
-		if (type == '') {
-			$('.modal-confirm').find('header').addClass('w3-teal')
-			$('.modal-confirm').find('.yes').addClass('w3-teal')
-		}
-		$('.modal-confirm').css({display: 'block'})
-		$('.yes').click(function() {
-			fYes()
-		})
-		$('.no').click(function () {
-			hideModalConfirm()
-		})
-		$('.modal-confirm').find('header').click(function() {
-			hideModalConfirm()
-		})
-	}
-	function hideModalConfirm()
-	{
-		$('.modal-confirm').hide();
-		$('.no').removeClass('w3-red, w3-teal');
-		$('.modal-confirm').find('header').removeClass('w3-red, w3-teal').html('');
-		$('.modal-confirm').find('.yes').removeClass('w3-teal, w3-red');
-	}
 	function showAndHideModalFancybox(header, view)
 	{
 		$('.modal-fancybox .modal-header #modal-fancybox-text').text(header)
