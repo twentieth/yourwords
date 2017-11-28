@@ -166,7 +166,6 @@ class NumberWordsManager(CollectionManager):
                 _('Słówek') + ': <span class="w3-tag w3-black w3-border w3-border-light-grey w3-round">' + \
                 str(self._count) + '</span>'
         else:
-            # self.__rating != self.__RATING_ALL and self.__number_words != self.__NUMBER_WORDS_ALL
             self._records_ids = English.users.where_user(
                 self._request.user).values_list(
                     'id', flat=True).filter(rating=self.__rating).order_by(

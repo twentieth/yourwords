@@ -15,10 +15,10 @@ class English(models.Model):
     objects = models.Manager()
     users = UserManager()
     RATING_CHOICES = (
-            ('1', 'easy'),
-            ('2', 'medium'),
-            ('3', 'difficult'),
-        )
+        ('1', 'easy'),
+        ('2', 'medium'),
+        ('3', 'difficult'),
+    )
     user = models.ForeignKey('auth.User', on_delete=models.CASCADE, default=1)
     polish = models.CharField(max_length=100, default='')
     english = models.CharField(max_length=100, default='')
