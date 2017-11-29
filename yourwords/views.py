@@ -225,7 +225,7 @@ def repeat(request, kind='read'):
                 message_text = _(
                     'Jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!'
                 )
-            
+
             messages.info(request, message_text)
             return redirect('yourwords:repeat', kind='write')
 
@@ -280,7 +280,7 @@ def contact(request):
                 recipients.append(email)
             emailObject.set_recipients(recipients)
             email_send = emailObject.send()
-            if email_send == True:
+            if email_send is True:
                 form.save()
                 message_text = _('Dziękuję, wiadomość została wysłana.')
                 messages.info(request, message_text)
@@ -291,7 +291,7 @@ def contact(request):
             return redirect('yourwords:contact')
     else:
         form = ContactForm()
-    context['title']= _('Napisz do nas')
+    context['title'] = _('Napisz do nas')
     context['form'] = form
     return render(request, 'yourwords/contact.html', context)
 
