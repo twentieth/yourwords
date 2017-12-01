@@ -174,7 +174,7 @@ CACHES = {
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'mail.linux.pl'
 EMAIL_HOST_USER = 'twentiethsite@linux.pl'
-EMAIL_HOST_PASSWORD = 'Dw5mpwdn'
+EMAIL_HOST_PASSWORD = 'Dw5mpwdn?'
 EMAIL_PORT = 25
 EMAIL_USE_TLS = True
 
@@ -193,3 +193,5 @@ SOCIAL_AUTH_SLUGIFY_USERNAMES = True
 
 LOGIN_REDIRECT_URL = reverse_lazy('yourwords:index')
 LOGIN_URL = reverse_lazy('authentication:signin')
+
+GOOGLE_RECAPTCHA_SECRET_KEY = '6LeAQDsUAAAAAFO1lwdtuifXsCv64aLYaKH23MA2'

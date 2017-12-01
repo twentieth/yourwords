@@ -55,21 +55,5 @@ class Email:
         try:
             msg.send()
             return True
-        except SMTPServerDisconnected:
-            return 'SMTPServerDisconnected'
-        except SMTPResponseException:
-            return 'SMTPResponseException'
-        except SMTPSenderRefused:
-            return 'SMTPSenderRefused'
-        except SMTPRecipientsRefused:
-            return 'SMTPRecipientsRefused'
-        except SMTPDataError:
-            return 'SMTPDataError'
-        except SMTPConnectError:
-            return 'SMTPConnectError'
-        except SMTPHeloError:
-            return 'SMTPHeloError'
-        except SMTPAuthenticationError:
-            return 'SMTPAuthenticationError'
-        except SMTPException:
-            return 'SMTPException'
+        except:
+            return False

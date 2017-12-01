@@ -16,6 +16,7 @@ from yourwords.my_classes.draw_factory import DrawFactory
 from common.emailer import Email
 from common.helpers import safe_string
 from common.helpers import user_has_option, set_pagination
+from common.decorators import check_recaptcha
 from .forms import AddRecordForm, ContactForm, SearchForm
 from .models import English
 from .models import Listing
@@ -251,11 +252,12 @@ def repeat(request, kind='read'):
 
 
 @csrf_exempt
+@check_recaptcha
 def contact(request):
     context = {}
     if request.method == 'POST':
         form = ContactForm(request.POST)
-        if form.is_valid():
+        if form.is_valid() and request.recaptcha_is_valid:
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             content = form.cleaned_data['content']
@@ -284,18 +286,18 @@ def contact(request):
                 recipients.append(email)
             emailObject.set_recipients(recipients)
             email_send = emailObject.send()
-            if email_send == True:
+            if email_send is True:
                 form.save()
                 message_text = _('Dziękuję, wiadomość została wysłana.')
                 messages.info(request, message_text)
             else:
-                message_text = _('Wystąpił błąd - wiadomość w tej chwili nie może zostać wysłana.')
+                message_text = _('Przepraszamy, wiadomość w tej chwili nie może zostać wysłana.')
                 messages.error(request, message_text)
 
             return redirect('yourwords:contact')
     else:
         form = ContactForm()
-    context['title']= _('Napisz do nas')
+    context['title'] = _('Napisz do nas')
     context['form'] = form
     return render(request, 'yourwords/contact.html', context)
 
