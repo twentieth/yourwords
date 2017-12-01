@@ -55,7 +55,7 @@ def signup(request):
             opts = {
                 'use_https': request.is_secure(),
                 'token_generator': default_token_generator,
-                'from_email': 'twentiethsite@linux.pl',
+                'from_email': 'twojeslowka.online',
                 'email_template_name': 'authentication/signup_email.html',
                 'subject_template_name': 'authentication/signup_subject.txt',
                 'request': request,
@@ -108,7 +108,7 @@ def password_reset(request):
             opts = {
                 'use_https': request.is_secure(),
                 'token_generator': default_token_generator,
-                'from_email': 'twentiethsite@linux.pl',
+                'from_email': 'twojeslowka.online',
                 'email_template_name': 'authentication/password_reset_email.html',
                 'subject_template_name': 'authentication/password_reset_subject.txt',
                 'request': request,
@@ -204,7 +204,7 @@ def signup_confirm(request, uidb64=None, token=None):
         content = '''
                     Informacja o nowozarejestrowanym użytkowniku:
                     <br>''' + user.username
-        send_mail(subject, '', 'twentiethsite@linux.pl', ['twentiethsite@linux.pl', 'nacoipoco@gmail.com'], fail_silently=True, html_message=content)
+        send_mail(subject, '', 'twojeslowka.online', ['twentiethsite@linux.pl', 'nacoipoco@gmail.com'], fail_silently=True, html_message=content)
         return redirect('authentication:signin')
     else:
         title = _('Aktywacja nowego konta nieudana')
