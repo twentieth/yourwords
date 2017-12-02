@@ -1,31 +1,5 @@
-from random import randrange
-from django.core.exceptions import ObjectDoesNotExist
-from django.core.cache import cache
-from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
-
-
 def get_current_url(request):
     return request.build_absolute_uri()
-
-
-def random_record(request):
-    response_data = {}
-    if cache.get('record_count') is None or cache.get('record_list') is None:
-        response_data['success'] = 0
-    else:
-        random_value = randrange(0, cache.get('record_count'))
-        record_list = cache.get('record_list')
-        try:
-            response_data['success'] = 1
-            record = record_list[random_value]
-            response_data['id'] = record.id
-            response_data['polish'] = record.polish
-            response_data['english'] = record.english
-            response_data['sentence'] = record.sentence
-            response_data['rating'] = record.rating
-        except ObjectDoesNotExist:
-            response_data = random_record(request)
-    return response_data
 
 
 def user_has_option(user, option):
@@ -39,6 +13,7 @@ def user_has_option(user, option):
 
 
 def set_pagination(request, collection, n):
+    from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
     paginator = Paginator(collection, int(n))
     page = request.GET.get('page')
     try:
@@ -57,7 +32,7 @@ def queryset_to_dict(queryset):
     for record in queryset:
         for key, value in record.items():
             if isinstance(value, datetime.datetime):
-                record[key] = value.strftime("%Y-%m-%d %H:%M:%S")
+                record[key] = str(value)
         array.append(record)
     return array
 
@@ -71,6 +46,30 @@ def queryset_to_dict_with_id_keys(queryset, pk='id'):
             if isinstance(value, datetime.datetime):
                 record[key] = str(value)
         d[record[pk]] = record
+    return d
+
+
+def queryset_to_dict_serializer_version(queryset, pk='id'):
+    import json
+    from django.core import serializers
+    serialized_data = serializers.serialize('json', queryset)
+    deserialized_data = json.loads(serialized_data)
+    array = []
+    for record in deserialized_data:
+        record['fields'][pk] = record['pk']
+        array.append(record['fields'])
+    return array
+
+
+def queryset_to_dict_with_id_keys_serializer_version(queryset, pk='id'):
+    import json
+    from django.core import serializers
+    serialized_data = serializers.serialize('json', queryset)
+    deserialized_data = json.loads(serialized_data)
+    d = {}
+    for record in deserialized_data:
+        record[pk] = record['pk']
+        d[record['pk']] = record['fields']
     return d
 
 
