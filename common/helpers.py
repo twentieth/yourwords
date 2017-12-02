@@ -63,6 +63,14 @@ def queryset_to_json_like(queryset):
         array.append(record)
     return array
 
+
+def json_like_from_queryset_with_id_keys(json_like, pk='id'):
+    array = {}
+    for record in json_like:
+        array[record[pk]] = record
+    return array
+
+
 def safe_string(string):
     from django.utils.safestring import mark_safe
     return mark_safe(string.strip().replace("\n", "<br>\n"))

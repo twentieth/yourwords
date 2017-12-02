@@ -19,6 +19,7 @@ $(function () {
         ratingButton: $('.rating'),
         language: null,
         randomRecord: null,
+        randomRecordId: null,
         reversedLanguage: null,
         points: null,
         negativePoints: null,
@@ -64,9 +65,12 @@ $(function () {
             init.newIteration();
         },
         getRandomRecord: function () {
-            var randomRecordId = Math.floor(Math.random() * init.recordsList.length);
-            init.recordsList[randomRecordId].randomRecordId = randomRecordId;
-            return init.recordsList[randomRecordId];
+            var ids = Object.keys(init.recordsList);
+            var randomIdPosition = Math.floor(Math.random() * ids.length);
+            var id = ids[randomIdPosition];
+            init.randomRecordId = id;
+            var randomRecord = init.recordsList[id];
+            return randomRecord;
         },
         clean: function () {
             init.fieldPolishPolish.hide().text('');
@@ -171,7 +175,7 @@ $(function () {
             var answerValueArray = init.prepareWordsArray(answerValue.split(' '));
             if (answerValueArray.includes(promptedText) || (answerValue.indexOf(promptedText) !== -1 && promptedTextWordsLength > 1)) {
                 init.addPoint();
-                init.recordsList.splice(init.randomRecord.randomRecordId, 1);
+                delete init.recordsList[init.randomRecordId];
                 init.happyIcon.fadeIn(init.fadeTime);
                 init.showAnswer();
                 init.continueButton.fadeIn(init.fadeTime);
@@ -200,7 +204,7 @@ $(function () {
 
     init.continueButton.click(function () {
         init.cleanFields();
-        if (init.recordsList.length) {
+        if (Object.keys(init.recordsList).length) {
             init.newIteration();
         } else {
             var percentsFromPoints = init.getPercentsFromPoints(init.points, init.negativePoints);
@@ -228,6 +232,7 @@ $(function () {
             if (data.success == 1) {
                 init.cleanForm();
                 init.randomRecord.rating = rating;
+                init.recordsDataOriginal.record_list[init.randomRecordId].rating = rating
             }
         }).fail(function () {
             init.cleanForm();

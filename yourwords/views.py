@@ -16,6 +16,7 @@ from yourwords.my_classes.draw_factory import DrawFactory
 from common.emailer import Email
 from common.helpers import safe_string
 from common.helpers import user_has_option, set_pagination
+from common.helpers import json_like_from_queryset_with_id_keys
 from common.decorators import check_recaptcha
 from .forms import AddRecordForm, ContactForm, SearchForm
 from .models import English
@@ -240,7 +241,7 @@ def repeat(request, kind='read'):
         messages.info(request, message_text, extra_tags='safe')
         records_to_json = {
             'record_count': record_count,
-            'record_list': record_list
+            'record_list': json_like_from_queryset_with_id_keys(record_list)
         }
         context = {'records_data': records_to_json}
         if kind == 'read':
