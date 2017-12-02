@@ -32,7 +32,10 @@ def signin(request):
                 if user.is_active:
                     login(request, user)
                     messages.success(request, _('Nastąpiło poprawne zalogowanie użytkownika'))
-                    return redirect(request.POST.get('next', '/'))
+                    if 'next' in request.GET:
+                        return redirect(request.POST.get('next', '/'))
+                    else:
+                        return redirect('yourwords:index')
                 else:
                     messages.info(request, _('Twoje konto użytkownika nie jest aktywne. Skontaktuj się z administratorem strony.'))
             else:
@@ -121,7 +124,7 @@ def password_reset(request):
             return redirect('authentication:password_reset_done')
     else:
         form = PasswordResetForm()
-        context ={
+        context = {
             'title': _('Reset hasła do konta'),
             'form': form,
         }
@@ -135,7 +138,6 @@ def password_reset_done(request):
     return render(request, 'authentication/password_reset_done.html', context)
 
 
-# Doesn't need csrf_protect since no-one can guess the URL
 @sensitive_post_parameters()
 @never_cache
 def password_reset_confirm(request, uidb64=None, token=None):
@@ -177,7 +179,7 @@ def password_reset_confirm(request, uidb64=None, token=None):
 
 @never_cache
 def signup_done(request):
-    return render(request, 'authentication/signup_done.html', {'title': _('Verification e-mail sent')})
+    return render(request, 'authentication/signup_done.html', {'title': _('E-mail weryfikacyjny został wysłany.')})
 
 
 # Doesn't need csrf_protect since no-one can guess the URL
@@ -208,7 +210,8 @@ def signup_confirm(request, uidb64=None, token=None):
         return redirect('authentication:signin')
     else:
         title = _('Aktywacja nowego konta nieudana')
-        messages.info(request, _('Przepraszamy, aktywacja Twojego konta nie przebiegła pomyślnie. Spróbuj później.'))
+        messages.info(request, _(
+            'Przepraszamy, aktywacja Twojego konta nie przebiegła pomyślnie') + '.' + _('Spróbuj jeszcze raz') + '.')
         context = {
             'title': title
         }

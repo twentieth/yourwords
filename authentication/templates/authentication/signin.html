@@ -19,7 +19,7 @@
 		{% for field in form %}
 				<label class="w3-label w3-text-blue">{{ field.label }}</label>
 				{% for error in field.errors %}
-					<span class="w3-small w3-text-red error">{{ error }}</span>
+					<span class="w3-small w3-text-red errors">{{ error }}</span>
 				{% endfor %}
 				{{ field }}
 		{% endfor %}

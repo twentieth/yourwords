@@ -243,6 +243,10 @@ input[type='radio']
     background-color: #f44336;
 	color: #f1f1f1;
 }
+.errors {
+	color: #f44336;
+	background-color: #f1f1f1;
+}
 .message_link
 {
 	text-decoration: underline;

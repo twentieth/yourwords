@@ -35,12 +35,14 @@ def index(request):
             message_text = _(
                 'Brak słówek spełniających wybrane kryteria wyszukiwania. Spróbuj jeszcze raz.'
             )
+            messages.info(request, message_text)
+            return redirect('yourwords:repeat', kind='write')
         else:
             message_text = _(
                 'Jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!'
             )
-        messages.info(request, message_text)
-        return redirect('yourwords:repeat', kind='write')
+            messages.info(request, message_text)
+            return redirect('yourwords:add')
 
     messages.info(request, message_text, extra_tags='safe')
     records_to_json = {
@@ -226,13 +228,14 @@ def repeat(request, kind='read'):
                 message_text = _(
                     'Brak słówek spełniających wybrane kryteria wyszukiwania. Spróbuj jeszcze raz.'
                 )
+                messages.info(request, message_text)
+                return redirect('yourwords:repeat', kind='write')
             else:
                 message_text = _(
                     'Jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!'
                 )
-            
-            messages.info(request, message_text)
-            return redirect('yourwords:repeat', kind='write')
+                messages.info(request, message_text)
+                return redirect('yourwords:add')
 
         messages.info(request, message_text, extra_tags='safe')
         records_to_json = {
