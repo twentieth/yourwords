@@ -50,7 +50,7 @@ def set_pagination(request, collection, n):
     return collection
 
 
-def queryset_to_json_like(queryset):
+def queryset_to_dict(queryset):
     import datetime
     queryset = queryset.values()
     array = []
@@ -58,17 +58,20 @@ def queryset_to_json_like(queryset):
         for key, value in record.items():
             if isinstance(value, datetime.datetime):
                 record[key] = value.strftime("%Y-%m-%d %H:%M:%S")
-            elif value is None:
-                record[key] = "0000-00-00 00:00:00"
         array.append(record)
     return array
 
 
-def json_like_from_queryset_with_id_keys(json_like, pk='id'):
-    array = {}
-    for record in json_like:
-        array[record[pk]] = record
-    return array
+def queryset_to_dict_with_id_keys(queryset, pk='id'):
+    import datetime
+    queryset = queryset.values()
+    d = {}
+    for record in queryset:
+        for key, value in record.items():
+            if isinstance(value, datetime.datetime):
+                record[key] = str(value)
+        d[record[pk]] = record
+    return d
 
 
 def safe_string(string):
