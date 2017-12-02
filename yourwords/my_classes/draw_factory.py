@@ -5,7 +5,7 @@ from django.utils.translation import ugettext as _
 from django.utils import timezone
 from yourwords.models import English
 from yourwords.models import Listing
-from common.helpers import queryset_to_json_like
+from common.helpers import queryset_to_dict, queryset_to_dict_with_id_keys
 
 
 class DrawFactory:
@@ -41,7 +41,12 @@ class CollectionManager:
     def get_collection(self):
         records_list = English.users.where_user(self._request.user).filter(
             id__in=list(self._records_ids))
-        return queryset_to_json_like(records_list)
+        return queryset_to_dict(records_list)
+
+    def get_collection_with_id_keys(self):
+        records_list = English.users.where_user(self._request.user).filter(
+            id__in=list(self._records_ids))
+        return queryset_to_dict_with_id_keys(records_list)
 
     def get_count(self):
         return self._count

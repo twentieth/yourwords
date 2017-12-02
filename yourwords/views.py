@@ -1,3 +1,4 @@
+import json
 from random import randint
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse, HttpResponse
@@ -26,7 +27,7 @@ from administration.models import Log
 @csrf_exempt
 def index(request):
     collection_manager = DrawFactory.get_collection_manager(request)
-    record_list = collection_manager.get_collection()
+    record_list = collection_manager.get_collection_with_id_keys()
     record_count = len(record_list)
     message_text = collection_manager.get_message()
 
@@ -51,7 +52,7 @@ def index(request):
     }
     context = {
         'title': _('Strona domowa - losowanie'),
-        'records_data': records_to_json
+        'records_data': json.dumps(records_to_json)
     }
     return render(request, 'yourwords/index.html', context)
 
@@ -219,7 +220,7 @@ def ajax_edit_rating(request):
 def repeat(request, kind='read'):
     if request.method == 'POST':
         collection_manager = DrawFactory.get_collection_manager(request)
-        record_list = collection_manager.get_collection()
+        record_list = collection_manager.get_collection_with_id_keys()
         record_count = len(record_list)
         message_text = collection_manager.get_message()
 
@@ -242,7 +243,9 @@ def repeat(request, kind='read'):
             'record_count': record_count,
             'record_list': record_list
         }
-        context = {'records_data': records_to_json}
+        context = {
+            'records_data': json.dumps(records_to_json)
+        }
         if kind == 'read':
             return render(request, 'yourwords/index.html', context)
         else:
