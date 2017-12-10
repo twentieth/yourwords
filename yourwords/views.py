@@ -1,3 +1,4 @@
+import json
 from random import randint
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import JsonResponse, HttpResponse
@@ -16,6 +17,7 @@ from yourwords.my_classes.draw_factory import DrawFactory
 from common.emailer import Email
 from common.helpers import safe_string
 from common.helpers import user_has_option, set_pagination
+from common.decorators import check_recaptcha
 from .forms import AddRecordForm, ContactForm, SearchForm
 from .models import English
 from .models import Listing
@@ -25,7 +27,7 @@ from administration.models import Log
 @csrf_exempt
 def index(request):
     collection_manager = DrawFactory.get_collection_manager(request)
-    record_list = collection_manager.get_collection()
+    record_list = collection_manager.get_collection_with_id_keys()
     record_count = len(record_list)
     message_text = collection_manager.get_message()
 
@@ -34,12 +36,14 @@ def index(request):
             message_text = _(
                 'Brak słówek spełniających wybrane kryteria wyszukiwania. Spróbuj jeszcze raz.'
             )
+            messages.info(request, message_text)
+            return redirect('yourwords:repeat', kind='write')
         else:
             message_text = _(
                 'Jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!'
             )
-        messages.info(request, message_text)
-        return redirect('yourwords:repeat', kind='write')
+            messages.info(request, message_text)
+            return redirect('yourwords:add')
 
     messages.info(request, message_text, extra_tags='safe')
     records_to_json = {
@@ -48,7 +52,7 @@ def index(request):
     }
     context = {
         'title': _('Strona domowa - losowanie'),
-        'records_data': records_to_json
+        'records_data': json.dumps(records_to_json)
     }
     return render(request, 'yourwords/index.html', context)
 
@@ -212,7 +216,7 @@ def ajax_edit_rating(request):
 def repeat(request, kind='read'):
     if request.method == 'POST':
         collection_manager = DrawFactory.get_collection_manager(request)
-        record_list = collection_manager.get_collection()
+        record_list = collection_manager.get_collection_with_id_keys()
         record_count = len(record_list)
         message_text = collection_manager.get_message()
 
@@ -221,20 +225,29 @@ def repeat(request, kind='read'):
                 message_text = _(
                     'Brak słówek spełniających wybrane kryteria wyszukiwania. Spróbuj jeszcze raz.'
                 )
+                messages.info(request, message_text)
+                return redirect('yourwords:repeat', kind='write')
             else:
                 message_text = _(
                     'Jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!'
                 )
+<<<<<<< HEAD
 
             messages.info(request, message_text)
             return redirect('yourwords:repeat', kind='write')
+=======
+                messages.info(request, message_text)
+                return redirect('yourwords:add')
+>>>>>>> cfa30a17d16eaf51fc19ae07155d9d341c6eae84
 
         messages.info(request, message_text, extra_tags='safe')
         records_to_json = {
             'record_count': record_count,
             'record_list': record_list
         }
-        context = {'records_data': records_to_json}
+        context = {
+            'records_data': json.dumps(records_to_json)
+        }
         if kind == 'read':
             return render(request, 'yourwords/index.html', context)
         else:
@@ -247,11 +260,12 @@ def repeat(request, kind='read'):
 
 
 @csrf_exempt
+@check_recaptcha
 def contact(request):
     context = {}
     if request.method == 'POST':
         form = ContactForm(request.POST)
-        if form.is_valid():
+        if form.is_valid() and request.recaptcha_is_valid:
             name = form.cleaned_data['name']
             email = form.cleaned_data['email']
             content = form.cleaned_data['content']
@@ -285,7 +299,7 @@ def contact(request):
                 message_text = _('Dziękuję, wiadomość została wysłana.')
                 messages.info(request, message_text)
             else:
-                message_text = _('Wystąpił błąd - wiadomość w tej chwili nie może zostać wysłana.')
+                message_text = _('Przepraszamy, wiadomość w tej chwili nie może zostać wysłana.')
                 messages.error(request, message_text)
 
             return redirect('yourwords:contact')
