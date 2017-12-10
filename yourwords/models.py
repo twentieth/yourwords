@@ -23,12 +23,25 @@ class English(models.Model):
     polish = models.CharField(max_length=100, default='')
     english = models.CharField(max_length=100, default='')
     sentence = models.TextField(max_length=500, blank=True, null=True)
-    rating = models.CharField(max_length=1, default='1', choices=RATING_CHOICES)
+    rating = models.CharField(
+        max_length=1, default=RATING_CHOICES[0][0], choices=RATING_CHOICES)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=False, null=True)
 
+    def clean(self):
+        self.polish = self.polish.strip().upper()
+        self.english = self.english.strip().lower()
+        if self.created_at is not None:
+            self.updated_at = timezone.now()
+        if not self.rating:
+            self.rating = '1'
+
+    def save(self, *args, **kwargs):
+        self.clean()
+        super(English, self).save(*args, **kwargs)
+
     def __str__(self):
-        return self.english + ' | ' + self.polish
+        return '{} | {}'.format(self.english, self.polish)
 
 
 class Listing(models.Model):

@@ -26,6 +26,12 @@ urlpatterns = i18n_patterns(
     url(r'^authentication/', include('authentication.urls')),
     url(r'^accounts/', include('accounts.urls')),
     url(r'^administration/', include('administration.urls')),
+    url(r'^api/', include('api.urls')),
     url(r'^social-auth/', include('social_django.urls', namespace='social')),
     url(r'^rosetta/', include('rosetta.urls')), ) + static(
         settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+urlpatterns += [
+    url(r'^api_auth/', include(
+        'rest_framework.urls', namespace='rest_framework')),
+]

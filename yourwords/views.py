@@ -130,7 +130,6 @@ def search(request):
 @csrf_exempt
 def add(request):
     context = {}
-    request.session['current_url'] = 'yourwords:add'
     if request.method == 'POST':
         if request.is_ajax():
             form = AddRecordForm(request.POST)
@@ -163,14 +162,11 @@ def edit(request, record_id):
     if request.method == 'POST':
         form = AddRecordForm(request.POST, instance=record)
         if form.is_valid():
-            instance = form.save(commit=False)
-            instance.rating = request.POST.get('rating')
-            instance.updated_at = timezone.now()
-            instance.save()
+            form.save()
             message_text = _('Wybrany rekord został zedytowany.')
             messages.success(request, message_text)
         return redirect('yourwords:edit', record_id=record.id)
-    else:
+    elif request.method == 'GET':
         form = AddRecordForm(instance=record)
         context['title'] = _('Edytuj słówko')
         context['edit'] = True
@@ -235,8 +231,14 @@ def repeat(request, kind='read'):
                 message_text = _(
                     'Jesteś nowym użytkownikiem? Uzupełnij swoją własną bazę słówek!'
                 )
+<<<<<<< HEAD
+
+            messages.info(request, message_text)
+            return redirect('yourwords:repeat', kind='write')
+=======
                 messages.info(request, message_text)
                 return redirect('yourwords:add')
+>>>>>>> cfa30a17d16eaf51fc19ae07155d9d341c6eae84
 
         messages.info(request, message_text, extra_tags='safe')
         records_to_json = {

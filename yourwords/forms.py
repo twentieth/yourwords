@@ -1,8 +1,8 @@
+import re
+from django.utils.translation import ugettext, ugettext_lazy as _
 from django import forms
 from .models import English
 from .models import Contact
-import re
-from django.utils.translation import ugettext, ugettext_lazy as _
 
 
 class AddRecordForm(forms.ModelForm):
@@ -12,15 +12,7 @@ class AddRecordForm(forms.ModelForm):
 
     class Meta:
         model = English
-        fields = ('english', 'polish', 'sentence')
-
-    def clean(self):
-        cleaned_data = {
-            'polish': self.cleaned_data['polish'].upper(),
-            'english': self.cleaned_data['english'].lower(),
-            'sentence': self.cleaned_data['sentence'],
-        }
-        return cleaned_data
+        fields = ('english', 'polish', 'sentence', 'rating')
 
 
 class ContactForm(forms.ModelForm):
